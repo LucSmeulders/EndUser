@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Verkoopbeheer &gt; Verhuringen &gt; Verhuurartikelen instellen</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Ieder artikel in het artikelbestand kan ingesteld worden als een ‘verhuurbaar’ artikel. Hiervoor ga je als volgt te werkt:" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #2C5D88; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "artikel-instellen-als-verhuurartikel.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Verhuurartikelen instellen</span></p>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?artikel-instellen-als-verhuurartikel.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="verkoopbeheer.htm">Verkoopbeheer</a> &gt; <a href="verhuringen.htm">Verhuringen</a>&nbsp;&gt;</p>
+   
+      <p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Verhuurartikelen instellen</span></p>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="verhuringen.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="verhuringen.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="verhuringen-beheren.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">Ieder artikel in het artikelbestand kan ingesteld worden als een ‘verhuurbaar’ artikel. Hiervoor ga je als volgt te werkt:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 26px; margin-left: 14px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Ga vanuit het hoofdmenu naar de artikelen</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 26px; margin-left: 14px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Zoek een artikel dat je wilt verhuren</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 26px; margin-left: 14px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Selecteer &lt;Macro&gt;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 26px; margin-left: 14px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>In het macro-scherm staat een keuze ‘Verhuurartikel’. Als je daarop klikt, verschijnt volgend dialoogvenster:</p>
+<div class="p_Normal" style="text-align: center; line-height: 1.68; margin: 0 0 0 0;"><div style="margin:0 auto 0 auto;width:80%;max-width:1297px;height:auto;"><img alt="k_aT54ERRWOcDYKW9hYIzuSrwAX8sPIM4NoxLR7S2gw8A_N6O8SXmr52wFbr5XwCTn7FN_rCzjT93ZH4WbiS8y75Gzv6Ez2H3urA1e_kmJBeu6xTuEVk40_FAiGc6hGOfBXDi5vo" style="width:100%;height:auto;border:none" src="k_at54errwocdykw9hyizusrwax8spim4noxlr7s2gw8a_n6o8sxmr52wfbr5xwctn7fn_rczjt93zh4wbis8y75gzv6ez2h3ura1e_kmjbeu6xtuevk40_faigc6hgofbxdi5vo.png"/></div><br />
+<span class="f_ImageCaption">&nbsp;</span></div>
+<p class="p_Normal" style="text-indent: 0; padding-left: 26px; margin-left: 14px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Standaard staat bij ieder artikel de waarde ‘N’ ingevuld bij ‘Verhuurartikel’. Deze status kun je wijzigen, waarbij je volgende waarden kunt invullen</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 52px; margin-left: 14px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>N = Neen, niet verhuren. Dit is dus een ‘gewoon’ artikel.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 52px; margin-left: 14px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>J = Ja, kan worden verhuurd. Dit is dus een ‘verhuur’ artikel.</p>
+<p class="p_Normal" style="line-height: 1.68; margin: 0 0 0 0;">&nbsp;</p>
+<p style="text-indent: 0; line-height: 1.57; padding-left: 26px; margin: 0 0 0 14px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Door hier nu de waarde ‘J’ in te vullen, zal het volledige dialoogvenster actief worden, en kun je volgende gegevens invullen:</p>
+<div class="p_Normal" style="text-align: center; line-height: 1.68; margin: 0 0 0 0;"><div style="margin:0 auto 0 auto;width:80%;max-width:712px;height:auto;"><img alt="T44Zx4UbchpmdUB-bST62lolCzq7Hu2Ab1MiN51ykXgQoRoojUMQptKam35GPmo13g6C6Qk3gISVdOTD27uNrjv_J_2rKtfBuM8x4PDt0EZnXAqlBiTeaVebmI4JHjBW5PqlTz4Q" style="width:100%;height:auto;border:none" src="t44zx4ubchpmdub-bst62lolczq7hu2ab1min51ykxgqoroojumqptkam35gpmo13g6c6qk3gisvdotd27unrjv_j_2rktfbum8x4pdt0eznxaqlbiteavebmi4jhjbw5pqltz4q.png"/></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 27px;">In de dialoogvenster kun je het volgende instellen:</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 27px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Werken met serienummers</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Indien dit op ‘J’ staat, kun je dus je verhuurde artikelen een unieke code (serienummer, interne nummering, nummerplaat, ...) gegeven. Zo kun je bepalen welk artikel ze precies huren. Dit wordt gedaan bij apparaten met een hogere waarde, waarbij deze info belangrijk is (vb voor schade na verhuur). Hiervoor heb je wel de licentie ‘Serienummers’ nodig.</p>
+<p class="p_Normal" style="margin: 0 0 0 40px;">Indien dit op ‘N’ staat, is dit een artikel dat geen opvolging nodig heeft. Dit doe je bijvoorbeeld bij tafels, stoelen, krukken, service, … Enkel het feit dat iets niet of kapot terugkomt, geeft aanleiding om de waarborg (gedeeltelijk) niet terug te betalen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aantal</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit kan enkel ingevuld worden indien ‘Werken met serienummers’ op ‘N’ staat. Het aantal dat je hier invult, is het aantal ‘eenheden’ dat je ter beschikking hebt om te verhuren. Indien je met serienummers werkt, wordt dit aantal automatisch berekend. Dit is dan gelijk aan het aantal serienummer dat je hebt toegevoegd via de keuze ‘= Serienummers’.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Verhuurprijzen</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Hier kun je de verhuurprijs ingeven per periode. Dat kan zijn per dag, 2 dagen, 5 dagen, weekend, 2 weken, maand.</p>
+<p class="p_Normal" style="margin: 0 0 0 40px;">Daarnaast kun je ook een zelf te bepalen periode invullen, waarbij rekening wordt gehouden met de verschillende ingevulde verhuurprijzen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Bijbehorende artikelen</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Hiermee bedoelen we artikelen die je extra kunt mee verhuren, enkele voorbeelden:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 65px; margin: 0 0 0 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Soms heeft de klant een aanhangwagen nodig. Dit kan dan ook aangerekend worden.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 65px; margin: 0 0 0 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Bij sommige toestellen heb je bijkomende producten nodig die je meegeeft, en daarvan komt niets of een gedeelte van terug. Afhankelijk van het verbruik, zal dit worden aangerekend.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 40px;">In totaal kun je 10 artikelen aan deze lijst toevoegen. Hierbij kun je het volgende invullen:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 65px; margin: 0 0 0 1px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Artikelnummer: Dit is het artikelnummer dat je uit het artikelbestand kunt overbrengen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 65px; margin: 0 0 0 1px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Aantal: Dit is een ‘standaard’ aantal dat je kunt invullen en dat zal worden ingevuld bij het toevoegen van een verhuring. Dit aantal is dan nog steeds wijzigbaar.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 65px; margin: 0 0 0 1px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Eenheidsprijs: Dit is de eenheidsprijs waaraan dit artikel zal worden verhuurd. Indien dit op 0 staat, zal de eenheidsprijs van het artikel in het artikelbestand worden genomen.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Waarborg, voorschot</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 27px;">Wanneer je een artikel verhuurt, wil je soms een waarborg en/of voorschot in rekening brengen. Op het moment dat je een verhuring toevoegt, kun je nog altijd beslissen of deze toegevoegd worden aan het verkoopdocument.</p>
+<p class="p_Normal" style="margin: 0 0 0 27px;">Je kunt zowel voor de waarborg en het voorschot een artikelnummer invullen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 65px; margin: 0 0 0 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>In het onderhoudsprogramma (zie eerder) kun je het artikelgroepnummer voor deze artikelen instellen, zodat wanneer je F5 selecteert enkel maar deze artikel getoond worden. Het artikelnummer zal op het verkoopdocument worden toegevoegd en de prijzen worden op dat moment uit het artikelbestand genomen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 65px; margin: 0 0 0 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Als je een artikelnummer invult, zal de eenheidsprijs in dit scherm op 0 euro worden gezet en gelijktijdig uitgeschakeld worden.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 65px; margin: 0 0 0 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>Wanneer je geen artikelnummer invult, kun je hier zelf een bedrag invullen. Dat bedrag zal dan op het verkoopdocument worden meegeteld (zonder artikelnummer)</p></td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Opmerking</span></h2>
+<p class="p_Normal">De eenheidsprijs excl. en incl. btw van een verhuurbaar artikel staan los van de verhuurprijzen van een artikel. Indien je een verhuurbaar artikel zou verkopen, zijn dat de bedragen die op de verkoopdocumenten zal verschijnen</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

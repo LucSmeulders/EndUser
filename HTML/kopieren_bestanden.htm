@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Backupbeheer &gt; Kopiëren bestanden</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Kopieren bestanden" />
+   <meta name="description" content="Het maken van een veiligheidskopie (in het Engels spreekt men van 'back-up') gebeurt in de volgende 6 stappen:" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #2C5D88; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "kopieren_bestanden.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Kopiëren bestanden</span></p>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?kopieren_bestanden.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="backupbeheer.htm">Backupbeheer</a>&nbsp;&gt;</p>
+   
+      <p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Kopiëren bestanden</span></p>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="backupbeheer.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="backupbeheer.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="terugzetten_bestanden.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">Het maken van een veiligheidskopie (in het Engels spreekt men van 'back-up') gebeurt in de volgende 6 stappen:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-weight: bold;"><a href="kopieren_bestanden.htm#selecteren_dossier" class="topiclink">Stap 1: Selecteren dossier.</a></span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-weight: bold;"><a href="kopieren_bestanden.htm#welke_bestanden_kopieren" class="topiclink">Stap 2: Welke bestanden kopiëren ?</a></span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-weight: bold;"><a href="kopieren_bestanden.htm#ingeven_kopieeropties" class="topiclink">Stap 3: Ingeven kopieeropties.</a></span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-weight: bold;"><a href="kopieren_bestanden.htm#ingeven_algemene_informatie" class="topiclink">Stap 4: Ingeven algemene informatie.</a></span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-weight: bold;"><a href="kopieren_bestanden.htm#selecteren_drive" class="topiclink">Stap 5: Selecteren drive</a></span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-weight: bold;"><a href="kopieren_bestanden.htm#het_eigenlijke_kopieren" class="topiclink">Stap 6: Het eigenlijke kopiëren.</a></span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<h1 class="p_Heading1"><a id="selecteren_dossier" class="hmanchor"></a><span class="f_Heading1">Stap 1: Selecteren dossier</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Opmerking</span>: Indien u niet beschikt over het AXITO multi-dossier beheer, zal deze eerste stap niet opgevraagd worden. In dat geval komt u automatisch terecht in 'Stap 2: Welke bestanden kopiëren?' Wanneer u heeft gekozen voor de keuze 'Kopiëren bestanden' krijgt u een gelijkaardig volgend scherm te zien:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In dit scherm krijgt u een overzicht te zien van alle bestaande dossiers op uw computer. </p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:114px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">BASISDOSSIER</span></p>
+</td>
+<td style="vertical-align:top; width:460px; padding:5px; border:none"><p class="p_Normal">Het eerste dossier wordt het 'BASISDOSSIER' genoemd, en komt overeen met het dossier dat u krijgt wanneer u bij het opvragen van het dossiernummer niets invult (met andere woorden het dossiernummer leeg laat).</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:114px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">AXITO001</span></p>
+</td>
+<td style="vertical-align:top; width:460px; padding:5px; border:none"><p class="p_Normal">AXITO Software &nbsp; &nbsp; &nbsp; &nbsp;Dit is het eerste dossier (alfabetisch) dat in de lijst voorkomt. AXITO001 is het dossiernummer en AXITO Software is de naam van de persoon of firma waarop het dossier van toepassing is. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Om het dossier te selecteren verplaatst u de cursorbalk met behulp van de pijltjestoetsen tot op het gewenste dossier. Daarna drukt u op &lt;Enter&gt;. Via de &lt;Esc&gt; toets kunt u terugkeren naar het hoofdmenu.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Voorbeeld</span>: u wenst de gegevens van het dossier AXITO001 te kopieren. Verplaats daarom de cursorbalk met behulp van de pijltjestoetsen tot op het betreffende dossier AXITO001. Zodra u met de cursorbalk op dit dossier staat, drukt u op &lt;Enter&gt;, waardoor het dossier is geselecteerd.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="welke_bestanden_kopieren" class="hmanchor"></a><span class="f_Heading1">Stap 2: Welke bestanden kopiëren?</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Omdat u niet altijd alles hoeft te kopiëren (bijvoorbeeld uitwisseling van enkel de boekhouding-gegevens met uw boekhouder), wordt u de vraag gesteld welke bestanden u wenst te kopiëren.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Schermvoorbeeld: Welke bestanden kopiëren?</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Uit bovenstaand schermvoorbeeld blijkt dat u kunt kiezen uit de volgende 6 mogelijkheden:</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:261px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">1. Alle AXITO-bestanden</span></p>
+</td>
+<td style="vertical-align:top; width:527px; padding:5px; border:none"><p class="p_Normal">Dit betekent dat alle bestanden die nodig zijn om met AXITO-software te kunnen werken, worden gekopieerd. Deze selectie is vanzelfsprekend de beste en veiligste keuze, maar neemt ook het meeste tijd in beslag.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:261px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">2. Alleen de handelszaak-bestanden</span></p>
+</td>
+<td style="vertical-align:top; width:527px; padding:5px; border:none"><p class="p_Normal">Wanneer u hiervoor kiest worden enkel de bestanden gekopieerd die nodig zijn voor het opstellen van offertes, bestelbonnen, facturen, voorraadbeheer enz...</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:261px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">3. Alleen de boekhouding-bestanden</span></p>
+</td>
+<td style="vertical-align:top; width:527px; padding:5px; border:none"><p class="p_Normal">Deze keuze zal u vooral gebruiken wanneer u de gegevens van de boekhouding wenst over te brengen naar de computer van uw boekhouder. Hierbij worden enkel de bestanden gekopieerd die betrekking hebben op het AXITO-boekhoudprogramma, zoals aankoopdagboek, verkoopdagboek, diversen dagboek, financieel dagboek, enz...</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:261px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">4. Alleen de kassabeheer-bestanden</span></p>
+</td>
+<td style="vertical-align:top; width:527px; padding:5px; border:none"><p class="p_Normal">Hierbij worden enkel de bestanden gekopieerd die nodig zijn voor de werking van het AXITO-kassabeheerprogramma, zoals de dagverkopen, historiek kassaverkopen, enz...</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:261px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">5. Alleen de tekstverwerking-bestanden</span></p>
+</td>
+<td style="vertical-align:top; width:527px; padding:5px; border:none"><p class="p_Normal">Hierbij worden enkel de bestanden gekopieerd die nodig zijn voor de werking van het AXITO-tekstverwerkingsprogramma, zoals de teksten, de standaardteksten, enz...</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:261px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">6. Zelf bepalen welke bestanden</span></p>
+</td>
+<td style="vertical-align:top; width:527px; padding:5px; border:none"><p class="p_Normal">In uitzonderlijke gevallen is het handig om slechts een beperkt aantal bestanden te kunnen kopiëren. Bij het uitvoeren van deze keuze krijgt u een gelijkaardig volgend scherm te zien:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Op het scherm ziet u een lijst van bestanden, die u één voor één kunt opnemen met de &lt;+&gt; toets, of niet opnemen met de &lt;-&gt; toets. U verplaatst daartoe de cursorbalk met behulp van de pijltjestoetsen tot op het te kopiëren bestand. Vervolgens drukt u op de &lt;+&gt; toets. Hierdoor komt er een '+' te staan achter de betreffende bestandsnaam, met andere woorden het betreffende bestand wordt opgenomen in de lijst om gekopieerd te worden. Wanneer u minstens één bestand heeft opgenomen, kunt u met behulp van de &lt;Enter&gt; toets verder gaan. Op ieder moment kunt u het selecteren beëindigen door op de &lt;Esc&gt; toets te drukken.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Voorbeeld</span>: u wenst de bestanden 'Helpteksten', 'Dossiers' en 'Woonplaatsen' te kopiëren. Verplaats daarom de curosorbalk met de pijltjestoetsen tot op het woord 'Helpteksten'. Vervolgens drukt u op &lt;+&gt;. U zult zien dat het '-' teken achter 'Helpteksten' een '+' teken wordt. De cursorbalk verplaatst zich automatisch naar het volgende bestand (in dit voorbeeld is dat 'Agenda'). Vervolgens verplaatst u de cursorbalk naar 'Dossiers' en drukt u op &lt;+&gt;. Daarna verplaatst u de cursorbalk naar 'Woonplaatsen' en drukt u nogmaals op &lt;+&gt;. Zodoende zijn de gewenste bestanden geselecteerd, en komt u door op &lt;Enter&gt; te drukken automatisch terecht in de volgende 'Stap 3'.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><span style="width:34px;display:inline-block">&nbsp;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="ingeven_kopieeropties" class="hmanchor"></a><span class="f_Heading1">Stap 3: Ingeven kopieeropties</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Deze bijkomende kopieer-opties kunnen de duur van het kopiëren enigszins verkorten.</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:204px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Volledige veiligheidskopie</span></p>
+</td>
+<td style="vertical-align:top; width:584px; padding:5px; border:none"><p class="p_Normal">Het is niet altijd noodzakelijk om minder belangrijke bestanden zoals woonplaatsen, branches, enz. te kopiëren. </p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:204px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Index-bestanden ook kopiëren</span></p>
+</td>
+<td style="vertical-align:top; width:584px; padding:5px; border:none"><p class="p_Normal">Aangezien u via de keuze 'Indexeren alle bestanden' de index-bestanden opnieuw (automatisch) kunt aanmaken, is het niet noodzakelijk om deze mee te kopiëren.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Opmerking</span>: Indien u de index-bestanden niet mee kopieert, en achteraf de betreffende veiligheidskopie wenst terug te zetten, dan zult u verplicht zijn om na het terugzetten van de betreffende bestanden deze bestanden opnieuw te indexeren!</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><span style="width:34px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="width:34px;display:inline-block">&nbsp;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="ingeven_algemene_informatie" class="hmanchor"></a><span class="f_Heading1">Stap 4: Ingeven algemene informatie</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In deze vierde stap kunt u de firmanaam, de naam van de verantwoordelijke en een algemene omschrijving &nbsp;van de betreffende veiligheidskopie ingeven.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="selecteren_drive" class="hmanchor"></a><span class="f_Heading1">Stap 5: Selecteren drive</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="het_eigenlijke_kopieren" class="hmanchor"></a><span class="f_Heading1">Stap 6: Het eigenlijke kopiëren</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Wanneer u de vorige 5 stappen heeft doorlopen, verschijnt het eigenlijke 'kopieer-scherm', waarop u kunt volgen hoever de computer reeds gevorderd is met het kopiëren.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Hoe zal het kopiëren verder verlopen?</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Indien er op dit moment nog geen diskette in de disk-drive steekt, zal gevraagd worden om een lege diskette in de disk-drive te plaatsen.<br />
+Indien u een diskette in de disk-drive heeft geplaatst waarop reeds informatie staat (vb. een oude back-up), dan zal gevraagd worden of de informatie op de betreffende diskette geschrapt mag worden. </p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Eenmaal het eigenlijke kopiëren begonnen is, kunt u op het scherm volgen hoe ver de computer reeds gevorderd is. Voor meer uitleg over dit 'kopieer-scherm' zie verder.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Indien er meerdere diskettes nodig zijn voor deze veiligheidskopie, dan zal de computer u vragen om een 2e, 3e, 4e, 5e, ... diskette in de disk-drive te plaatsen. </p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Indien er tijdens het kopiëren storingen optreden, zal dit worden gemeld. Vervolgens wordt u gevraagd wat er moet gebeuren. U kunt dan kiezen uit:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Nieuwe poging</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Andere diskette</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Formatteren diskette</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Einde<br />
+&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Wanneer de veiligheidskopie gemaakt is, krijgt u de melding 'Kopiëren bestanden succesvol uitgevoerd!'</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In bovenstaand 'kopieer-scherm' vindt u diverse informatie met betrekking tot het kopieer-proces.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Tabeltitel" style="margin: 0 0 0 74px;"><span class="f_Tabeltitel">Betekenis velden 'kopieer-scherm'</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Totaal aantal bestanden</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Dit getal geeft aan hoeveel bestanden er in totaal gekopieerd moeten worden.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Totaal omvang bytes</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Dit getal (in bytes) geeft de totale omvang van de te kopieren bestanden weer. Merk op dat 1 megabyte gelijk is aan 1.048.576 bytes.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Compressie</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Geeft weer of de bestanden al dan niet gecomprimeerd &nbsp;worden. 'Compressie' betekent dat de bestanden 'samengeperst' worden, waardoor ze kleiner worden en uiteindelijk minder plaats innemen. Resultaat: minder diskettes nodig per veiligheidskopie.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Verlopen tijd</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Alzo kunt u zien hoe lang de computer reeds bezig is met het maken van de back-up.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Geschat aantal diskettes</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">De computer maakt aan de hand van de reeds gekende gegevens een schatting van het aantal benodigde diskettes. Zodoende weet u op voorhand hoeveel diskettes dat u ongeveer zult nodig hebben. Tijdens het kopiëren kan deze schatting aangepast worden.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Controleren kopie</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Geeft weer of de veiligheidskopie gecontroleerd wordt op schrijffouten. Zo ja, betekent dit uiteraard dat het kopiëren langer zal duren.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Huidige actie</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Alzo kunt u zien wat de computer op dit moment aan het doen is:</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="width:100%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:134px; padding:3px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Comprimeren</span></p>
+</td>
+<td style="vertical-align:top; width:745px; padding:3px; border:none"><p class="p_Normal">Momenteel wordt het betreffende bestand gecomprimeerd.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:134px; padding:3px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Kopiëren</span></p>
+</td>
+<td style="vertical-align:top; width:745px; padding:3px; border:none"><p class="p_Normal">Het (gecomprimeerde) bestand wordt naar de gewenste disk-drive gekopieerd.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:134px; padding:3px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Vergelijken</span></p>
+</td>
+<td style="vertical-align:top; width:745px; padding:3px; border:none"><p class="p_Normal">De computer vergelijkt het (gecomprimeerde) doelbestand op de disk-drive met het overeenkomstige bronbestand op de harde schijf.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:134px; padding:3px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Schrijven cataloog</span></p>
+</td>
+<td style="vertical-align:top; width:745px; padding:3px; border:none"><p class="p_Normal">Van iedere veiligheidskopie wordt op de eerste diskette een cataloog (= inhoudsopgave) bijgehouden.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:134px; padding:3px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Schrappen bestanden</span></p>
+</td>
+<td style="vertical-align:top; width:745px; padding:3px; border:none"><p class="p_Normal">Wanneer u een diskette gebruikt voor het maken van een veiligheidskopie, wordt gecontroleerd of er nog gegevens op staan. Zo ja, dan kunt u deze eerst laten schrappen, zodat deze gebruikt kan worden voor het maken van een veiligheidskopie.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Huidige bestandsnaam</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Dit is de naam van het bestand dat momenteel bewerkt wordt.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Omvang huidig bestand</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Dit getal (in bytes) geeft de omvang van het huidige bestand weer.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Reeds gekopieerd aantal</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Geeft weer hoeveel bestanden er reeds gekopieerd zijn.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Huidige diskettenummer</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Indien de veiligheidskopie over meerdere diskettes gebeurt, kunt u zien wat het volgnummer is van de huidige diskette.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Reeds gekopieerde bytes</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Dit getal (in bytes) geeft aan wat de omvang is van de reeds gekopieerde bestanden. Met andere woorden, hoeveel is er reeds gekopieerd? </p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Gecomprimeerd tot</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Dit getal (in bytes) geeft aan wat de omvang is van de reeds gekopieerde bestanden in gecomprimeerde vorm.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Compressiefactor</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Dit getal geeft de verhouding weer tussen enerzijds de omvang van de bronbestanden, en anderzijds de omvang van de gecomprimeerde gekopieerde doelbestanden. In sommige gevallen kan een compressie worden gehaald van 20. Dit betekent dat de omvang van de gecomprimeerde gekopieerde doelbestanden 20 maal kleiner is dan de oorspronkelijke bronbestanden.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">PROGRESSIE REEDS GEKOPIEERD</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Via deze indicatiebalk en het bijbehorende percentage kunt u zien hoever het kopieerproces reeds gevorderd is.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">REEDS BESCHREVEN KAPACITEIT</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Via deze indicatiebalk en het bijbehorende percentage kunt u zien hoeveel van de capaciteit van de diskette nog beschikbaar is voor het kopiëren van gegevens.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><span style="width:34px;display:inline-block">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

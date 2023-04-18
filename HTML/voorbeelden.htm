@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Tekstverwerking &gt; Voorbeelden</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Hierbij geven we aan de hand van een aantal voorbeelden bijkomende uitleg over de werking van de tekstverwerker." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #2C5D88; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "voorbeelden.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Voorbeelden</span></p>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?voorbeelden.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="tekstverwerking.htm">Tekstverwerking</a>&nbsp;&gt;</p>
+   
+      <p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Voorbeelden</span></p>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="diversen.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tekstverwerking.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="speciale_versies.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">Hierbij geven we aan de hand van een aantal voorbeelden bijkomende uitleg over de werking van de tekstverwerker.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="voorbeelden.htm#toevoegen" class="topiclink">Toevoegen nieuwe tekst</a></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="voorbeelden.htm#wijzigen" class="topiclink">Wijzigen tekst</a></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="voorbeelden.htm#schrappen" class="topiclink">Schrappen tekst</a></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="voorbeelden.htm#printen" class="topiclink">Printen tekst</a></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="voorbeelden.htm#diversen" class="topiclink">Diversen</a></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="toevoegen" class="hmanchor"></a><span class="f_Heading1">Toevoegen nieuwe tekst</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Wanneer u een nieuwe tekst wenst in te geven, kunt u dit doen door op de &lt;T&gt; toets te drukken. Vervolgens verschijnt er een 'toevoeg' scherm, waarbij u een aantal gegevens dient in te vullen. Zodra u deze allemaal heeft ingevuld, verschijnt automatisch een leeg tekstblad.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Procedure:</span></h2>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Invullen van een tekstnummer</span>. De tekstnummer bepaalt de volgorde in de lijst van teksten. De computer zal zelf een nummer bepalen aan de hand van een aantal faktoren (Laatste nummer, jaar, ...). U hoeft deze nog maar alleen te bevestigen door op &lt;Enter&gt; te drukken. De tekstnummer kunt u echter volledig willekeurig bepalen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Tekstomschrijving</span>: Geeft aan de tekst een bondige omschrijving. U kunt op deze manier snel achterhalen waarover de tekst zelf gaat, zonder deze te bekijken (met de keuze 'Video tekst'). De computer neemt automatisch de omschrijving van de vorige tekst over. u mag deze wijzigen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Mailing</span>: Hiermee bepaalt u of het hier gaat om een 'gewone' tekst of om een mailing. Voor een gewone tekst vult u 'N' in, en voor een mailing een 'J'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Relatiecode</span>: Met de relatiecode kunt u bepalen welke relatienummer u zult gaan invullen (in de volgende stap). U kunt hierbij kiezen uit de volgende mogelijkheden &lt;F5&gt;:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Klant</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Leverancier</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Prospectie klant</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Werknemer</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Zelf bepalen</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Tekst</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Relatienummer</span>: Met de relatienummer bepaalt u welke gegevens in de tekst worden verwerkt. Wanneer u op de &lt;F5&gt; toets drukt krijgt u automatisch een lijst van mogelijke relatienummers op het scherm te zien. Gaf u als relatiecode een 'K' in, dan zult u als relatienummer een klantnummer moeten invullen. Gaf u als relatiecode een 'L' in, dan zult u als relatienummer een leveranciersnummer moeten invullen. Zodra deze relatienummer is ingevuld, worden de gegevens van deze relatie automatisch ingevuld (Naam, Naam deel 2, Straat + nummer, Postcode + woonplaats). Het eigenlijke doel van de relatiecode en relatienummer wordt verder in deze handleiding besproken.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Uitzonderingen:</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:87px;"><p class="p_Normal"><span style="font-weight: bold;">Mailing</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Wanneer u bij het toevoegen (of wijzigen) van een tekst in het veld 'Mailing' en 'J' invult, kunt u bij deze tekst een mailinglijst ingeven. Hoe kunt u dit doen ?</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Relaties mailing</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Bij het toevoegen van een nieuwe tekst, wordt automatisch een mailinglijst opgevraagd. Nadien kunt u deze mailinglijst terug bekijken door op de &lt;R&gt; toets te drukken. U krijgt dan het volgende scherm te zien:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Toevoegen, wijzigen, schrappen relatie</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">U kunt een relatie toevoegen door op de &lt;T&gt; te drukken. Vervolgens wordt een relatiecode en relatienummer opgevraagd (op dezelfde manier als bij een toevoegen van een nieuwe tekst). Nadien kunt u steeds een relatie wijzigen of schrappen.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Overbrengen relatie</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Een snellere manier om uw mailinglijst in te vullen gaat met de keuze '* Overbrengen relaties'. U drukt daarvoor op de &lt;*&gt; toets, waarna een scherm verschijnt waarbij u kunt kiezen tussen:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Klanten</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Leveranciers</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Prospectie klanten</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Werknemers</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Nadat u deze keuze heeft gemaakt, krijgt u op het scherm afhankelijk van de voorgaande keuze een klantenlijst, leverancierslijst, prospectie klantenlijst of werknemerslijst te zien. U kunt één of meerdere relaties opnemen met de &lt;+&gt; toets of niet opnemen met de &lt;-&gt; toets.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table class="Voorbeeld" >
+<tr class="Voorbeeld">
+<td class="Voorbeeld"><p class="p_Normal"><span style="font-weight: bold;">Voorbeeld:</span> </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In het volgende voorbeeld ziet u het overbrengen van klanten.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Stel, u wilt volgende klantnummers overbrengen: &nbsp; &nbsp; &nbsp; &nbsp;BROE01, AXITO001, DGAS01, FOBO01, HAES01</p>
+<p class="p_Normal">JANS01, JANS02, JANS03, MOER01, PETE01</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Verplaats daarvoor de cursorbalk naar de regel met klantnummer 'BROE01' en druk op &lt;+&gt;. Vervolgens verplaatst u de cursorbalk naar de regel met klantnummer 'AXITO001' en drukt op &lt;+&gt;. Op deze manier kunt u het volledige rijtje afwerken. Heeft u per vergissing een verkeerde klant opgenomen, dan kunt u dit herstellen door op de betreffende klant (de betreffende regel) te gaan staan, en op de &lt;-&gt; toets te drukken.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Wanneer u alle relaties heeft opgenomen, drukt u op de &lt;E&gt; of &lt;Esc&gt; toets. Door op de vraag 'Doorgaan met overbrengen relaties' met 'J' te antwoorden, kunt u alle opgenomen relaties overbrengen naar de mailinglijst. Het spreekt voor zich dat dit de ideale werkwijze is bij een uitgebreide mailinglijst.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Opmerking: Een mailinglijst mag opgebouwd zijn uit verschillende relaties en relatiescodes. U mag dus in eenzelfde mailinglijst klanten, leveranciers, prospectie klanten en werknemers toevoegen of overbrengen.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:87px;"><p class="p_Normal"><span style="font-weight: bold;">Kopiëren</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Stel, dat u een nieuwe tekst moet toevoegen, en u weet dat een reeds bestaande tekst geschikt is mits enkele kleine aanpassingen. Voor deze situatie kunt u gebruik maken van de mogelijkheid om een bestaande tekst te kopiëren. In het volgende voorbeeld ziet u hoe dit in zijn werk gaat:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Wat moet u doen:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verplaats de cursorbalk tot op de tekst (of regel) van de te kopiëren tekst.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk op de &lt;K&gt; toets</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In het bovenstaande schermvoorbeeld ziet u dat alle gegevens reeds zijn ingevuld. Natuurlijk kunt u deze gegevens wijzigen (vb. een andere nieuwe tekstnummer)</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Afhankelijk van de oorspronkelijk tekst (de nummer die u als tekstnummer invult '9400002'), wordt in de kader op de laatste regel de volgende vraag gesteld:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Klantnummer</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Leveranciersnummer</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Prospectie klantnummer</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Werknemersnummer</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Is de oorspronkelijke tekst een mailing, dan wordt de vraag 'Kopiëren relaties mailing' gesteld.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Wanneer u op deze vragen heeft geantwoord, volgt enkel nog de vraag 'Doorgaan met kopiëren tekst'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Vervolgens wordt de tekst (in dit voorbeeld tekstnummer '9400002') gekopieerd naar een nieuwe tekst (in dit voorbeeld tekstnummer '9400016').</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Uiteraard mag u bij deze nieuwe tekst de relatiecode en relatienummer wijzigen. Het veld 'Mailing' mag u eveneens wijzigen. Met de keuze &lt;R&gt;elatie mailing kunt dan u een mailinglijst opstellen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Deze tekst kunt u met de keuze &lt;V&gt;ideo tekst wijzigen. Met de keuze &lt;P&gt;rinten kunt u deze op papier of op het scherm afdrukken.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:87px;"><p class="p_Normal"><span style="font-weight: bold;">overbrengen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Een andere manier om snel een nieuwe tekst toe te voegen, is het overbrengen van een standaardtekst. Dit gebeurt ook via een specifiek scherm:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Wat moet u doen:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk op de &lt;*&gt; toets</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In het onderstaand voorbeeld ziet u dat u nog de standaardtekstnummer moet invullen. U kunt met behulp van de &lt;F5&gt; toets een overzicht krijgen van alle aanwezige standaardteksten. Verplaats de cursorbalk tot op de gewenst tekst (of regel), en druk vervolgens op de &lt;O&gt; toets. Dit heeft voor gevolg dat de standaardtekstnummer wordt ingevuld.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>De 'nieuwe' tekstnummer wordt door de komputer zelf ingevuld. U kunt deze uiteraard wijzigen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Wanneer u op deze vragen heeft geantwoord, volgt de vraag 'Doorgaan met overbrengen'. Met een druk op de &lt;J&gt; toets bevestigt u dat u inderdaad deze tekst wilt kopiëren.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Afhankelijk van de oorspronkelijk tekst (de standaardtekst), wordt in een nieuwe kader nog een bijkomende vraag gesteld 'OPVRAGEN OVERIGE GEGEVENS' :</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Klantnummer</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Leveranciersnummer</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Prospectieklantnummer</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Werknemersnummer</p></td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><a id="wijzigen" class="hmanchor"></a><span class="f_Heading1">Wijzigen tekst</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">De tekst die u heeft ingegeven, kunt u nog steeds wijzigen. u verplaatst daarvoor de cursorbalk tot op de gewenst tekst (of regel), en drukt op de &lt;V&gt; toets. Vervolgens verschijnt het volgende scherm (in dit voorbeeld is nog GEEN tekst ingegeven) :</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Ingave van tekst</span></h2>
+<p class="p_Normal">Net als bij een gewoon typemachine kunt u met de AXITO-Tekstverwerker een tekst ingeven met behulp van het toetsenbord. De mogelijkheden van het toetsenbord werden reeds besproken in de 'Inleidende handleiding'. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Er zijn een aantal grote verschillen tussen de AXITO tekstverwerker en een typemachine:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Einde van een regel</span>: Het einde van een regel hoeft u niet zelf aan te geven (door op &lt;Enter&gt; te drukken). Van zodra u op het einde van een regel komt, wordt automatisch naar een nieuwe regel gesprongen. En indien het laatste woord van de vorige regel te lang is, wordt dit automatisch naar de volgende regel verplaatst.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Einde van een alinea</span>: Het einde van een alinea (een stuk tekst dat een geheel vormt) geeft u aan door op de &lt;Enter&gt; toets te drukken. Vervolgens wordt naar een nieuwe regel gesprongen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Wijzigingen aanbrengen</span>: Omdat typefouten kunnen gemaakt worden, is het nodig dat u deze op een eenvoudige manier kunt herstellen. Verplaats daarvoor de cursor (het knipperde blokje) naar de plaats waar de fout zich bevindt. Vervolgens kunt u de fout herstellen.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Bewerkingstoetsen</span></h2>
+<p class="p_Normal">Met de bewerkingstoetsen &lt;Backspace&gt; en &lt;Delete&gt; kunt u bepaalde delen tekst op een eenvoudige manier wijzigen. Dit zullen we met een paar voorbeelden verduidelijken :</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table class="Voorbeeld" >
+<tr class="Voorbeeld">
+<td class="Voorbeeld"><p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 1:</span> &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Gebruik van de &lt;Backspace&gt; toets.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Met de &lt;Backspace&gt; toets kunt u karakters links van de cursor verwijderen.</p>
+<p class="p_Normal">Neem de volgende zin:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een voorbYeeld</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; text-decoration: underline;"> .</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif;"> </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">De cursor (knipperend balkje) staat achter het woord 'voorbYeeld'. In dit woord is echter een fout geslopen (nl de letter 'Y'). Om deze 'Y' te schrappen moet U de volgende stappen uitvoeren:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verplaats de cursor tot op het karakter rechts van de 'Y'</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een voorbY</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">e</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">eld</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Kontroleer dat de &lt;Insert&gt; toets is ingedrukt. Dit kunt u zien indien links-boven in het scherm de melding &lt;Insert&gt; verschijnt.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk één maal op de &lt;Backspace&gt; toets. Het karakter 'Y' verdwijnt, en alle tekst rechts ervan verschuift een positie naar links. Indien er meerdere karakters verkeerd zijn, moet u natuurlijk meerdere keren op de &lt;Backspace&gt; toets drukken.</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een voorb</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">e</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">eld</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 2</span>: </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Gebruik van de &lt;Delete&gt; toets</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Met de &lt;Delete&gt; toets kunt u het karakter waar de cursor op staat verwijderen.</p>
+<p class="p_Normal">Neem de volgende zin:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een voorbYeeld</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; text-decoration: underline;"> .</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">De cursor (knipperend balkje) staat achter het woord 'voorbYeeld'. In dit woord is echter een fout geslopen (nl de letter 'Y'). Om deze 'Y' te schrappen moet U de volgende stappen uitvoeren :</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verplaats de cursor tot op het karakter 'Y'</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een voorb</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">Y</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">eeld</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk één maal op de &lt;Delete&gt; toets. Het karakter 'Y' verdwijnt, en alle tekst recht ervan verschuift een positie naar links. Indien er meerdere karakters verkeerd zijn, moet u natuurlijk meerdere keren op de &lt;Delete&gt; toets drukken. De stand van de &lt;Insert&gt; toets heeft hierbij geen belang.</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een voorb</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">e</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">eld</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Het wijzigen van de tekst</span></h2>
+<p class="p_Normal">Een eenvoudige manier om een tekst te wijzigen, is er simpelweg overheen tikken. De stand van de &lt;Insert&gt; toets speelt hierbij een belangrijke rol. Een aantal eenvoudige voorbeelden:</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table class="Voorbeeld" >
+<tr class="Voorbeeld">
+<td class="Voorbeeld"><p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 1:</span> &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">U heeft de zin :</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is het voorbeeld</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; text-decoration: underline;">.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In deze zin wilt U het woord 'het' vervangen door 'een'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verplaats de cursor tot op het karakter 'h' van 'het' :</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">h</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">et voorbeeld</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Zorg ervoor dat de &lt;Insert&gt; toets is uitgeschakeld. Tik het woord 'een' in :</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">voorbeeld</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 2:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">U heeft de zin :</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de voorbeeld</span><span style="text-decoration: underline;"> .</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In deze zin wilt U het woord 'de' vervangen door 'een'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verplaats de cursor tot op het karakter 'd' van 'de' :</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">d</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">e voorbeeld</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Zorg ervoor dat de &lt;Insert&gt; toets is uitgeschakeld. Tik het woord 'ee' in :</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is ee</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">voorbeeld</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk één maal op de &lt;Insert&gt; toets (deze wordt ingeschakeld). Tik vervolgens het karakter 'n' van 'een' in. Alle karakters rechts van de cursor schuiven een positie naar rechts.</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">voorbeeld</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Indien U wil, mag U de &lt;Insert&gt; toets terug uitschakelen.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 3:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">U heeft de zin:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een voorbeeldje</span><span style="text-decoration: underline;"> .</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In deze zin wilt u het woord 'voorbeeldje' vervangen door 'proefje'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verplaats de cursor tot op het karakter 'v' van 'voorbeeldje' :</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">v</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">oorbeeldje</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Zorg ervoor dat de &lt;Insert&gt; toets is uitgeschakeld. Tik het woord 'proef' in:</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een proef</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">e</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">eldje</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U moet enkel nog de karakters 'eeld' van 'voorbeeldje' verwijderen. Dit kunt u door nu vier maal op de &lt;Delete&gt; toets te drukken. Deze vier karakters zullen één voor één verdwijnen (terwijl ze naar links worden verplaatst):</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een proef</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">e</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">ldje</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een proef</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">e</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">dje</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een proef</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">e</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">je</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een proef</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">j</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">e</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Tekst tussenvoegen of verwijderen</span></h2>
+<p class="p_Normal">Het enige dat u moet doen om over te schakelen van 'tekst overschrijven' naar 'tekst tussenvoegen', is op de &lt;Insert&gt; toets drukken (u kunt de stand van de &lt;Insert&gt; toets zien op het scherm links-boven in de AXITO kader). </p>
+<p class="p_Normal">Mogelijkheden:</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="width:100%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:166px; padding:3px; border:none"><p class="p_Normal"><span style="font-weight: bold;">&lt;Insert&gt; uitgeschakeld</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:none"><p class="p_Normal">Alles wat u dan intypt, zal op de positie van de cursor, de reeds bestaande tekst overschrijven.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:166px; padding:3px; border:none"><p class="p_Normal"><span style="font-weight: bold;">&lt;Insert&gt; ingeschakeld</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:none"><p class="p_Normal">Alles wat u dan intypt, zal op de positie van de cursor tussengevoegd worden.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 14px;"><table class="Voorbeeld" >
+<tr class="Voorbeeld">
+<td class="Voorbeeld"><p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 1:</span> &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Een woord tussenvoegen.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">U heeft de zin:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is een voorbeeld</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; text-decoration: underline;"> .</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In deze zin wilt u het woord 'goed' tussenvoegen, zodat u de zin 'Dit is een goed voorbeeld' krijgt.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verplaats de cursor tot op het karakter 'v' van 'voorbeeld':</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;">Dit is een <span style="text-decoration: underline;">v</span>oorbeeld</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Zorg ervoor dat de &lt;Insert&gt; toets is ingeschakeld. Tik het woord 'goed' in:</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;">Dit is een goed<span style="text-decoration: underline;">v</span>oorbeeld</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Om de twee woorden te scheiden, moet U één maal op de spatiebalk drukken:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 2: </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Een woord splitsen</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Een woord kunt u splitsen door op de juiste positie een spatie tussen te voegen; een voorbeeld:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is hetvolgende voorbeeld</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; text-decoration: underline;"> .</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">U wilt het woord 'hetzelfde' splitsen in twee woorden, nl. 'het' en 'zelfde'</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verplaats de cursor tot op het karakter 'v' van 'hetvolgende'.</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is het</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">v</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">olgende voorbeeld</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Zorg ervoor dat de &lt;Insert&gt; toets is ingeschakeld.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk één maal de &lt;Spatie&gt; balk in. Het woord 'volgende' verschuift een positie naar rechts:</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is het </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">v</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">olgende voorbeeld</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Indien u wil, mag u de &lt;Insert&gt; toets terug uitschakelen.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 3:</span> </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Een zin splitsen</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Een zin kunt u splitsen door op de juiste positie op &lt;Enter&gt; te drukken:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de eerste zin en dit is de tweede zin</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; text-decoration: underline;"> .</span> </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">U wilt deze zin splitsen in de zinnen 'Dit is de eerste zin' en 'Dit is de tweede zin'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Eerst kunt u na het woord 'zin' een punt '.' plaatsen. Verplaats daarvoor de cursor tot achter het woord 'zin'</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de eerste zin</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">en dit is de tweede zin.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk een maal op de &lt;.&gt; punt-toets. Zorg ervoor dat de &lt;Insert&gt; toets is uitgeschakeld.</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de eerste zin.</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">e</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">n dit is de tweede zin.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Vervolgens verwijdert u het woord 'en'. Druk drie maal op de &lt;Delete&gt; toets. De derde maal is om de spatie na 'en' te verwijderen:</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de eerste zin.</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">n</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;"> dit is de tweede zin.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de eerste zin.</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">dit is de tweede zin.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de eerste zin.</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">d</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">it is de tweede zin.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Om de zin te splitsen moet u er voor zorgen dat de &lt;Insert&gt; toets is ingeschakeld. Vervolgens drukt u op de &lt;Enter&gt; toets :</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de eerste zin.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">d</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">it is de tweede zin.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Het woord 'dit' moet nu enkel nog beginnen met een hoofdletter. Zorg ervoor dat de &lt;Insert&gt; toets is uitgeschakeld. Het karakter 'D' bekomt u via de &lt;Shift/D&gt; toetscombinatie (u drukt eerst de &lt;Shift&gt; toets in en vervolgens de &lt;D&gt; toets). De &lt;Shift&gt; toets wordt ook soms voorgesteld door een dubbele pijl omhoog.</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Dit is de eerste zin.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">D</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic; text-decoration: underline;">i</span><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">t is de tweede zin.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="text-decoration: underline;">Opmerking</span> : Een blanko regel tussen twee zinnen plaatsen is haast even eenvoudig. U verplaatst de cursor naar het begin van regel en drukt &lt;Enter&gt; (zorg ervoor dat de &lt;Insert&gt; toets ingeschakeld is).</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Voorbeeld 4:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Een blanko regel verwijderen</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="text-decoration: underline;">Belangrijke opmerking</span>: Een spatie en het einde van een regel worden op het scherm NIET weergegeven. Het is om deze reden dat wij in de volgende voorbeelden deze twee karakters als volgt zullen voorstellen:</p>
+<p class="p_Normal"> &nbsp; 1. &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-style: italic;">'Spatie' &nbsp; &nbsp; &nbsp; &nbsp;</span>door het karakter ''</p>
+<p class="p_Normal"> &nbsp; 2. &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-style: italic;">'Enter' &nbsp; &nbsp; &nbsp; &nbsp;</span>door het karakter '&lt;'</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">De karakters '' en '&lt;' zult U in werkelijkheid niet zien (toch niet in deze betekenis).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Stel, we hebben volgend stukje tekst:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">De AXITO-handleiding is opgesplitst in meerdere hoofdstukken.&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Ieder deel behandelt een specifiek gedeelte van het programma.&lt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In dit voorbeeld zijn de regels 2 en 3 een blanko regel. Op het scherm zou u enkel maar twee blanko lijnen zien. Regel 3 bevat echter een aantal spaties, die u op het scherm ook niet zult zien. Wanneer u deze twee regels wilt schrappen, kunt u dat op de volgende manier doen:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>De eerste regel kunt u eenvoudig schrappen door de cursor naar het begin van regel twee te verplaatsen :</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">De AXITO-handleiding is opgesplitst in meerdere hoofdstukken.&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Ieder deel behandelt een specifiek gedeelte van het programma.&lt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Vervolgens drukt u één maal op de &lt;Delete&gt; toets, waardoor het 'enter' teken '' wordt geschrapt. Dit heeft automatisch tot gevolg dat de volgende regel omhoog schuift.</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">De AXITO-handleiding is opgesplitst in meerdere hoofdstukken.&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Ieder deel behandelt een specifiek gedeelte van het programma.&lt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>De volgende regel verwijderd u door niet één maal, maar zes maal op de &lt;Delete&gt; toets te drukken (u moet immers ook de spaties verwijderen). Het eindresultaat is:</p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">De AXITO-handleiding is opgesplitst in meerdere hoofdstukken.&lt;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 72px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Ieder deel behandelt een specifiek gedeelte van het programma.&lt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Speciale toetsen</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">De keuzes die in de AXITO-kader worden aangegeven, hebben allemaal dezelfde combinatietoets. Normaal zou u om een tekst te printen op de &lt;P&gt; toets drukken. In de AXITO-tekstverwerker heeft dit echter tot gevolg dat er een 'P' op de plaats van de cursor in de tekst verschijnt. Daarom moet u voor het uitvoeren van een keuze eerst de &lt;Alt&gt; toets indrukken, gevolgd door een tweede toets.</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">&lt;Alt/P&gt;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Printen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Wanneer u een tekst wilt printen op papier (of op het scherm), kunt u dit via de &lt;Alt/P&gt; toetscombinatie.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">&lt;Alt/Z&gt;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Zoeken</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Het keuze 'zoeken' activeert u met de &lt;Alt/Z&gt; toetsen. Vanaf de cursorpositie wordt gezocht naar de tekst die u ingeeft. In de voorbeeld staat de cursor in het begin van de tekst, en de gezochte tekst is 'geachte'. Tijdens het zoeken wordt er geen onderscheid gemaakt tussen hoofdletters en kleine letters.</p>
+<p class="p_Normal" style="text-align: justify;">Wanneer de computer deze te zoeken tekst heeft gevonden, wordt dit gemeld via een geluidssignaal, en wordt de zin waar deze tekst in voor komt, weergegeven. U kunt nogmaals zoeken door weer de &lt;Alt/Z&gt; toetsen in te drukken (merk op dat de vorige te zoeken tekst is blijven staan). U kunt nu &lt;Enter&gt; drukken of een andere tekst ingeven.</p>
+<p class="p_Normal" style="text-align: justify;">Indien de komputer niets vindt, wordt dit gemeld in de AXITO-kader.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">&lt;Alt/F&gt;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Fontcodes</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Een stukje tekst kunt u op verschillende manieren afdrukken. U kunt dit onderlijnd, cursief of in een vetter lettertype afdrukken (dit noemen we een bepaald 'font'). Om dit te bekomen moet u natuurlijk in de tekst aanduiden waar een nieuwe font begint en eindigt. Dit kunt u doen op de volgende manier:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>U verplaatst de cursor naar de positie waar een nieuwe font begint.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Vervolgens drukt u de &lt;Alt/F&gt; toetscombinatie in.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">3.</span>Op het scherm verschijnt het volgende beeld :</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">4.</span>Uit deze lijst kunt u een bepaalde font kiezen. Verplaats daarvoor de cursorbalk naar de juiste font, en druk &lt;Enter&gt;. In de tekst verschijnt het karakter '' gevolgd door de fontcode (vb. 'D').</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">5.</span>Wanneer u nadien met de cursor op deze fontcode gaat staan, verschijnt links-onder in het scherm de betekenis ervan, zodat u altijd kunt achterhalen waar een bepaalde font begint of eindigt.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="text-decoration: underline;">Voorbeeld</span></p>
+<p class="p_Normal" style="text-align: justify;">In de volgende tekst wilt u het woord dringend onderlijnen:</p>
+<p class="p_Normal" style="text-align: justify;">Ik vraag u om dit dringend terug te bezorgen.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Om dit te bekomen moet u de volgende fontcodes plaatsen:</p>
+<p class="p_Normal" style="text-align: justify;">Ik vraag u om dit -dringend+ terug te bezorgen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">&lt;Alt/V&gt;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Veldcodes</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Wanneer u bijvoorbeeld een mailing ingeeft, is het uiteraard handig dat, wanneer u deze mailing print, de gegevens van de verschillende relaties (naar wie u deze mailing stuurt) automatisch worden ingevuld.</p>
+<p class="p_Normal" style="text-align: justify;">Om dit te bekomen moet u in de tekst aangeven waar deze gegevens moeten staan. Zo moet u aanduiden waar de naam, straat en gemeente moeten komen, enz...</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Met de AXITO-tekstverwerker gaat dit als volgt. In de tekst kunt u op een willekeurige positie een speciaal woord (een veldcode) plaatsen (dit is een uniek woord, dat afwijkt van 'normale' woorden) . Deze woorden of veldcodes worden tijdens het afdrukken naar de printer of het scherm vervangen door de relatiegegevens. Het aantal verschillende veldcodes wordt bepaald door het merk en type printer.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Met behulp van de veldcodes kunt u dit op een eenvoudige en snelle manier uitvoeren:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Plaats de cursor op de plaats waar u een veldcode wenst.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Druk de &lt;Alt/V&gt; toetscombinatie in. u krijgt het volgende scherm te zien:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">3.</span>U verplaatst de cursorbalk naar de veldcode (of regel) die u wenst, en drukt op &lt;O&gt;verbrengen of &lt;Enter&gt;. De veldcode wordt automatisch in de tekst ingelast vooraf gegaan door het '<a href="mailto:@'-karakter." target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">@'-karakter.</a></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold; text-decoration: underline;">Voorbeeld</span>.:</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">'@NAAM'</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">'@GEMEENTE'</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">'@TELEFOON'</span></p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold;">OPGELET:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-weight: bold;">Een veldcode wordt vooraf gegaan door minimaal 1 '@' teken. Na een veldcode mogen enkel leestekens, een spatie of een nieuwe veldcode geplaatst worden.</span></p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold; text-decoration: underline;">Voorbeeld</span></p>
+<p class="p_Normal" style="text-align: justify;">Een brief aan een klant</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">@KLANT_NAAM</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">@KLANT_NAAM2</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">@KLANT_STRAAT &nbsp;</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">@KLANT_GEMEENTE &nbsp;</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Geacht @KLANT_AANSPREEKTITEL,</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">......</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">......</span></p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Tijdens het printen worden deze codes vervangen door de gegevens van de klant, die u vermeld heeft in het veld 'Relatienr'.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold; text-decoration: underline;">Resultaat:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Peters Piet</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Bosstraat 12 </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">1040 Brussel </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Geachte Heer, </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">.... </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">.... </span></p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Zoals u ziet worden de gegevens vervangen door deze van de gewenste klant. Het is zelfs mogelijk om deze brief naar alle klanten te sturen, en waarbij voor elke klant de bijbehorende gegevens worden vermeld. Dit doet u door in het veld 'Mailing' een 'J' in te vullen en een mailinglijst op te stellen.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Het kan nadien voorkomen dat een bepaalde veldcode van een klant leeg is. Dit kan soms tot minder fraaie resultaten leiden. Dit kunt u voorkomen door voor het eerste '@' teken nog een '@' teken te plaatsen. In het volgende voorbeeld ziet u het verschil tussen één '@' en twee '@@' karakters:</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Aan @KLANT_NAAM </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Aan@@KLANT_NAAM </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Geachte @KLANT_AANSPREEKTITEL, </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Geachte@@KLANT_AANSPREEKTITEL,</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">....</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">....</span></p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold; text-decoration: underline;">Dit geeft volgend resultaat :</span></p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Aan Peters Piet</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Aan Peters Piet</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Geachte ,</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Geachte, &nbsp;</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">.... </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">.... </span></p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Als een bepaald veld NIET leeg is, wordt het eerste '@' karakter vervangen door een spatie.</p>
+<p class="p_Normal" style="text-align: justify;">Is het veld WEL leeg, dan wordt het eerst '@'-karakter weggelaten.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">&lt;Alt/B&gt;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Blok</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">De blokfunktie heeft u opgeroepen via de &lt;Alt/D&gt; toetscombinatie. Met behulp van de blokfunctie kunt u op een eenvoudige manier stukjes tekst kopiëren, verplaatsen of schrappen. Hoe kunt u dit op een eenvoudige manier kunt uitvoeren?</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table style="width:90%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:103px; padding:5px; border:none"><p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold;">Kopiëren</span></p>
+</td>
+<td style="vertical-align:top; width:470px; padding:5px; border:none"><p class="p_Normal" style="text-align: justify;">Hierbij wordt een stukje tekst, dat u moet afbakenen, gekopieerd op een andere positie in de tekst. Deze positie moet u eveneens aanduiden.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk de &lt;Alt/B&gt; toetsen in, en kies uit het menu de keuze 'Kopiëren'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR BEGINPOSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar het begin van de tekst die u wilt kopiëren. Vervolgens drukt u op &lt;Enter&gt;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 48px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR EINDPOSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar het einde van de tekst die u wilt kopiëren. Vervolgens drukt u op &lt;Enter&gt;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 48px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR GEWENSTE POSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar de nieuwe positie, waar een kopie van de tekst moet komen. Vervolgens drukt u op &lt;Enter&gt;. Deze tekst wordt op de positie van de cursor tussengevoegd.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:103px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Verplaatsen</span></p>
+</td>
+<td style="vertical-align:top; width:470px; padding:5px; border:none"><p class="p_Normal" style="text-align: justify;">Hierbij wordt een stukje tekst, dat i moet afbakenen, verplaatst naar een andere positie in de tekst. Deze positie moet u eveneens aanduiden.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk de &lt;Alt/B&gt; toetsen in, en kies uit het menu de keuze 'Verplaatsen'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR BEGINPOSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar het begin van de tekst die u wilt verplaatsen. Vervolgens drukt u op &lt;Enter&gt;</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR EINDPOSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar het einde van de tekst die u wilt verplaatsen. Vervolgens drukt u op &lt;Enter&gt;</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de tekst wordt het gedeelte tekst dat u heeft gemarkeerd, geschrapt. In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR GEWENSTE POSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar de nieuwe positie, waar de geschrapte tekst moet verschijnen. Vervolgens drukt u op &lt;Enter&gt;. Deze tekst wordt op de positie van de cursor tussengevoegd.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:103px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Schrappen</span></p>
+</td>
+<td style="vertical-align:top; width:470px; padding:5px; border:none"><p class="p_Normal" style="text-align: justify;">Hierbij wordt een stukje tekst, dat u moet afbakenen, geschrapt.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk de &lt;Alt/B&gt; toetsen in, en kies uit het menu de keuze 'Schrappen'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR BEGINPOSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar het begin van de tekst die u wilt schrappen. Vervolgens drukt u op &lt;Enter&gt;</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR GEWENSTE POSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar het einde van de tekst die u wilt schrappen. Vervolgens drukt U op &lt;Enter&gt;</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de tekst wordt het gedeelte tekst dat u heeft gemarkeerd, geschrapt.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:103px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Bloktekst</span></p>
+</td>
+<td style="vertical-align:top; width:470px; padding:5px; border:none"><p class="p_Normal" style="text-align: justify;">Wanneer u met behulp van de blokfunktie een stukje tekst heeft gekopieerd, verplaatst of geschrapt, wordt deze tekst eveneens bewaard in een tijdelijk kladblokje. De tekst in dit kladblokje kunt u op iedere willekeurige positie in de tekst kopiëren. Dit heeft enkel pluspunten:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U kunt een bepaalde stukje tekst een oneindig aantal maal kopiëren, zonder steeds de begin en eindpositie aan te duiden. </p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Nadat u een tekstgedeelte heeft geschrapt, kunt u deze toch nog terugroepen.</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">OPGELET: Zodra u een nieuw stukje tekst heeft gemarkeerd om dit te kopiëren, verplaatsen of te schrappen, wordt de inhoud van het kladblokje overschreven met de nieuwe tekst.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Druk de &lt;Alt/B&gt; toetsen in, en kies uit het menu de keuze 'Bloktekst'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In de AXITO-kader verschijnt de melding:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>'VERPLAATS Cursor NAAR GEWENSTE POSITIE, DRUK &lt;ENTER&gt;'.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U kunt nu de cursor verplaatsen naar de positie, waar de 'bloktekst' moet verschijnen. Vervolgens drukt u op &lt;Enter&gt;. Deze tekst wordt op de positie van de cursor tussengevoegd.</p></td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold; text-decoration: underline;">Opmerking</span>:</p>
+<p class="p_Normal" style="text-align: justify;">In deze voorbeelden werd bij het markeren steeds eerst de begin- en daarna de eindpositie aangeduid. In de praktijk is dit echter niet verplicht. U mag zonder problemen eerst de eind- en daarna pas de beginpositie aanduiden. De computer zal deze gegevens zonder problemen verwerken.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><a id="alt_d_diversen" class="hmanchor"></a><span style="font-weight: bold;">&lt;Alt/D&gt;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Diversen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">De keuze 'Diversen' biedt u een aantal mogelijkheden, waarbij u bepaalde gegevens van de verschillende teksten kunt wijzigen:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Huidige tekst</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Standaard instellingen nieuwe tekst</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Algemene instellingen</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Vervangen alle  karakters</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold;">Huidige tekst</span></p>
+<p class="p_Normal" style="text-align: justify;">Wanneer u voor 'Huidige tekst' kiest, kunt u uit een nieuw menu de volgende keuzes maken:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Bladindeling: u krijgt de volgende parameters te zien:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 72px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Linker- en rechtermarge: u bepaalt hoeveel kolommen u links en rechts vrij laat.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 72px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Boven- en ondermarge: u bepaalt hoeveel blanko regels u open laat.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 72px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">3.</span>Lijnafstand: u bepaalt de afstand tussen twee lijnen.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 72px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">4.</span>Rechts uitvullen: u kunt een rechtermarge bekomen</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 72px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">5.</span>Bladzijdenummering: Met deze instellingen bepaalt u waar de bladzijdenummering zal staan.</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 72px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Tekstopmaak</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Koptekst: Dit is een vaste tekst die bovenaan elke bladzijde zal worden afgedrukt.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Voettekst: dit is een vaste tekst die onderaan elke bladzijde zal worden afgedrukt.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold;">Standaard instellingen nieuwe tekst</span></p>
+<p class="p_Normal" style="text-align: justify;">De mogelijkheden zijn identiek aan die van de vorige keuze. Wanneer u een nieuwe tekst toevoegt, worden deze gegevens automatisch naar deze nieuwe tekst gekopieerd.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold;">Algemene instellingen</span></p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Printer</span>: U kunt bepalen op welke printer de teksten worden afgedrukt</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Scherm</span>: Bepaalde instellingen met betrekking tot het scherm kunt u hier instellen</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Werkwijze</span>: u bepaalt zelf hoe u met de AXITO-Tekstverwerker wilt werken.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Aanvang printcodes</span>: Deze printcodes (Veldcodes) worden bij de aanvang van een nieuwe tekst naar de printer gestuurd.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;"><span style="font-weight: bold;">Vervangen alle  karakters</span></p>
+<p class="p_Normal" style="text-align: justify;">Met deze keuze kunt U alle '' karakters in de huidige tekst automatisch vervangen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">&lt;Alt/K&gt;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Karakter  </span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Met de &lt;Alt/K&gt; toetscombinatie kunt U in de huidige tekst, op de positie van de cursor, het '' karakter plaatsen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">&lt;Alt/G&gt;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Ga naar  </span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Wanneer u de &lt;Alt/G&gt; toetscombinatie indrukt, zal de computer vanaf de huidige cursorpositie, het volgende '' karakter in de tekst opzoeken. Vervolgens kunt u het '' karakter vervangen.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="schrappen" class="hmanchor"></a><span class="f_Heading1">Schrappen tekst</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Het schrappen van een tekst kunt u via de &lt;S&gt; toets. U moet dit enkel nog bevestigen met een druk op de &lt;J&gt; toets.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="printen" class="hmanchor"></a><span class="f_Heading1">Printen tekst</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">U kunt de tekst (de regel) waarop u staat, afdrukken op papier of op het scherm. Ook kunt u een lijst afdrukken van alle aanwezige teksten.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="diversen" class="hmanchor"></a><span class="f_Heading1">Diversen</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Wanneer u een tekst wijzigt (met de keuze 'Video tekst'), kunt u met behulp van de &lt;Alt/D&gt; toetsen de tekstinstellingen wijzigen. Deze keuze (<a href="voorbeelden.htm#alt_d_diversen" class="topiclink">Diversen</a>) is identiek.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

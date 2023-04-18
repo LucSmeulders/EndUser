@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"Afschrijvingstabellen,Investeringen",
+hmTitle:"Afschrijvingstabellen\/Investeringen",
+hmDescription:"Opmerking: Dit deel van uw boekhouding wordt gewoonlijk in samenspraak met uw boekhouder gedaan.",
+hmPrevLink:"instellen_boekhoudperiode_datu.html",
+hmNextLink:"soorten-afschrijvingen.html",
+hmParentLink:"boekhouding_algemeen.html",
+hmBreadCrumbs:"<a href=\"boekhouding_algemeen.html\">Boekhouding<\/a>",
+hmTitlePath:"Boekhouding > Afschrijvingstabellen\/Investeringen",
+hmHeader:"<p class=\"p_Titeltekstinbalk\"><span class=\"f_Titeltekstinbalk\">Afschrijvingstabellen\/Investeringen<\/span><\/p>\n\r",
+hmBody:"<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\"><span style=\"font-style: italic; font-weight: bold; text-decoration: underline;\">Opmerking:<\/span><span style=\"font-style: italic;\"> Dit deel van uw boekhouding wordt gewoonlijk in samenspraak met uw boekhouder gedaan.<\/span><\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\">&nbsp;<\/p>\n\r<h2 class=\"p_Heading2\" style=\"margin: 0 0 0 0.7500rem;\"><span class=\"f_Heading2\">Wat is afschrijven?<\/span><\/h2>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 1.5625rem;\">Afschrijven is een boekhoudkundige ingreep die de kosten van bepaalde bedrijfsmiddelen verspreidt over verschillende jaren. De meeste bedrijfsmiddelen gaan langer mee dan één jaar. Daarom moet u de kosten ervan verdelen in plaats van het hele bedrag in één jaar als kost onder te brengen. Op deze manier zorgt u ook voor een evenwichtigere verdeling van uw kosten in de balans. <\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 1.5625rem;\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 1.5625rem;\"><span style=\"font-weight: bold; text-decoration: underline;\">Opmerking<\/span><span style=\"font-weight: bold;\">:<\/span> als het aankoopbedrag lager is dan € 450, dan is het wel een eenmalige kost. <\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 0.7500rem;\">&nbsp;<\/p>\n\r<h1 class=\"p_Heading1\" style=\"margin: 0 0 0 0.7500rem;\"><span class=\"f_Heading1\">&nbsp;<\/span><\/h1>\n\r"
+})

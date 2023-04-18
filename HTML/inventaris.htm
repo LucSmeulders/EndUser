@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Voorraad- &amp; aankoopbeheer &gt; Inventaris</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Inventaris" />
+   <meta name="description" content="Met behulp van de module inventaris kunt u een overzicht opvragen van alle artikelen die momenteel op voorraad zijn, en wat de totale aankoopwaarde en de totale aankoop..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #2C5D88; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "inventaris.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Inventaris</span></p>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?inventaris.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="voorraadbeheer2.htm">Voorraad- &amp; aankoopbeheer</a>&nbsp;&gt;</p>
+   
+      <p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Inventaris</span></p>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="voorraad.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="voorraadbeheer2.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="besteladviezen.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">Met behulp van de module inventaris kunt u een overzicht opvragen van alle artikelen die momenteel op voorraad zijn, en wat de totale aankoopwaarde en de totale aankoop BTW-waarde hiervan is. U kunt een inventaris opvragen via het hoofdmenu, vervolgens selecteert u de keuze <span style="font-style: italic;">'Voorraad/Aankoop'</span> en dan '<span style="font-style: italic;">2 Inventaris'</span></p>
+<p class="p_Normal">De verschillende stappen bij het opvragen van een inventaris:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span><a href="inventaris.htm#inventaris_ingavemunteenheid" class="topiclink">Ingave munteenheid</a></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span><a href="inventaris.htm#inventaris_ingavelocatiewinkel" class="topiclink">Ingave locatie/winkel</a></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">3.</span><a href="inventaris.htm#inventaris_bepalenvansoortinventaris" class="topiclink">Bepalen van het soort inventaris</a></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">4.</span><a href="inventaris.htm#inventaris_berekeninginventaris" class="topiclink">Berekening inventaris</a></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">5.</span><a href="inventaris.htm#inventaris_printeninventaris" class="topiclink">Printen inventaris</a></p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="inventaris_ingavemunteenheid" class="hmanchor"></a><span class="f_Heading1">Ingave munteenheid</span></h1>
+<p class="p_Normal">Voordat u de inventaris op het scherm krijgt, kunt u eerst bepalen in welke munteenheid deze inventaris moet berekend worden. Via de functietoets &lt;F5&gt; krijgt u een overzicht van de mogelijke munteenheden.</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="inventaris_ingavelocatiewinkel" class="hmanchor"></a><span class="f_Heading1">Ingave locatie/winkel</span></h1>
+<p class="p_Normal">Indien u de licentie 'Locaties' heeft, kunt u aangeven voor elke locatie (of winkel) de inventaris wordt berekend. Indien u echter de locatiecode blanco laat, zal de inventaris van alle locaties samen worden berekend.</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="inventaris_bepalenvansoortinventaris" class="hmanchor"></a><span class="f_Heading1">Bepalen van het soort inventaris</span></h1>
+<p class="p_Normal">Vervolgens krijgt u een keuzemenu met de volgende mogelijke keuzes:</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="margin: 0 0 0 24px;"><span class="f_Heading2">1. Inventaris (normaal, op basis van aankoopprijs)</span></h2>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Dit is de lijst die door de meeste gebruikers zal worden gekozen. Via deze keuze krijgt u een inventaris waarbij gerekend wordt met de aankoopprijs van de artikelen zoals ze momenteel voor ieder artikel staat genoteerd in het artikelbestand.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<h2 class="p_Heading2" style="margin: 0 0 0 24px;"><span class="f_Heading2">2. Inventaris (op basis van gemiddelde aankoopprijs)</span></h2>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Deze inventaris is vergelijkbaar met de 'normale' inventaris, echter met het verschil dat hier de gemiddelde aankoopprijs wordt gebruikt (in plaats van de 'normale' aankoopprijs)</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<h2 class="p_Heading2" style="margin: 0 0 0 24px;"><span class="f_Heading2">3. Inventariswaardevermindering (op basis van aankoopprijs)</span></h2>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Bij deze inventaris wordt gebruikt gemaakt van principe dat hoe langer een artikel op voorraad blijft liggen (dus niet wordt verkocht), de boekhoudkundige waarde van dat artikel verminderd. Ieder jaar wordt deze boekhoudkundige waarde verminderd met een bepaald percentage om na bijvoorbeeld 5 jaar 100% in waarde te zijn verminderd (= een boekhoudkundige voorraadwaarde van 0 euro).</p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">De percentages die deze waardevermindering per jaar bepalen, kunt u ingeven in de keuze 'Percentages <a href="inventaris.htm#inventaris_percentageinventariswaardevermindering" class="topiclink">Inventariswaardevermindering'</a>.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<h2 class="p_Heading2" style="margin: 0 0 0 24px;"><span class="f_Heading2">4. Inventariswaardevermindering (op basis van gemiddelde aankoopprijs)</span></h2>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Deze inventaris is vergelijkbaar met de vorige keuze, echter ook hier wordt gebruik gemaakt van de gemiddelde aankoopprijs.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<h2 class="p_Heading2" style="margin: 0 0 0 24px;"><span class="f_Heading2">5. <a id="inventaris_percentageinventariswaardevermindering" class="hmanchor"></a>Percentages inventariswaardevermindering</span></h2>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Via deze keuze kunt u de percentage ingeven voor de berekening van de 'Inventariswaardevermindering', waarbij elk jaar dat een artikel op voorraad blijft, de boekhoudkundige voorraadwaarde verminderd. Via de 'Verschillende keuzes' kunt u deze gegevens beheren.</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 48px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Kalenderjaar</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is het jaar waarvoor de waardevermindering van toepassing is.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Waarde-vermindering %</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is het waardeverminderingspercentage voor dat jaar.</p>
+<p class="p_Normal" style="margin: 0 0 0 40px;">Voorbeeld: Vanaf het 3e jaar is dat ieder jaar 25% om na het 6e jaar 100% te zijn:</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 48px;"><table style="width:100%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:88px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">2017</span></p>
+</td>
+<td style="vertical-align:top; width:1117px; padding:0; border:none"><p class="p_Normal">100%</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:88px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">2018</span></p>
+</td>
+<td style="vertical-align:top; width:1117px; padding:0; border:none"><p class="p_Normal">75%</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:88px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">2019</span></p>
+</td>
+<td style="vertical-align:top; width:1117px; padding:0; border:none"><p class="p_Normal">50%</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:88px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">2020</span></p>
+</td>
+<td style="vertical-align:top; width:1117px; padding:0; border:none"><p class="p_Normal">25%</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:88px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">2021</span></p>
+</td>
+<td style="vertical-align:top; width:1117px; padding:0; border:none"><p class="p_Normal">0%</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:88px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">2022</span></p>
+</td>
+<td style="vertical-align:top; width:1117px; padding:0; border:none"><p class="p_Normal">0%</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<h1 class="p_Heading1"><a id="inventaris_berekeninginventaris" class="hmanchor"></a></h1>
+<h1 class="p_Heading1"><span class="f_Heading1">Berekening inventaris</span></h1>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Nadat u uit voorgaand menu een keuze heeft gemaakt, wordt in een volgend scherm de inventaris getoond. Onderaan het scherm worden totalen getoond </p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Totaal aantal</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is het totaal som van alle artikelen die in voorraad zijn.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Totaal bedrag</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is de totale aankoopwaarde van alle artikelen die in voorraad zijn, uitgaande van de gekozen '<span style="font-style: italic;"><a href="inventaris.htm#inventaris_bepalenvansoortinventaris" class="topiclink">soort inventaris'</a></span>.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Totaal BTW</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is de totale som van de betaalde BTW op de aankoopwaarde van de inventaris.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Deze totaalbedragen worden direct na de weergave van de inventaris berekend, en kan indien er veel artikelen zijn, enige tijd in beslag nemen (rechtsonder ziet u een teller lopen). U kunt op ieder moment deze berekening onderbreken door op de &lt;Esc&gt; toets te drukken. </p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Opmerking: indien u deze berekening onderbreekt, worden op het scherm uiteraard geen totalen weergegeven.</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Tabeltitel" style="margin: 0 0 0 61px;"><span class="f_Tabeltitel">Velden in het inventarisscherm:</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 22px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Artikelnummer</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Het artikelnummer van dit artikel</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Omschrijving</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">De omschrijving van het artikel</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Voorraad</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is de huidige voorraad van het artikel</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is de aankoopprijs van het betreffende artikel, rekening houdend met de gemaakte keuze in het menu <a href="inventaris.htm#inventaris_bepalenvansoortinventaris" class="topiclink">'soort inventaris'</a>.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Totaal bedrag</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is het product van het veld 'Voorraad' en 'Aankoopprijs'.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Totaal BTW</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is de totale BTW betaald, berekend aan de hand van het veld 'Totaal bedrag' en het vooropgestelde BTW-tarief.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<h1 class="p_Heading1"><a id="inventaris_printeninventaris" class="hmanchor"></a><span class="f_Heading1">Printen inventaris</span></h1>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Nadat de inventaris op het scherm is getoond, kunt u deze ook op papier gaan printen. Hiervoor kunt u kiezen uit verschillende mogelijkheden. Via de keuze &lt;P&gt;rinten krijgt u een keuzemenu waar u voor 'Inventaris' kiest. Vervolgens krijgt u een menu te zien met volgende mogelijkheden:</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_Heading2">1. Standaard (huidige index)</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hierbij wordt een volledige inventaris geprint, waarbij de volgorde van de artikelen bepaald wordt door de <a href="index.htm" class="topiclink">index</a> die op dat moment geselecteerd is (standaard is dat het artikelnummer).</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;<br />
+<span class="f_Heading2">2. Gesorteerd per artikelgroep: Uitgebreid per artikel</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hierbij wordt een volledige inventaris geprint, waarbij bij het begin van elke artikelgroep een kopje wordt geprint met daarin de artikelgroepnummer en de artikelgroepomschrijving.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;<br />
+<span class="f_Heading2">3. Gesorteerd per artikelgroep: Een bepaalde artikelgroep</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hierbij wordt een gedeeltelijke inventaris geprint, afhankelijk van de ingevulde artikelgroepnummer.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;<br />
+<span class="f_Heading2">4. Gesorteerd per artikelgroep: Samengevat per artikelgroep</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hierbij wordt een volledige inventaris geprint, echter samengevat per artikelgroep (de artikelen zelf worden dus niet geprint).</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;<br />
+<span class="f_Heading2">5. Gesorteerd per artikelsoort: Uitgebreid per artikel</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hierbij wordt een volledige inventaris geprint, gesorteerd volgens artikelsoort en waarbij bij het begin van elke artikelsoort een kopje wordt geprint met daarin de artikelsoortnummer en artikelsoortomschrijving.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;<br />
+<span class="f_Heading2">6. Gesorteerd per artikelsoort: Een bepaalde artikelsoort</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hierbij wordt een gedeeltelijke inventaris geprint, afhankelijk van de ingevulde artikelsoortnummer.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;<br />
+<span class="f_Heading2">7. Gesorteerd per artikelsoort: Alle ingevulde artikelsoort</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hierbij wordt een volledige inventaris geprint, gesorteerd volgens artikelsoort en waarbij bij het begin van elke artikelsoort een kopje wordt geprint met daarin de artikelsoortnummer en artikelsoortomschrijving.</p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Echter, de artikelen waarbij het veld 'artikelsoort' niet is ingevuld, worden niet getoond.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;<br />
+<span class="f_Heading2">8. Gesorteerd per artikelsoort: Samengevat per artikelsoort</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hierbij wordt een volledige inventaris geprint, echter samengevat per artikelsoort (de artikelen zelf worden dus niet geprint).</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Nadat u uit voorgaand menu een keuze heeft gemaakt worden nog volgende vragen gesteld:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Prijzen printen J/N</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>BTW-bedragen printen J/N</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>'Eenheid' printen J/N</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 48px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Magazijncodes printen J/N</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

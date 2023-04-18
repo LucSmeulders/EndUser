@@ -1,0 +1,1096 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Verkoopbeheer &gt; Bestelbonnen</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Bestelbonnen" />
+   <meta name="description" content="Net zoals bij een facturatiebestand, kunt u ook in het bestelbonnenbestand een bestelbon toevoegen, wijzigen, schrappen enz... Het toevoegen of wijzigen van een bestelbon..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #2C5D88; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "bestelbonnen.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Bestelbonnen</span></p>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?bestelbonnen.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="verkoopbeheer.htm">Verkoopbeheer</a>&nbsp;&gt;</p>
+   
+      <p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Bestelbonnen</span></p>
+
+    </td>
+    <td class="topichead" id="idnav">
+      <a href="javascript:HMToggleExpandAll(!HMAnyToggleOpen())" title="Click to open/close expanding sections"><span class="hmbtntoggle"></span></a>
+      <a href="uitleg-velden13.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="verkoopbeheer.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="leveringsbonnen.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">Net zoals bij een facturatiebestand, kunt u ook in het bestelbonnenbestand een bestelbon toevoegen, wijzigen, schrappen enz... Het toevoegen of wijzigen van een bestelbon gebeurt, net zoals een factuur in twee stappen:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;"><span class="f_Heading2">Stap 1: Hoofdgegevens</span> </p>
+<p class="p_Normal" style="margin: 0 0 0 0;">In deze eerste stap kunt u de hoofdgegevens zoals klantnummer, bestelbondatum, vervaldag enzoverder invullen.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;"><span class="f_Heading2">Stap 2: Bestelbonregels</span> </p>
+<p class="p_Normal" style="margin: 0 0 0 0;">Nadat de voorgaande hoofdgegevens zijn ingevuld, komt u automatisch in het tweede toevoegscherm terecht. Hierbij kunt u voor één bestelbon meerdere bestelbonregels (artikelen, werkzaamheden) toevoegen.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Zowat alle keuze die in het bestelbonnen bestand voorkomen zijn gelijk aan deze bij het facturatiebestand. Om deze reden beperken wij ons tot het bespreken van de nieuwe keuzes:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Tabeltitel"><img id="TOGGLE0186A1_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/><span class="f_Tabeltitel">  <a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #595959; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1','TOGGLE0186A1_ICON')">Keuzes in de AXITO-kader</a></span></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 18px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:5px; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><a id="bestelbon_overbrengen_offerte" class="hmanchor"></a><span style="font-weight: bold;">* Overbrengen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via deze keuze kunt van één offerte automatisch een bestelbon opstellen. Wanneer u deze keuze selecteert, verschijnt er een menu met volgende mogelijkheden:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Offerte overbrengen naar bestelbon</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Offerte gedeeltelijk overbrengen naar bestelbon</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Via deze twee keuzes kunt u dus een volledige of gedeeltelijke offerte verwerken naar een bestelbon. Bij de eerste keuze vult u gewoon de offertenummer in (op te vragen via &lt;F5&gt;). Bij de tweede keuze krijgt u vervolgens de video van de offerte te zien, waarna u met &lt;+&gt; en &lt; - &gt; de verschillende offerteregels kunt opnemen.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Nadat u op &lt;E&gt;inde heeft gedrukt, wordt de bestelbon aangemaakt.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Diversen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Als u vanuit het bestelbonnenbestand kiest voor 'Diversen' krijgt u een menu te zien met daarin diverse mogelijkheden:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Instellingen: via deze keuze kunt u diverse instellingen wijzigen (met betrekking op de bestelbonnen).</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Lijst van de verschillende documenten. Per document kunt u een aantal gegevens wijzigen, zoals hoe vaak document printen, instellingen met betrekken op het gebruikte papier, positie van de bedrijfsgegevens op het document, vaste tekst op het document.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Y Instratat document xxxxx</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via deze keuze krijgt u een lijst van alle instrastatboekeing van het betreffende document te zien</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Einde</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">U verlaat het bestelbonnenbestand met behulp van &lt;E&gt; of &lt;Esc&gt;. Hierdoor komt u terug in het hoofdmenu terecht.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Tabeltitel"><img id="TOGGLE0186A2_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/><span class="f_Tabeltitel">  <a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #595959; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2','TOGGLE0186A2_ICON')">Betekenis velden</a></span></p>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 18px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:5px; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Bestelbon-nummer</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Elke bestelbon heeft zijn eigen unieke nummer. Een eenvoudige werkwijze is deze, waarbij het bestelbonnummer begint met het jaartal, gevolgd door indien gewenst een maandnummer. De overige karakters vormen een volgnummer. Enkele voorbeelden:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>0700001' (07 = jaar 2007 ; 000001 = volgnummer ; 0700001 verwijst dus naar de eerste bestelbon van het jaar 2007)</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>'0700002' (dit verwijst naar de tweede bestelbon van het jaar 2007)</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>07801001' (07 = jaar 2007 ; 01 = maand januari ; 001 = volgnummer)</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Welke bestelbonnummer u invult, beslist u uiteraard zelf.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Klantnummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Klanten</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Hier vult u de klantnummer in. Volgende situaties kunnen zich voordoen:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U kent de volledige klantnummer, en vult deze in.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U kent slechts een gedeelte van de klantnummer, vult deze in, en u drukt vervolgens op &lt;Enter&gt; :</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Indien deze (gedeeltelijke) klantnummer slechts één maal voorkomt in het klantenbestand, zal de computer automatisch de klantnummer vervolledigen.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Indien deze (gedeeltelijke) klantnummer meerdere keren voorkomt, zal de computer u het klantenbestand tonen (in de buurt van de gezochte klant), waarna u enkel de juiste klantnummer hoeft over te brengen (verplaats de cursorbalk naar de te zoeken klant en druk op &lt;O&gt;).</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U kent slechts een gedeelte van de klantnummer, vult deze in en u drukt op &lt;F5&gt; (overbrengen). Hierdoor zal de computer u het klantenbestand tonen (in de buurt van de gezochte klant), waarna u enkel de juiste klantnummer hoeft over te brengen (verplaats de cursorbalk naar de te zoeken klant en druk op &lt;O&gt;).</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>De in te vullen klant is nog niet aanwezig in het klantenbestand :</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Druk &lt;F5&gt;. U krijgt het klantenbestand te zien.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Vervolgens kunt u via &lt;T&gt; de betreffende klant toevoegen in het klantenbestand.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Nadat u deze klant heeft toegevoegd, kunt u met behulp van de keuze &lt;O&gt; deze pas toegevoegde klant overbrengen naar de bestelbon die u op dat moment aan het toevoegen (of wijzigen) bent.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U vult geen klantnummer in. De klantnaam, straat en woonplaats vult u zelf in.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Bestelbondatum</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">De bestelbondatum wordt automatisch door de computer ingevuld (aan de hand van de systeemdatum). U mag deze datum uiteraard wijzigen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Code boekstuk</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Voorbeelden</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze code boekstuk bepaalt onder meer hoe de BTW wordt berekend. U kunt kiezen uit volgende 4 codes:</p>
+<div style="text-align: justify; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:47px; padding:3px; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">N</span></p>
+</td>
+<td style="vertical-align:top; width:157px; padding:3px; border:none"><p class="p_Normal">Normale BTW berekening</p>
+</td>
+<td style="vertical-align:top; width:450px; padding:3px; border:none"><p class="p_Normal">Het betreft een normale Belgische bestelbon, waarbij automatisch het BTW-bedrag wordt berekend</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:47px; padding:3px; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">M</span></p>
+</td>
+<td style="vertical-align:top; width:157px; padding:3px; border:none"><p class="p_Normal">Medecontractant</p>
+</td>
+<td style="vertical-align:top; width:450px; padding:3px; border:none"><p class="p_Normal">Er wordt geen BTW berekend.</p>
+<p class="p_Normal" style="text-align: justify;">Het betreft een medecontractant-klant.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:47px; padding:3px; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">E</span></p>
+</td>
+<td style="vertical-align:top; width:157px; padding:3px; border:none"><p class="p_Normal">EEG-Lidstaat</p>
+</td>
+<td style="vertical-align:top; width:450px; padding:3px; border:none"><p class="p_Normal">Er wordt geen BTW berekend (Intracommunautair)</p>
+<p class="p_Normal">Het betreft een klant die niet in Belgie, maar wel in de Europese Gemeenschap gevestigd is. Vb.: Nederland, Duitsland, Frankrijk, ...</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:47px; padding:3px; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">B</span></p>
+</td>
+<td style="vertical-align:top; width:157px; padding:3px; border:none"><p class="p_Normal">Buitenland</p>
+</td>
+<td style="vertical-align:top; width:450px; padding:3px; border:none"><p class="p_Normal">Er wordt geen BTW berekend (Niet EEG-lidstaat)</p>
+<p class="p_Normal">Het betreft een klant die niet in Belgie, en niet in de Europese Gemeenschap gevestigd is. Vb.: Amerika, Japan, ...</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="text-align: justify;"><span style="width:34px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Indien u over het AXITO-Boekhoudprogramma beschikt, zal deze code boekstuk tevens de BTW-vakken (zie BTW-aangifte) mee bepalen. Dit gebeurt overigens automatisch.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Landcode munteenheid</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Vreemde munt'</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Landcodes</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze landcode bepaalt de munteenheid waarin deze bestelbon moet worden opgesteld en geprint.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Werknemers-nummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Werknemers</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Alzo kunt u een werknemer (vertegenwoordiger) koppelen aan een bestelbon. Nadien kunt u met behulp van AXITO-Statistiek nagaan wat een bepaalde werknemer heeft 'gepresteerd' (handig bij het bepalen van commissies).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Naam klant</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze naam wordt automatisch ingevuld aan de hand van de klantnummer. Wanneer echter geen klantnummer werd ingevuld, moet u dit veld zelf invullen</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Straat klant</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Zie vorige</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Woonplaats klant</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Woonplaatsen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Zie vorige</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Wisselkoers</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Vreemde munteenheid'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de wisselkoers zoals die was op het moment van toevoegen van de betreffende bestelbon</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Leveringstraat</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de leveringsstraat van deze bestelbon.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Leveringwoon-plaats</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Woonplaatsen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de leveringswoonplaats van deze bestelbon.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Week</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze weeknummer wordt automatisch berekend aan de hand van de bestelbondatum.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Kortingcode</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Kortingen- en prijzenboek'</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Kortingcodes</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Indien u over de optie 'Kortingen- en prijzenboek' beschikt, kunt u via dit veld aan elke bestelbon een eigen kortingcode koppelen. Dit bepaalt rechtstreeks de artikelprijzen die de computer straks bij het aanmaken van bestelbonregels zal voorstellen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Reeds voldaan excl. BTW</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het bedrag dat reeds voldaan is (exclusief BTW).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Hoofdnota</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Nota's</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze 'hoofdnota' wordt bij het printen van de betreffende bestelbon, standaard net onder de laatste bestelbonregel geprint. In deze 'interne tekstverwerker' kunt u eender welke tekst ingeven. Voorbeelden hiervan zijn: Plaatsings- en leveringsvoorwaarden, gemaakte afspraken, kenmerken verkochte artikelen enzoverder. Merk op dat u via &lt;F5&gt; kunt werken met standaard notateksten, die u uiteraard zelf kunt opstellen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Totaal excl. BTW</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het totaal bestelbonbedrag exclusief BTW.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Totaal BTW</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het totaal BTW-bedrag voor de betreffende bestelbon.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Totaal incl. BTW</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het totaal bestelbonbedrag inclusief BTW.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Voldaan</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via dit veld kunt u aangeven of deze bestelbon:</p>
+<div style="text-align: justify; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:47px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">J</span></p>
+</td>
+<td style="vertical-align:top; width:264px; padding:0; border:none"><p class="p_Normal">Voldaan is</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:47px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">N</span></p>
+</td>
+<td style="vertical-align:top; width:264px; padding:0; border:none"><p class="p_Normal">Niet voldaan is</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:47px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">G</span></p>
+</td>
+<td style="vertical-align:top; width:264px; padding:0; border:none"><p class="p_Normal">Gedeeltelijk voldaan is (vb.: een voorschot)</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Reeds voldaan</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit bedrag heeft de betreffende klant reeds betaald. (Bijvoorbeeld een voorschot)</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Nog te voldoen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het bedrag dat de betreffende klant voor deze bestelbon nog moet betalen.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><span class="f_Heading1">Video bestelbon</span></h1>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Wanneer u de keuze &lt;V&gt;ideo bestelbon uitvoert, krijgt u (afhankelijk van de programma-instellingen) het volgende te zien :</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="margin: 0 0 0 24px;"><span class="f_Heading2">Basis-instelling:</span></h2>
+<p class="p_Normal" style="margin: 0 0 0 24px;">U krijgt de videoregels van het document te zien. Hierbij ziet u de verschillende regels van het document, en kunt u nieuwe regels toevoegen of bestaande regels wijzigen of schrappen.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<h2 class="p_Heading2" style="margin: 0 0 0 24px;"><span class="f_Heading2">Projectbeheer-instellingen:</span></h2>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Wanneer u met de module 'Projectbeheer' werkt, krijgt u eerst volgend menu te zien:</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 35px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:215px;"><p class="p_Normal"><span style="font-size: 14pt; font-weight: bold;">Video bestelbon</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Beschrijving van de verschillende mogelijkheden :</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:215px;"><p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-weight: bold;">Video standaard</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Via deze keuze krijgt u het standaard video-scherm te zien (hetzelfde scherm zoals hierboven beschreven).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:215px;"><p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-weight: bold;">Prijs- &amp; kortingafkomst</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Via deze keuze wordt er een extra kolom getoond '<span style="font-weight: bold;">Afkomst prijs - %</span>'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Het doel van deze kolom is om aan te geven van waar de getoonde prijs en korting afkomstig zijn. U kunt dus in een oogopslag nagaan of de vermelde prijzen en kortingen kloppen. De prijzen en kortingen kunnen van verschillende bronnen afkomstig zijn, enkele voorbeelden :</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 59px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">ARTS</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">De prijs is afkomstig van het artikelbestand (dus geen kortingen, geen manuele aanpassing)</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">ARTC</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">De prijs is afkomstig van het artikelbestand, echter het is de aankoopprijs (vb wanneer u een artikel doorverkoopt aan een collega).</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">FREE</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">Het artikel is gratis (vb een proef of staal).</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">DISC</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">De prijs/korting is afkomstig van het kortingenboek.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">SQUO</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">De prijs/korting werd overgebracht van een offerte.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">SORD</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">De prijs/korting werd overgebracht van een bestelbon.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">SDEL</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">De prijs/korting werd overgebracht van een leveringsbon.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">MANU</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">De prijs/korting werd manueel aangepast.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">NODI</span></p>
+</td>
+<td style="vertical-align:top; width:373px; padding:5px; border:none"><p class="p_Normal">Er werd geen korting toegekend.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Wanneer u met de cursorbalk op een veld gaat staan, wordt extra informatie getoond. Een voorbeeld van zo'n extra informatie :</p>
+<p class="p_Normal" style="margin: 0 0 0 48px;"><span style="font-weight: bold;">EHpr = Art.pr. (01-01-08) &nbsp;Kort.% = Geen (01-01-08)</span></p>
+<p class="p_Normal" style="margin: 0 0 0 48px;">Hieruit kunt u volgende informatie aflijden :</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>De eenheidsprijs is afkomstig van het artikelbestand</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Deze prijs werd toegekend op 01-01-08</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 72px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Er werd geen korting gegeven</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:215px;"><p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-weight: bold;">Leveringsinformatie</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Via deze keuze wordt een extra kolom getoond '<span style="font-weight: bold;">Reeds geleverd</span>'. Aan de hand van dit veld kunt u nagaan hoeveel van de bestelde aantallen reeds werden geleverd. Dit aantal wordt automatisch berekend aan de hand van de opgestelde leveringsbonnen. Hiervoor moeten zowel de bestelbon en de verschillende leveringsbonnen toegekend zijn aan hetzelfde project.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:215px;"><p class="p_Normal" style="margin: 0 0 0 24px;"><a id="aantal_controle" class="hmanchor"></a><span style="font-weight: bold;">Aantal controle</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Via deze keuze wordt een extra kolom getoond '<span style="font-weight: bold;">Werkelijk geteld'</span>. Deze keuze werd ontwikkeld om te controleren of het aantal dat besteld zijn werkelijk wordt geleverd. De verschillende regels worden kunnen in diverse kleuren worden weergegeven, afhandelijk van de situatie :</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:158px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold; color: #33cccc;">Blauw/cyaan</span></p>
+</td>
+<td style="vertical-align:top; width:388px; padding:5px; border:none"><p class="p_Normal">Het werkelijk geteld is <span style="font-weight: bold;">kleiner</span> dan het aantal besteld.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:158px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold; color: #008000;">Groen</span></p>
+</td>
+<td style="vertical-align:top; width:388px; padding:5px; border:none"><p class="p_Normal">Het werkelijk geteld is <span style="font-weight: bold;">gelijk</span> aan het aantal besteld.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:158px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold; color: #ff0000;">Rood</span></p>
+</td>
+<td style="vertical-align:top; width:388px; padding:5px; border:none"><p class="p_Normal">Het werkelijk geteld is <span style="font-weight: bold;">groter</span> dan het aantal besteld.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">Het veld 'Werkelijk geteld' kan op verschillende manieren aangepast worden :</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:157px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Handmatig aanpassen</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:5px; border:none"><p class="p_Normal">U verplaatst de <a href="cursorbalk.htm" class="topiclink">curosorbalk</a> op het veld 'Werkelijk geteld' en <a href="wijzigen.htm" class="topiclink">wijzigt</a> dit veld.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:157px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Afpunten aantal</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:5px; border:none"><p class="p_Normal">Wanneer u de keuze 'Aantal controle' heeft geselecteerd, wordt er een bijkomende keuze '<span style="font-weight: bold;">. Afpunten aantal</span>' beschikbaar. Wanneer u dus op een bepaalde regel (record) staat, en vervolgens op de punt-toets drukt, wordt het veld 'Werkelijk geteld' gelijk gesteld aan het veld 'Aantal'.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:157px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Barcode inscannen</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:5px; border:none"><p class="p_Normal">Automatisch nadat u een barcode heeft ingescand, wordt het veld 'Werkelijk geteld' het bijbehorende artikel van de bestelbon met een waarde 1 opgehoogd.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:157px; padding:5px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Scanbestand inlezen</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:5px; border:none"><p class="p_Normal">Via de keuze '<span style="font-weight: bold;">* Overbrengen</span>' kunt u een verbinding maken met een extern scantoestel (vb scanpal II), en zodoende de gescande barcodes inlezen en het veld 'Werkelijk geteld' voor de verschillende regels (<a href="enkele_termen__bestand_record_.htm" class="topiclink">records</a>) aanpassen.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">Dit veld 'Werkelijk geteld' kan ook geprint worden op de verschillende documenten (bestelbon, leveringsbon).</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Na uw selectie worden de video-regels van de bestelbon getoond.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Tabeltitel"><img id="TOGGLE0186A3_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/><span class="f_Tabeltitel">  <a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #595959; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3','TOGGLE0186A3_ICON')">Keuzes in de AXITO-kader (Video)</a></span></p>
+<div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 18px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:5px; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Toevoegen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Met deze keuze kunt u een nieuwe bestelbonregel toevoegen. Door op &lt;T&gt; te drukken, krijgt u een toevoegscherm te zien (zie afbeelding hierna). Wat u in de verschillende velden kunt invullen wordt verderop besproken in 'Betekenis velden (video bestelbon)'</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Wijzigen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Het wijzigen van gegevens kunt u via &lt;W&gt;.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Opmerking: U kunt gegevens ook wijzigen door &lt;Enter&gt; te drukken.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Schrappen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Indien u een bestelbonregel wenst te schrappen, verplaatst u de cursorbalk naar de regel van de betreffende bestelbonregel, en drukt u op &lt;S&gt;. Vervolgens zal deze bestelbonregel in een hedere (gele) kleur worden opgelicht, en zal in de AXITO-kader de vraag 'Doorgaan met schrappen' verschijnen. Deze vraag beantwoordt u dan met &lt;J&gt;a.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Micro/Macro</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Het macroscherm is identiek aan het toevoegscherm (zie afbeelding hierna). De bedoeling van deze keuze is het weergeven van alle gegevens van één bepaalde bestelbonregel in één oogopslag. Wanneer &nbsp;u nogmaals op &lt;M&gt; drukt, krijgt u terug het vorige micro-scherm te zien.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Printen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Met behulp van &lt;P&gt; kunt u de betreffende bestelbon afdrukken op papier. U kunt kiezen uit meerdere bestelbonlayouts (uitzicht bestelbon).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Historieken</span></p>
+<p class="p_Normal"><span class="f_Opmerkingcursief">Zie 'Historieken' &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Om snel na te kunnen gaan wat de betreffende klant in het verleden reeds heeft besteld, tegen welke verkoopprijs enzoverder.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Backorders</span></p>
+<p class="p_Normal"><span class="f_Opmerkingcursief">Zie 'Backorders' &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Om snel na te kunnen gaan welke backorders voor de betreffende klant nog openstaan.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Nota</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Nota's</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Via deze keuze kunt u een bijkomende notatekst (regelnota) aan de betreffende bestelbonregel koppelen. Deze notatekst zal standaard, net onder de betreffene bestelbonregel geprint worden. Uiteraard handig wanneer de 60 karakters van de artikelomschrijving niet volstaan. Zodra u op &lt;N&gt; drukt, verschijnt op het scherm een kader, waar u deze tekst kunt intypen. Deze keuze beëindigt u door op &lt;Esc&gt; te drukken. Op het scherm verschijnt in de kolom 'Nota' een '*' indien de regelnota tekst bevat. Merk op dat u via &lt;F5&gt; over standaard notateksten kunt beschikken.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Korting %</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Wanneer u aan alle bestelbonregels eenzelfde korting wens toe te kennen, kunt u dit op een snelle manier verwezenlijken met behulp van de keuze 'Korting %'. Hierbij zal een kortingspercentage worden opgevraagd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">* Overbrengen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Met behulp van deze keuze kunt u op een snelle manier een samenstelling (samengesteld artikel) overbrengen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Diversen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Met behulp van deze keuze kunt u onder andere de eenheidsprijzen van de betreffende bestelbon herberekenen (uiteraard uitgaande van de huidige wijzigbare kortingcode, en de huidige artikelprijzen in het artikelenbestand).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">F8 Werkwijze</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">De keuze 'F8 Werkwijze' wordt uitvoerig besproken in 'F.8. F8 = Werkwijze'.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Einde</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">U verlaat deze 'video bestelbon' via een druk op &lt;E&gt; of &lt;Esc&gt;. Vervolgens komt U terug terecht in het hoofdoverzicht van de bestelbonnen.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Tabeltitel"><span class="f_Tabeltitel">Bijkomende keuzes in AXITO-Facturatie</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Omdat u werkt met de keuze bestelbonnen, wordt automatisch de keuze ‘* Factureren’ in het facturatiebestand actief. Via deze keuze kunt u op een eenvoudige manier een reeds toegevoegde bestelbon gaan factureren. Nadat u op &nbsp;&lt;*&gt; heeft gedrukt, krijgt u een scherm te zien met volgende keuzes:</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 26px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:61px;"><p class="p_Normal" style="text-align: center;">1</p>
+</td>
+<td class="AxitoTableLarge" style="width:228px;"><p class="p_Normal">Factureren bestelbon</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:61px;"><p class="p_Normal" style="text-align: center;">2</p>
+</td>
+<td class="AxitoTableLarge" style="width:228px;"><p class="p_Normal">Factureren bestelbon gedeeltelijk</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:61px;"><p class="p_Normal" style="text-align: center;">3</p>
+</td>
+<td class="AxitoTableLarge" style="width:228px;"><p class="p_Normal">Factureren offerte</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:61px;"><p class="p_Normal" style="text-align: center;">4</p>
+</td>
+<td class="AxitoTableLarge" style="width:228px;"><p class="p_Normal">Factureren offerte gedeeltelijk</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:61px;"><p class="p_Normal" style="text-align: center;">5</p>
+</td>
+<td class="AxitoTableLarge" style="width:228px;"><p class="p_Normal">Kassaticket factureren</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:61px;"><p class="p_Normal" style="text-align: center;">E</p>
+</td>
+<td class="AxitoTableLarge" style="width:228px;"><p class="p_Normal">Einde</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Via deze twee keuzes kunt u dus een volledige of gedeeltelijke bestelbon gaan factureren. Bij de eerste keuze vult u gewoon de bestelbonnummer in (op te vragen via &lt;F5&gt;). Bij de tweede keuze krijgt u vervolgens de video van de bestelbon te zien, waarna u met &lt;+&gt; en &lt; - &gt; de verschillende bestelbonregels kunt opnemen. Nadat u op &lt;E&gt;inde heeft gedrukt, wordt de factuur aangemaakt.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Tabeltitel"><img id="TOGGLE0186A4_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/><span class="f_Tabeltitel">  <a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #595959; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4','TOGGLE0186A4_ICON')">Betekenis velden (Video)</a></span></p>
+<div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 18px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:5px; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Artikelnummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">9-18 karakters</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Artikelen of Werkzaamheden</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Wanneer u een bestelbonegel toevoegt, moet u als eerste stap een artikelnummer ingeven. Dit kunt u op verschillende manieren doen :</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U kent het artikelnummer volledig, typt het in en drukt &lt;Enter&gt;.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U kent slechts een gedeelte (of niets) van het artikelnummer, vult deze in, en u drukt op &lt;F5&gt;. De computer zal vervolgens het artikelenbestand tonen (in de buurt van het gezochte artikel), waarna U enkel het juiste artikelnummer hoeft over te brengen met &lt;O&gt; of &lt;Enter&gt;.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Het in te vullen artikel is nog niet aanwezig in het artikelenbestand :</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Druk &lt;F5&gt;. U krijgt het artikelenbestand te zien.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Vervolgens kunt u via &lt;T&gt; het betreffende artikel toevoegen in het artikelenbestand.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Nadat u dit artikel heeft toegevoegd, kunt u door op &lt;O&gt; te drukken dit artikel overbrengen naar de factuurregel die u op dat moment aan het toevoegen bent.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Als artikelgroepnummer (de karakters voor de '-') geeft u '---' in. Vervolgens drukt u op &lt;F5&gt;, zodat de werkzaamheden op het scherm verschijnen. Net zoals bij de artikelen kunt u ook een werkzaamheid overbrengen. Een werkzaamheid kunt u dus beschouwen als een artikelnummer, waarvan de artikelgroep gelijk is aan streepjes ---</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>U vult geen artikelnummer in. U zult dan wel de overige gegevens, zoals omschrijving, eenheidsprijs enz. zelf moeten invullen.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Omschrijving</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">60 karakters</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Wanneer u een artikelnummer heeft ingevuld, zal de bijbehorende omschrijving automatisch worden ingevuld. Uiteraard mag u deze omschrijving wijzigen.</p>
+<p class="p_Normal" style="text-align: justify;">Indien u geen artikelnummer heeft ingevuld, zult u de omschrijving zelf moeten ingeven.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Leverancier</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Leveranciers</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze leveranciersnummer wordt automatisch ingevuld wanneer u een artikelnummer heeft ingevuld. Deze leveranciersnummer kunt u nadien nog steeds wijzigen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Aantal</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Hierin vult u het aantal verkochte artikelen in. Het veld 'Aantal' mag U nadien voortdurend wijzigen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Per</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via het veld 'Per' bepaalt u in welke basisverpakking dit artikel wordt verkocht (bijvoorbeeld per 1 stuk, per 6 liter, set van 12 stuks). In de meeste situaties zal dit veld gelijk zijn aan het getal 1. Merk op dat dit getal rechtstreeks het totaal bedrag van de betreffende factuurregel beïnvloedt.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Eenheid</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de eenheid waarin het artikel wordt verkocht (bijv.: stuk, m², lm, liter, kg ...).</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Indien u geen artikelnummer invult, moet u dit zelf invullen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Eenheidsprijs</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de verkoopprijs exclusief BTW. U mag dit uiteraard wijzigen.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Indien u geen artikelnummer invult, moet u dit zelf invullen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Korting %</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Kortingen- en prijzenboek'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Hier vult u het kortingspercentage voor deze bestelbonregel in. U kan ervoor zorgen dat de computer dit kortingspercentage standaard voorstelt (uitgaande van het 'kortingen- en prijzenboek').</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Bedrag</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het totaal bedrag exclusief BTW voor deze bestelbonregel. Dit bedrag wordt automatisch berekend. Als u dit bedrag echter wijzigt, zal het kortingspercentage automatisch worden aangepast.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">BTW-percentage</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het BTW-percentage dat voor deze bestelbonregel van toepassing is. Wanneer u een artikelnummer heeft ingevuld, zal automatisch dit BTW-percentage worden ingevuld.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: De mogelijkheid bestaat om aan elke bestelbonrregel een ander BTW-percentage te koppelen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Tegenrekening</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Boekhoudplan</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het grootboekrekeningnummer waarop deze bestelbonrregel straks in het AXITO boekhoudprogramma zal worden geboekt. (Indien dit grootboekrekeningnummer niet ingevuld wordt, zal het standaard op rekening 700000 worden geboekt).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:110px;"><p class="p_Normal"><span style="font-weight: bold;">Code aantal-berekening</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Spread-sheet'</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Spread-sheet : aantal</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze code bepaalt de spread-sheet, die aan deze bestelbonregel is gekoppeld. Indien u over de optie 'Aantal-spreadsheet' beschikt, kunt u alzo formules als 'breedte x hoogte' integreren in de bestelbon.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Deze formules zijn volledig zelf definieerbaar. Zowel eenvoudige als complexe formules behoren tot de mogelijkheden. </p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Voorraad</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft het huidige voorraadpeil weer van dit artikel in het artikelenbestand.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">In bestelling</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft aan hoeveel eenheden van dit artikel momenteel in bestellling zijn; met andere woorden reeds besteld bij de leverancier, maar nog niet geleverd. </p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Adviesprijs</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de verkoopprijs excl. BTW zoals deze momenteel in het artikelenbestand staat genoteerd.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Dit veld is informatief.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de aankoopprijs zoals deze toenmalig (op het moment dat deze factuurregel werd toegevoegd) in het artikelenbestand stond genoteerd.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Dit veld is informatief en wijzigbaar. Wordt tevens in het AXITO statistiek-programma gebruikt om resultaten (winst, verlies) te berekenen per klant, artikel enzoverder.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs gemiddeld</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de gemiddelde aankoopprijs zoals deze toenmalig (op het moment dat deze bestelbonregel werd toegevoegd) in het artikelenbestand stond genoteerd. Zelfde opmerking als bij het voorgaande veld 'Aankoopprijs'.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Netto eenheidprijs</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de eenheidsprijs excl. BTW van deze bestelbonrregel, min de ingevulde korting in het veld 'Korting %'. &nbsp; </p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Dit veld is informatief.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Regelnota</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Nota's</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via de keuze 'Nota' kunt u de regelnota van deze bestelbonregel wijzigen. Bij het printen van de bestelbon, zal deze regelnota standaard net onder de betreffende bestelbonregel worden geprint.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Backorders</span></p>
+<p class="p_Normal"><span class="f_Opmerkingcursief">Zie 'Backorders' &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft weer hoeveel backorders voor deze klant voor dit artikel genoteerd staan. Dit backorder-aantal geeft weer hoeveel van dit artikel nog geleverd moet worden, omdat op het moment van bestelling een voorraadtekort was.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Enkel van toepassing indien u over de optie 'Backorderbeheer' beschikt.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Samenstelling-nummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Samengestelde artikelen'</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Samenstellingen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Aan de hand van dit nummer kunt u snel zien tot welke samenstelling deze bestelbonrregel (artikel) behoort.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Factuurnummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Bestelbonnen'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Indien u over de optie 'Facturatie' beschikt, kunt u alzo nagaan naar welke factuur deze bestelbonregel is gefactureerd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Opmerking</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">U kunt per bestelbonrregel een korte opmerking ingeven. Puur informatief, en in de meeste situaties niet van toepassing.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Soort aantal berekening</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Spread-sheet'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Enkel van toepassing indien u over de optie 'Aantal-spreadsheet' beschikt. </p>
+<p class="p_Normal" style="text-align: justify;">Mogelijke codes zijn:</p>
+<div style="text-align: justify; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 14px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:46px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">B</span></p>
+</td>
+<td style="vertical-align:top; width:534px; padding:0; border:none"><p class="p_Normal">Beperkte aantal berekening (eenvoudige werking; voorbeeld 'breedte x hoogte')</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:46px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">U</span></p>
+</td>
+<td style="vertical-align:top; width:534px; padding:0; border:none"><p class="p_Normal">Uitgebreide aantal berekening (met behulp van een spread-sheet, met kolommen en rijen)</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Opbouw aantal berekening</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Spread-sheet'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Enkel van toepassing indien u over de optie 'Aantal-spreadsheet' beschikt.</p>
+<p class="p_Normal" style="text-align: justify;">Wanneer u dit veld wijzigt, krijgt u de betreffende spread-sheet te zien.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Volgnummer</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze volgnummer bepaalt de volgorde (plaats) van de bestelbonrregel binnen de bestelbon. Wanneer u bijvoorbeeld de 9e bestelbonregel wenst te verplaatsen naar de positie tussen bestelbonregel 2 (met regelnummer 2) en bestelbonregel 3 (met regelnummer 3), dan moet u er voor zorgen dat de nieuwe regelnummer tussen de waarde 2 en 3 ligt (vb.: 2,5). Na het wijzigen zult u zien dat deze regel op zijn nieuwe positie komt te staan.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Voorraad artikelbestand</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft het huidige voorraadpeil weer van dit artikel in het artikelenbestand.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">In bestelling artikelbestand</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft aan hoeveel eenheden van dit artikel momenteel in bestellling zijn; met andere woorden reeds besteld bij de leverancier, maar nog niet geleverd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Adviesprijs artikelbestand</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de huidige verkoopprijs excl. BTW, zoals deze momenteel in het artikelenbestand staat genoteerd. </p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Dit veld is informatief.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs artikelbestand</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de huidige aankoopprijs van het betreffende artikel, zoals deze op dit moment in het artikelenbestand staat genoteerd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs gemiddeld artikelbestand</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de gemiddelde aankoopprijs van het betreffende artikel, zoals deze op dit moment in het artikelenbestand staat genoteerd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs op dat moment</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de aankoopprijs zoals deze toenmalig (op het moment dat deze bestelbonregel werd toegevoegd) in het artikelenbestand stond genoteerd.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Dit veld is informatief en wijzigbaar. Wordt tevens in het AXITO statistiek-programma gebruikt om resultaten (winst, verlies) te berekenen per klant, artikel enzoverder</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs gemiddeld op dat moment</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de gemiddelde aankoopprijs zoals deze toenmalig (op het moment dat deze bestelbonregel werd toegevoegd) in het artikelenbestand stond genoteerd. Zelfde opmerking als bij het voorgaande veld 'Aankoopprijs op dat moment'.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table class="Voorbeeld" >
+<tr class="Voorbeeld">
+<td class="Voorbeeld"><p class="p_Normal"><span style="font-weight: bold;">Voorbeeld:</span> Toevoegen nieuwe bestelbon: Algemene procedure</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Om een nieuwe bestelbon toe te voegen, moet u de volgende zeven stappen doorlopen :</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Kies vanuit het hoofdmenu voor de keuze &quot;Bestelbonnen&quot;. Hierdoor komt u in het hoofdoverzicht van de bestelbonnen terecht (en dit op de laatste bestelbon die u in het verleden reeds heeft toegevoegd). Merk op dat elke regel (of record) overeenkomt met een bestelbon, en dat alle reeds eerder gemaakte bestelbonnen contimu bewaard blijven.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Door op &lt;T&gt; te drukken, voegt u een nieuwe bestelbon toe. Hierdoor zal automatisch een toevoegscherm verschijnen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">3.</span>Vervolgens geeft u alle hoofdgegevens van de betreffende bestelbon in, zoals bestelbonnummer, klantnummer, bestelbondatum enzoverder..</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">4.</span>Nadat u alle hoofdgegevens heeft ingevuld, zal de computer automatisch overgaan naar het tweede toevoegscherm. Hierin worden vervolgens de gegevens van de eerste bestelbonregel opgevraagd, zoals artikelnummer, artikelomschrijving, eenheidsprijs enzoverder.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">5.</span>Indien u een tweede bestelbonrregel wenst toe te voegen, moet u nogmaals op &lt;T&gt; drukken. Vervolgens geeft u de gegevens van die tweede bestelbonregel in. Wenst u een derde bestelbonregel toe te voegen, dan drukt u nogmaals op &lt;T&gt; enzoverder...</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">6.</span>Nadat u alle gegevens heeft ingevuld, kunt u de betreffende bestelbon printen door op &lt;P&gt; te drukken.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 24px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">7.</span>Om vanuit het 'video bestelbon'-scherm terug te keren naar het hoofdoverzicht van de bestelbonnen, drukt u op &lt;E&gt; of &lt;Esc&gt;. Merk op dat u vanuit het hoofdoverzicht van de bestelbonnen, elke reeds eerder gemaakte bestelbon terug gedetailleerd kunt bekijken, door op &lt;V&gt; te drukken (dit staat voor 'Video', wat zoveel betekent als 'kijken naar').</p></td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table class="Voorbeeld" >
+<tr class="Voorbeeld">
+<td class="Voorbeeld"><p class="p_Normal"><span style="font-weight: bold;">Voorbeeld:</span> Toevoegen nieuwe bestelbon</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Nadat u vanuit het hoofdmenu voor de keuze &quot;Bestelbonnen&quot; heeft gekozen, komt u automatisch in het hoofdoverzicht van de bestelbonnen terecht. Vervolgens kunt u een nieuwe bestelbon toevoegen door op &lt;T&gt; te drukken. Hierdoor verschijnt een toevoegscherm, waarin de hoofdgegevens van de nieuwe bestelbon opgevraagd worden.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">De hoofdgegevens van de bestelbon</span></h2>
+<p class="p_Normal"><span style="font-weight: bold;">Bestelbonnummer</span>: Wanneer u een nieuwe bestelbon toevoegt, zal de computer automatisch het eerstvolgende bestelbonnummer voorstellen (namelijk laatste bestelbonrnummer plus één). Indien het echter de allereerste bestelbon betreft, zal de bestelbonrnummer opgebouwd zijn als volgt: De eerste twee karakters worden bepaald aan het hand van het jaar (vb.: 07), de overige karakters zijn een volgnummer (vb.: 00001). Uiteraard mag u de bestelbonrnummer op ieder moment wijzigen. Zorg er wel voor dat het bestelbonnummer begint met het jaartal. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Klantnummer</span>: Aan de hand van de klantnummer kan de computer de informatie opvragen, die nodig is bij het opstellen van de bestelbon (Naam, Adres, Leveringsadres, BTW-nummer, Code boekstuk, Landcode munteenheid, Werknemersnummer, Vervaldagperiode, Financiële korting, ...). Via &lt;F5&gt; krijgt u een overzicht van de verschillende klanten. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Bestelbondatum</span>: De computer zal automatisch de systeemdatum (elke computer heeft een interne klok en kalender) invullen. u kunt deze wijzigen. Zodra u &lt;Enter&gt; drukt, worden aan de hand van 'Code vervaldag' van de betreffende klant in het klantenbestand, de vervaldata automatisch berekend. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Creditbon / terugname</span>: Vervolgens bepaalt u of het een 'Bestelbon' of een 'Terugname' betreft. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Code boekstuk</span>: Via deze code bepaalt u het soort bestelbon (&lt;F5&gt; geeft u een overzicht van de verschillende mogelijkheden). </p>
+<p class="p_Normal"><span style="font-weight: bold;">Omschrijving</span>: Bij elke bestelbon kunt u een samenvattende omschrijving invullen. Zodoende heeft u direct informatie over deze bestelbon. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Kenmerken</span>: Via &lt;F5&gt; kunt u diverse kenmerken aan deze bestelbon koppelen. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Levering straat, Levering woonpl</span>.: Via deze twee velden kunt u aangeven dat het leveringsadres afwijkt van het bestelbon-adres. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Voldaan</span>: Voordat de bestelbon is opgesteld, kunt u reeds aangeven of de &nbsp;bestelbongedeeltelijk of volledig zal worden voldaan. Wanneer U 'G' (=gedeeltelijk) invult, zal tevens het veld 'Reeds voldaan' worden opgevraagd (alzo kunt u een reeds betaald voorschot registreren).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Nadat u alle hoofdgegevens van de bestelbon (of terugname) heeft ingegeven, komt u automatisch in het tweede toevoegscherm terecht. Hierin zullen de gegevens van de eerste bestelbonrregel worden opgevraagd.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">De bestelbonregels</span></h2>
+<p class="p_Normal">Voor elke bestelbonregel zullen de volgende gegevens opgevraagd worden:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Artikelnummer</span>: Aan de hand van dit artikelnummer zal elke belangrijke informatie van dit artikel automatisch in de betreffende bestelbonrregel worden overgebracht (Omschrijving, Leveranciersnummer, Per, Eenheid, Eenheidsprijs, BTW %, Tegenrekening, Aankoopprijs, ...). Indien u het artikelnummer niet van buiten kent, kunt u met behulp van &lt;F5&gt; een overzicht krijgen van het artikelenbestand; Nadat u het gewenste artikel heeft gevonden, kunt u het artikelnummer overbrengen naar de betreffende bestelbonrregel via de keuze &lt;O&gt;verbrengen of &lt;Enter&gt;. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Omschrijving</span>: Dit veld is steeds wijzigbaar. Indien u deze omschrijving wijzigt, heeft dat geen invloed op de omschrijving zoals die op dat moment in het artikelenbestand genoteerd staat. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Aantal</span>: Dit is het aantal eenheden dat van dit artikel worden verkocht. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Eenheid</span>: Wordt enkel opgevraagd indien u geen artikelnummer invult. Dit is de verkoopseenheid van deze bestelbonregel (vb.: stuk, m, liter, kg ...). <span style="font-weight: bold;">Eenheidsprijs</span>: Wordt enkel opgevraagd indien u geen artikelnummer invult. Dit is de verkoopprijs exclusief BTW van deze bestelbonrregel. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Korting</span>: Dit is de het kortingspercentage dat u toekent aan de betreffende bestelbonregel. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Bedrag</span>: Dit is het totaal verkoopbedrag van de betreffende bestelbonregel. Dit bedrag (berekend aan de hand van onder andere 'Aantal' en 'Eenheidsprijs', kunt u wijzigen. De computer zal dan automatisch het juiste kortingspercentage invullen in het veld 'Korting %'.</p>
+<p class="p_Normal">Nadat u alle gegevens van de eerste bestelbonregel heeft ingevuld, kunt u een tweede bestelbonrregel toevoegen door nogmaals op &lt;T&gt; te drukken. Vervolgens geeft u de gegevens van die tweede bestelbonregel in. Wenst u een derde bestelbonregel toe te voegen, dan drukt u nogmaals op &lt;T&gt; enzoverder...</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Merk op dat u aan elke bestelbonregel een uitgebreide nota-tekst (bijv. garantievoorwaarden, leveringsvoorwaarden enzoverder) kunt koppelen, door gebruik te maken van de keuze &lt;N&gt;ota.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Het overbrengen van een samenstelling</span></h2>
+<p class="p_Normal">Wanneer u zich in het 'Video bestelbon'-scherm bevindt, kunt u een samenstelling naar de betreffende bestelbon overbrengen via de keuze '* Overbrengen'. Nadat u op &lt;*&gt; heeft gedrukt, verschijnt een keuzemenu. Nadat u heeft gekozen voor de keuze '1. Overbrengen samenstelling', krijgt u een 'Overbreng'-scherm te zien. Vervolgens worden volgende velden opgevraagd:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Samenstellingnummer</span>: Dit is het samenstellingnummer zoals u dat invulde in het samenstellingenbestand. Via &lt;F5&gt; kunt u een overzicht krijgen van de verschillende samenstellingen. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Omschrijving samenstelling</span>: Indien u een samenstellingnummer heeft ingevuld, zal in dit veld automatisch de omschrijving van de betreffende samenstelling worden ingevuld (vanuit het samenstellingenbestand). U heeft echter de mogelijkheid om deze omschrijving te wijzigen. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Aantal</span>: Dit getal geeft weer, hoe vaak dat deze samenstelling moet worden overgebracht (vb.: 5 volledige stereoketens). </p>
+<p class="p_Normal"><span style="font-weight: bold;">Eenheid</span>: Ook deze eenheid is wijzigbaar.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Nadat al deze velden zijn ingegeven, zullen de verschillende videoregels van de betreffende samenstelling, automatisch worden overgebracht naar de betreffende bestelbon. </p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1_ICON','hm.type','dropdown','hm.state','1','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A1\',\'TOGGLE0186A1_ICON\')');
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','1');
+HMInitToggle('TOGGLE0186A2_ICON','hm.type','dropdown','hm.state','1','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A2\',\'TOGGLE0186A2_ICON\')');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','1');
+HMInitToggle('TOGGLE0186A3_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A3\',\'TOGGLE0186A3_ICON\')');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A4\',\'TOGGLE0186A4_ICON\')');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+</html>

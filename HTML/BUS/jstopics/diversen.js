@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Diversen",
+hmDescription:"Met deze keuze kunt u een aantal bijkomende instellingen wijzigen. U krijgt een scherm te zien waarbij u kunt kiezen uit:",
+hmPrevLink:"standaardteksten.html",
+hmNextLink:"voorbeelden.html",
+hmParentLink:"tekstverwerking.html",
+hmBreadCrumbs:"<a href=\"tekstverwerking.html\">Tekstverwerking<\/a>",
+hmTitlePath:"Tekstverwerking > Diversen",
+hmHeader:"<p class=\"p_Titeltekstinbalk\"><span class=\"f_Titeltekstinbalk\">Diversen<\/span><\/p>\n\r",
+hmBody:"<p class=\"p_Normal\">Met deze keuze kunt u een aantal bijkomende instellingen wijzigen. U krijgt een scherm te zien waarbij u kunt kiezen uit:<\/p>\n\r<p class=\"p_Normal\" style=\"text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;\"><span class=\"f_Normal\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span>Veldcodes: Dit zijn codes die u in een tekst kunt plaatsen; zodra u de tekst print, worden deze veldcodes vervangen door de specifieke informatie (zie volgend hoofdstuk)<\/p>\n\r<p class=\"p_Normal\" style=\"text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;\"><span class=\"f_Normal\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span>Onderhoud: Via de keuze onderhoud kunt u de volgende handelingen uitvoeren:<\/p>\n\r<p class=\"p_Normal\" style=\"text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;\"><span class=\"f_Normal\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span>Konverteren en indexeren bestanden<\/p>\n\r<p class=\"p_Normal\" style=\"text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;\"><span class=\"f_Normal\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span>Wachtwoorden wijzigen<\/p>\n\r<p class=\"p_Normal\" style=\"text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;\"><span class=\"f_Normal\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span>Basisinstellingen tekstverwerker<\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r"
+})

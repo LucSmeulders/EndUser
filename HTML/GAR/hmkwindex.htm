@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>AXITO-Software Handleiding</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <script type="text/javascript">isIE=false</script>
+   <!--[if IE]>
+   <script type="text/javascript">isIE=true</script>
+   <![endif]-->
+
+      
+          
+   <style type="text/css">
+       body {  }
+       #idx          { margin: 0; padding: 0; }     /* div tag that wraps the keyword index */
+       #idx a        { font-color: #000; text-decoration: none; }  /* all links in index appear as text */
+
+       #idx p             { margin: 2px; }       /* keywords and secondary keywords */
+       #idx p.idxkeyword2 { margin-left: 20px }  /* indentation for secondary keywords */
+
+       table.idxtable { background: #F4F4F4;
+                        border: 1px solid #000000;
+                        border-collapse: collapse;
+                        -moz-box-shadow: 2px 2px 2px #B0B0B0;
+                        -webkit-box-shadow: 2px 2px 2px #B0B0B0;
+                        box-shadow: 2px 2px 2px #B0B0B0;
+                        filter: progid:DXImageTransform.Microsoft.Shadow(color=B0B0B0, Direction=135, Strength=4); }
+       td.idxtable    { background: #F4F4F4; }
+
+       /* font definitions for keyword section, keywords and popup links */
+       .idxsection  { font-family: Arial,Helvetica; font-weight: bold; font-size: 14pt; color: #000000; text-decoration: none;
+                      margin-top: 15px; margin-bottom: 15px; }
+       .idxkeyword  { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .idxkeyword2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .idxlink     { font-family: Arial,Helvetica; font-weight: normal; font-size: 9pt; color: #000000; text-decoration: none; }
+
+   </style>
+      
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="hmcontextids.js"></script>
+</head>
+<body>
+   
+   
+  <script type="text/javascript">
+
+  function hmInitHideLinks(cssCode) {
+  	var styleElement = document.createElement("style");
+  	styleElement.type = "text/css";
+  	if (styleElement.styleSheet) {
+    	styleElement.styleSheet.cssText = cssCode;
+  	}
+  	else {
+    	styleElement.appendChild(document.createTextNode(cssCode));
+  	}
+  	document.getElementsByTagName("head")[0].appendChild(styleElement);
+  }
+
+  hmInitHideLinks("#idx div { display: none }");
+
+  var currentdiv = null;
+  var canhidelinks = true;
+
+  function hmshowLinks(divID) {
+    var thisdiv = document.getElementById(divID);
+    canhidelinks = true;
+    hmhideLinks();
+    if (thisdiv) {
+      currentdiv = thisdiv;
+      $(currentdiv).show();
+      $(currentdiv).mouseover(hmdivMouseOver).mouseout(hmdivMouseOut);
+      $(document).mouseup(hmhideLinks);
+    }
+  }
+  function hmdivMouseOver() { canhidelinks = false; };
+  function hmdivMouseOut() { canhidelinks = true; };
+  function hmhideLinks() {
+    if (canhidelinks) {
+      if (currentdiv) {
+        $(currentdiv).hide();
+        $(currentdiv).unbind("onmouseover", "onmouseout");
+      }
+      currentdiv = null;
+      $(document).unbind("onmouseup");
+    }
+  }
+function getText(obj) {
+  return (obj.innerText ? obj.innerText : obj.textContent);
+}
+function trackidx(obj) {
+  var akeyword = "";
+  while (obj.className != "idxkeyword") {
+    if (obj.previousSibling == null)
+      { obj = obj.parentNode; }
+    else
+      { obj = obj.previousSibling; }
+    if (obj.className == "idxkeyword2") { akeyword = getText(obj); }
+    if (obj.className == "idxkeyword") { akeyword = ((akeyword=="") ? getText(obj) : getText(obj) + ":" + akeyword); }
+  }
+  if (parent.frames.length>0) {
+    if (parent.gaaccount) { parent.track("index", akeyword); }
+  }
+}
+
+</script>
+<div id="idx" style="margin:0;padding:0;border:none">
+<a name="A" id="A"></a><p class="idxsection">- A -</p>
+<p class="idxkeyword"><a href="aankoop_bestelbon.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Aankoop bestelbon</span></a></p>
+<p class="idxkeyword"><a href="aankoop_leveringsbon.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Aankoop leveringsbon</span></a></p>
+<p class="idxkeyword"><a href="aankoopdagboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Aankoopdagboek</span></a></p>
+<p class="idxkeyword"><a href="abonnementen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Abonnementen</span></a></p>
+<p class="idxkeyword"><a href="abonnementen_beheren.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Abonnementen beheren</span></a></p>
+<p class="idxkeyword"><a href="accijnzen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">accijnzen</span></a></p>
+<p class="idxkeyword"><a href="advanced_graphics.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Advanced Graphics</span></a></p>
+<p class="idxkeyword"><a href="investeringen-afschrijvingstabellen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Afschrijvingstabellen</span></a></p>
+<p class="idxkeyword"><a href="shift_-_f6.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Artikel opzoeken</span></a></p>
+<p class="idxkeyword"><a href="artikelen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Artikelen</span></a></p>
+<p class="idxkeyword"><a href="artikelenbeheer2.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Artikelenbeheer</span></a></p>
+<p class="idxkeyword"><a href="artikelgroepen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Artikelgroepen</span></a></p>
+<p class="idxkeyword"><a href="recupel_bebat_reprobel_auvibel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">auvibel</span></a></p>
+<a name="B" id="B"></a><p class="idxsection">- B -</p>
+<p class="idxkeyword"><a href="backorders.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Backorders</span></a></p>
+<p class="idxkeyword"><a href="backupbeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Backupbeheer</span></a></p>
+<p class="idxkeyword"><a href="balansen_grootboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Balansen</span></a></p>
+<p class="idxkeyword"><a href="barcodes.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Barcodes</span></a></p>
+<p class="idxkeyword"><a href="recupel_bebat_reprobel_auvibel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">bebat</span></a></p>
+<p class="idxkeyword"><a href="bedrijfskosten.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bedrijfskosten</span></a></p>
+<p class="idxkeyword"><a href="bedrijfskostenopbrengsten.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bedrijfskosten/opbrengsten</span></a></p>
+<p class="idxkeyword"><a href="bedrijfsobrengsten.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bedrijfsopbrengsten</span></a></p>
+<p class="idxkeyword"><a href="bedrijfsresultaten.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bedrijfsresultaten</span></a></p>
+<p class="idxkeyword"><a href="enkele_termen__bestand_record_.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BESTAND</span></a></p>
+<p class="idxkeyword"><a href="besteladviezen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Besteladviezen</span></a></p>
+<p class="idxkeyword"><a href="bestelbonnen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bestelbonnen</span></a></p>
+<p class="idxkeyword"><a href="boekhouding_algemeen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Boekhouding</span></a></p>
+<p class="idxkeyword"><a href="de_zes_starthandelingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">boekhoudjaar</span></a></p>
+<p class="idxkeyword"><a href="de_zes_starthandelingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Boekhoudjaar openen</span></a></p>
+<p class="idxkeyword"><a href="btw-aangifte.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BTW-aangifte</span></a></p>
+<p class="idxkeyword"><a href="btw-kwartaalopgave.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BTW-kwartaalopgave</span></a></p>
+<p class="idxkeyword"><a href="btw-listing.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BTW-listing</span></a></p>
+<a name="C" id="C"></a><p class="idxsection">- C -</p>
+<p class="idxkeyword"><a href="cadeaubonnen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">cadeaubon</span></a></p>
+<p class="idxkeyword"><a href="commissiebeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Commissiebeheer</span></a></p>
+<p class="idxkeyword"><a href="cts_hoofdmenu.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CTS Hoofdmenu</span></a></p>
+<p class="idxkeyword"><a href="cts-handelszaak_hoofdmenu.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CTS-Menuprogramma</span></a></p>
+<a name="D" id="D"></a><p class="idxsection">- D -</p>
+<p class="idxkeyword"><a href="kassabeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Dagverkopen</span></a></p>
+<p class="idxkeyword"><a href="diverse_dagboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Diverse dagboek</span></a></p>
+<p class="idxkeyword"><a href="document_in_vreemde_munt.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Document in vreemde munt</span></a></p>
+<p class="idxkeyword"><a href="dossierbeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Dossierbeheer</span></a></p>
+<a name="E" id="E"></a><p class="idxsection">- E -</p>
+<p class="idxkeyword"><a href="recupel_bebat_reprobel_auvibel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Eco-taksen</span></a></p>
+<p class="idxkeyword"><a href="einde_of_escape.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Einde</span></a></p>
+<p class="idxkeyword"><a href="einde_of_escape.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Esc</span></a></p>
+<p class="idxkeyword"><a href="einde_of_escape.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Escape</span></a></p>
+<p class="idxkeyword"><a href="evolutie_aankoopverkoop.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Evolutie aankoop/verkoop</span></a></p>
+<p class="idxkeyword"><a href="accijnzen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Extra taksen</span></a></p>
+<p class="idxkeyword"><a href="extra_totaal_kortingentoeslage.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Extra totaal kortingen/toeslagen</span></a></p>
+<a name="F" id="F"></a><p class="idxsection">- F -</p>
+<p class="idxkeyword"><a href="facturatie.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Facturatie</span></a></p>
+<p class="idxkeyword"><a href="faq.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FAQ</span></a></p>
+<p class="idxkeyword"><a href="filter.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Filter</span></a></p>
+<p class="idxkeyword"><a href="financieel_dagboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Financieel dagboek</span></a></p>
+<a name="G" id="G"></a><p class="idxsection">- G -</p>
+<p class="idxkeyword"><a href="garage.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Garage</span></a></p>
+<p class="idxkeyword"><a href="glashandel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Glashandel</span></a></p>
+<p class="idxkeyword"><a href="gratis_artikelen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Gratis artikel</span></a></p>
+<p class="idxkeyword"><a href="grootkleinverpakking.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Groot- &amp; kleinverpakking</span></a></p>
+<p class="idxkeyword"><a href="balansen_grootboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Grootboek</span></a></p>
+<p class="idxkeyword"><a href="grootkleinverpakking.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">grootverpakking</span></a></p>
+<a name="H" id="H"></a><p class="idxsection">- H -</p>
+<p class="idxkeyword"><a href="de_zes_starthandelingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Het boekhoudjaar openen</span></a></p>
+<p class="idxkeyword"><a href="historiek_aankopen_en_levering.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Historiek aankopen en leveringen</span></a></p>
+<p class="idxkeyword"><a href="historieken3.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Historieken</span></a></p>
+<p class="idxkeyword"><a href="historieken_artikelen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Historieken artikelen</span></a></p>
+<p class="idxkeyword"><a href="historieken_boekhouding.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Historieken boekhouding</span></a></p>
+<p class="idxkeyword"><a href="historieken_klanten.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Historieken klanten</span></a></p>
+<p class="idxkeyword"><a href="historieken_leveranciers.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Historieken leveranciers</span></a></p>
+<p class="idxkeyword"><a href="historieken_offertes_bonnen_en.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Historieken offertes, bonnen en facturen</span></a></p>
+<p class="idxkeyword"><a href="houthandel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Houthandel</span></a></p>
+<a name="I" id="I"></a><p class="idxsection">- I -</p>
+<p class="idxkeyword"><a href="index.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Index</span></a></p>
+<p class="idxkeyword"><a href="de_zes_starthandelingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ingave beginsaldi klanten/leveranciers</span></a></p>
+<p class="idxkeyword"><a href="de_zes_starthandelingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ingave beginsbalans</span></a></p>
+<p class="idxkeyword"><a href="initialisatie_voorraad.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Initialisatie voorraad</span></a></p>
+<p class="idxkeyword"><a href="inlezen_externe_artikelgegeven.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Inlezen externe artikelgegevens</span></a></p>
+<p class="idxkeyword"><a href="installatie_axito-cts_software.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">installatieprocedure</span></a></p>
+<p class="idxkeyword"><a href="installatie_axito-cts_software.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">installatiestappen</span></a></p>
+<p class="idxkeyword"><a href="installeren_van_een_externe_ca.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Installeren van een externe cardreader</span></a></p>
+<p class="idxkeyword"><a href="instellen_boekhoudperiode_datu.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Instellen boekhoudperiode, datum</span></a></p>
+<p class="idxkeyword"><a href="intrastat.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Instrastat-aangifte</span></a></p>
+<p class="idxkeyword"><a href="intervat_procedure_vanaf_1_jan.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Intervat</span></a></p>
+<p class="idxkeyword"><a href="intrastat.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Intrastat</span></a></p>
+<p class="idxkeyword"><a href="intrastatcodes.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Intrastatcodes</span></a></p>
+<p class="idxkeyword"><a href="inventaris.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Inventaris</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k80')"><span class="idxkeyword">Investeringen</span></a></p>
+<div id="k80" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="investeringen-afschrijvingstabellen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Afschrijvingstabellen/Investeringen</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="investeringen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Investeringen</span></a></td></tr></table></td></tr></table></div>
+<a name="J" id="J"></a><p class="idxsection">- J -</p>
+<p class="idxkeyword"><a href="afsluiten_boekhoudperiode.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">jaarafsluiting</span></a></p>
+<p class="idxkeyword"><a href="jaarrekening.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Jaarrekening</span></a></p>
+<a name="K" id="K"></a><p class="idxsection">- K -</p>
+<p class="idxkeyword"><a href="kassabeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Kassabeheer</span></a></p>
+<p class="idxkeyword"><a href="klant_voertuigen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Klant voertuigen</span></a></p>
+<p class="idxkeyword"><a href="grootkleinverpakking.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">kleinverpakking</span></a></p>
+<p class="idxkeyword"><a href="kopieren_bestanden.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Kopieren bestanden</span></a></p>
+<p class="idxkeyword"><a href="kortingenboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Kortingenboek</span></a></p>
+<p class="idxkeyword"><a href="kortingenboek_standaard.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Kortingenboek standaard</span></a></p>
+<a name="L" id="L"></a><p class="idxsection">- L -</p>
+<p class="idxkeyword"><a href="lay-out_documenten.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Lay-out documenten</span></a></p>
+<p class="idxkeyword"><a href="leveringsbonnen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Leveringsbonnen</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k91')"><span class="idxkeyword">Locatiebeheer</span></a></p>
+<div id="k91" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="locatiebeheer_en_kassabeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Locatiebeheer en kassabeheer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="locatiebeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Locatiebeheer</span></a></td></tr></table></td></tr></table></div>
+<a name="M" id="M"></a><p class="idxsection">- M -</p>
+<p class="idxkeyword"><a href="micromacro.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Micro/macro</span></a></p>
+<a name="N" id="N"></a><p class="idxsection">- N -</p>
+<p class="idxkeyword"><a href="nacalculatie.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Nacalculatie</span></a></p>
+<p class="idxkeyword"><a href="intrastat.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NBB</span></a></p>
+<p class="idxkeyword"><a href="nieuw_in_deze_versie.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Nieuw in deze versie</span></a></p>
+<p class="idxkeyword"><a href="nieuwe_voertuigen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Nieuwe voertuigen</span></a></p>
+<p class="idxkeyword"><a href="nota.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Nota</span></a></p>
+<a name="O" id="O"></a><p class="idxsection">- O -</p>
+<p class="idxkeyword"><a href="offertes.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Offertes</span></a></p>
+<p class="idxkeyword"><a href="onderhoudsprogramma.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Onderhoudsprogramma</span></a></p>
+<p class="idxkeyword"><a href="afsluiten_boekhoudperiode.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Openen &amp; afsluiten boekhoudperiode en -jaar</span></a></p>
+<p class="idxkeyword"><a href="de_zes_starthandelingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Opstellen boekhoudplan</span></a></p>
+<p class="idxkeyword"><a href="de_zes_starthandelingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Opstellen klantenbestand</span></a></p>
+<p class="idxkeyword"><a href="de_zes_starthandelingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Opstellen leveranciersbestand</span></a></p>
+<p class="idxkeyword"><a href="overname_voertuigen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Overname voertuigen</span></a></p>
+<a name="P" id="P"></a><p class="idxsection">- P -</p>
+<p class="idxkeyword"><a href="pdfs_maken.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PDF's maken</span></a></p>
+<p class="idxkeyword"><a href="afsluiten_boekhoudperiode.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Periodeafsluiting</span></a></p>
+<p class="idxkeyword"><a href="prijsaanpak.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Prijsaanpak</span></a></p>
+<p class="idxkeyword"><a href="prijsinformatie.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Prijsinformatie</span></a></p>
+<p class="idxkeyword"><a href="prijzen_verhogenverlagen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Prijzen verhogen/verlagen</span></a></p>
+<p class="idxkeyword"><a href="printen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Printen</span></a></p>
+<p class="idxkeyword"><a href="projecten2.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Projectbeheer</span></a></p>
+<p class="idxkeyword"><a href="promotieprijzen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Promotieprijzen</span></a></p>
+<p class="idxkeyword"><a href="puntenkaart.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Puntenkaart</span></a></p>
+<a name="R" id="R"></a><p class="idxsection">- R -</p>
+<p class="idxkeyword"><a href="enkele_termen__bestand_record_.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RECORD</span></a></p>
+<p class="idxkeyword"><a href="recupel_bebat_reprobel_auvibel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Recupel</span></a></p>
+<p class="idxkeyword"><a href="registratie.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Registratie van CTS Software</span></a></p>
+<p class="idxkeyword"><a href="recupel_bebat_reprobel_auvibel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">reprobel</span></a></p>
+<a name="S" id="S"></a><p class="idxsection">- S -</p>
+<p class="idxkeyword"><a href="samenstellingen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Samengestelde artikelen</span></a></p>
+<p class="idxkeyword"><a href="samengestelde_artikelen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Samengestelde artikelen werkwijze 2</span></a></p>
+<p class="idxkeyword"><a href="samenstelling_aankoopverkoop.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Samenstelling aankoop/verkoop</span></a></p>
+<p class="idxkeyword"><a href="schrappen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Schrappen</span></a></p>
+<p class="idxkeyword"><a href="schrijnwerkers.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Schrijnwerkers</span></a></p>
+<p class="idxkeyword"><a href="serienummers.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Serienummers</span></a></p>
+<p class="idxkeyword"><a href="shift_-_f6.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Shift - F6</span></a></p>
+<p class="idxkeyword"><a href="speciale_versies.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Speciale versies</span></a></p>
+<p class="idxkeyword"><a href="standaardteksten.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Standaardteksten</span></a></p>
+<p class="idxkeyword"><a href="statistieken.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Statistieken</span></a></p>
+<p class="idxkeyword"><a href="streefmaskers.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Streefmaskers</span></a></p>
+<p class="idxkeyword"><a href="streefpercentage.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Streefpercentage</span></a></p>
+<p class="idxkeyword"><a href="strikt_voorraadbeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Strikt voorraadbeheer</span></a></p>
+<a name="T" id="T"></a><p class="idxsection">- T -</p>
+<p class="idxkeyword"><a href="tegoedbonnen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">tegoedbon</span></a></p>
+<p class="idxkeyword"><a href="teksten_mailings.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Teksten, mailings</span></a></p>
+<p class="idxkeyword"><a href="tekstverwerking.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Tekstverwerking</span></a></p>
+<p class="idxkeyword"><a href="terugname_artikelen_retour.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Terugname artikelen</span></a></p>
+<p class="idxkeyword"><a href="terugzetten_bestanden.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Terugzetten bestanden</span></a></p>
+<p class="idxkeyword"><a href="toegangsrechtenbeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Toegangsrechtenbeheer</span></a></p>
+<p class="idxkeyword"><a href="toevoegen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Toevoegen</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k138')"><span class="idxkeyword">Traceren artikelen</span></a></p>
+<div id="k138" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="traceren_artikelen2.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Traceren artikelen</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="traceren_artikelen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Traceren artikelen</span></a></td></tr></table></td></tr></table></div>
+<a name="U" id="U"></a><p class="idxsection">- U -</p>
+<p class="idxkeyword"><a href="uitwisselen_gegevens.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Uitwisselen gegevens</span></a></p>
+<a name="V" id="V"></a><p class="idxsection">- V -</p>
+<p class="idxkeyword"><a href="faq.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">vaak gestelde vragen</span></a></p>
+<p class="idxkeyword"><a href="enkele_termen__bestand_record_.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">VELD</span></a></p>
+<p class="idxkeyword"><a href="vereenvoudigd_prijzenboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Vereenvoudigd prijzenboek</span></a></p>
+<p class="idxkeyword"><a href="verhuren_van_artikelen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Verhuren van artikelen</span></a></p>
+<p class="idxkeyword"><a href="verhuringen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Verhuringen</span></a></p>
+<p class="idxkeyword"><a href="verkoopdagboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Verkoopdagboek</span></a></p>
+<p class="idxkeyword"><a href="overige_mogelijkheden.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Verkoopprijs altijd negatief invullen</span></a></p>
+<p class="idxkeyword"><a href="vervaldagboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Vervaldagboek</span></a></p>
+<p class="idxkeyword"><a href="verwerken_orders.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Verwerken orders</span></a></p>
+<p class="idxkeyword"><a href="voertuigenbeheer.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Voertuigenbeheer</span></a></p>
+<p class="idxkeyword"><a href="voldaan.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Voldaan</span></a></p>
+<p class="idxkeyword"><a href="voorbeelden2.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Voorbeelden</span></a></p>
+<p class="idxkeyword"><a href="voorraad.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Voorraad</span></a></p>
+<p class="idxkeyword"><a href="voorraadbeheer2.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Voorraad- &amp; aankoopbeheer</span></a></p>
+<p class="idxkeyword"><a href="voorraad_transfert.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Voorraad transfert</span></a></p>
+<p class="idxkeyword"><a href="artikelen_in_vreemde_talen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Vreemde talen</span></a></p>
+<a name="W" id="W"></a><p class="idxsection">- W -</p>
+<p class="idxkeyword"><a href="overige_mogelijkheden.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Werken met variabele verkoopprijs</span></a></p>
+<p class="idxkeyword"><a href="werknemers.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Werknemers</span></a></p>
+<p class="idxkeyword"><a href="werkplaats_registerboek.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Werkplaats registerboek</span></a></p>
+<p class="idxkeyword"><a href="werkzaamheden.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Werkzaamheden</span></a></p>
+<p class="idxkeyword"><a href="wijzigen.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Wijzigen</span></a></p>
+<a name="Z" id="Z"></a><p class="idxsection">- Z -</p>
+<p class="idxkeyword"><a href="zoeken.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Zoeken</span></a></p>
+</div>
+
+   
+</body>
+</html>

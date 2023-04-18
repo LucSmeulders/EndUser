@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Artikelenbeheer &gt; Artikelen &gt; Barcodes</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Barcodes" />
+   <meta name="description" content="Aan alle artikelen kunt u een barcode koppelen. Deze barcode kan dan met behulp van een barcodescanner in het kassabeheer worden ingelezen. Hoe u de verschillende mogelijkheden..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #F0F0F0; min-height: 59px }             
+      #idheader h1 span { color: #000000 }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_white.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_grey.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #000000; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "barcodes.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Barcodes</span></p>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?barcodes.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="artikelenbeheer2.htm">Artikelenbeheer</a> &gt; <a href="artikelen.htm">Artikelen</a>&nbsp;&gt;</p>
+   
+      <p class="p_Titeltekstinbalk"><span class="f_Titeltekstinbalk">Barcodes</span></p>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="artikelsoorten.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="artikelen.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="colli-leeggoed.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">Aan alle artikelen kunt u een barcode koppelen. Deze barcode kan dan met behulp van een barcodescanner in het kassabeheer worden ingelezen. Hoe u de verschillende mogelijkheden kunt gebruiken wordt in dit gedeelte van de handleiding besproken.</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><a id="ondersteunde_barcode-types" class="hmanchor"></a><span class="f_Heading1">Ondersteunde barcode-types</span></h1>
+<p class="p_Normal">Momenteel worden volgende barcodes ondersteund :</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">EAN-8</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is een internationale barcode met een lengte van 8 karakters (zie EAN-13).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">EAN-13</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Dit is een internationale barcode met een lengte van 13 karakter (enkel getallen zijn toegelaten). Deze barcode is als volgt opgebouwd:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 52px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>1e en 2e getal: verwijzing naar het land van oorsprong</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 52px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>3e tot 6e getal: verwijzing naar de fabricant</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 52px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>7e tot 12e getal: nummering toegekend door fabricant (interne nummer)</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 52px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>13e getal: controlegetal</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">UPC</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Deze barcode heeft een lengte van 12 karakters (enkel getallen zijn toegelaten). Barcode-type EAN-13 werd afgeleid van deze UPC. In het AXITO-programma wordt een UPC-barcode geconverteerd naar een EAN-13 barcode door voor de barcode een extra '0' te plaatsen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">INTER2/5</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Bij deze barcode is de lengte variabel en bestaat volledig uit getallen. Echter, in het AXITO-programma is deze lengte vastgelegd op 10 karakters. Hierbij wordt de barcode als volgt opgebouwd:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 52px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>1e tot 7e getal: dit is een willekeurig getal van 1 to 9999999</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 52px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>8e tot 10e getal: in de 'normale' versie van AXITO is dit steeds '000'. In de matenbalk-versie echter, kan dit varieren van 001 to 999, en verwijst dit naar de maat van het artikel.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">CODE39</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Bij dit barcode-type is de lengte ook variabel en mag deze bestaan uit letters en getallen.</p>
+<p class="p_Normal" style="margin: 0 0 0 40px;">Dit zijn de karakters die zijn toegestaan : <span style="font-weight: bold;">0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ - . $ / + %</span> en spatie </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><span class="f_Heading1">Toekenning barcodes</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Artikel heeft reeds een barcode (EAN-8 / EAN-13 / CODE39)</span></h2>
+<p class="p_Normal">Hierbij is op het betreffende artikel (of verpakking) reeds een barcode afgedrukt (door de leverancier van het artikel). In de meeste gevallen is dit een EAN-8 of EAN 13 code.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table class="Opmerking" >
+<tr class="Opmerking">
+<td class="Opmerking"><p class="p_Normal" style="margin: 0 0 0 0;"><span style="font-weight: bold;">Opmerking:</span> </p>
+<p class="p_Normal" style="margin: 0 0 0 0;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">Hoe is een EAN-barcode opgebouwd? Deze barcode begint steeds met een landcode, gevolgd door een uniek getal (voor dat land). Zodoende heeft ieder artikel een unieke barcodenummer. Dit barcodenummer moet u bij het betreffende artikel invullen in het veld 'Barcodenummer'.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 11px;"><span style="font-weight: bold;">Barcode toekennen aan artikel</span></p>
+<p class="p_Normal" style="margin: 0 0 0 11px;">Tijdens het toevoegen van een nieuw artikel :</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 35px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Wanneer u tijdens het toevoegen op het <a href="enkele_termen__bestand_record_.htm" class="topiclink">veld</a> 'Barcode' komt, hoeft u slechts de barcode op het artikel te scannen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 35px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Het programma herkent automatisch of een een EAN-barcode is, en plaats automatisch het veld 'Eigen barcode' op &quot;J&quot;.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 11px;">Nadien, als het artikel reeds aanwezig is, een barcode aan het artikel toekennen:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 35px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Ga via het hoofdmenu naar de keuze 'Artikelen', en <a href="zoeken.htm" class="topiclink">zoek</a> het betreffende artikel.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 35px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Vraag via de &lt;M&gt; toets het <a href="micromacro.htm" class="topiclink">Micro/macro</a> scherm op.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 35px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">3.</span>In dit scherm verplaatst u de cursorbalk naar het <a href="enkele_termen__bestand_record_.htm" class="topiclink">veld</a> 'Barcode'</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 35px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">4.</span><a href="wijzigen.htm" class="topiclink">Wijzig</a> het veld 'Barcode'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 35px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">5.</span>Scan de barcode op het artikel. Het programma herkent automatisch of een een EAN-barcode is, en plaats automatisch het veld 'Eigen barcode' op &quot;J&quot;.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Artikel heeft geen barcode (Interleave 2/5)</span></h2>
+<p class="p_Normal">Hierbij is op het betreffende artikel (of verpakking) nog geen barcode afgedrukt. Om deze artikelen toch met een barcodescanner te kunnen inlezen, is het nodig dat u zelf dit artikel voorziet van een barcode.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table class="Opmerking" >
+<tr class="Opmerking">
+<td class="Opmerking"><p class="p_Normal" style="margin: 0 0 0 0;"><span style="font-weight: bold;">Opmerking :</span> </p>
+<p class="p_Normal" style="margin: 0 0 0 0;">Deze barcode heeft een lengte van maximaal 7 karakters en kan dus een waarde hebben van 1 tot 9999999. Wanneer u deze barcode afdrukt (op etiketten) wordt deze barcode als een <span style="font-style: italic;">Interleave 2/5</span> afgedrukt. Aan deze barcode wordt achteraan 3 nullen bijgeplaatst. De totale lengte van de barcode bestaat dan uit 10 karakters gevormd (door het toevoegen van extra nullen voor de barcode).</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;"><span style="text-decoration: underline;">Enkele voorbeelden</span> :</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 11px;"><table style="width:100%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:147px; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 0 0;"><span style="font-weight: bold;">Barcodewaarde</span></p>
+</td>
+<td style="vertical-align:top; width:758px; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 0 0;"><span style="font-weight: bold;">Barcode op etiket</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:147px; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 0 0;">123</p>
+</td>
+<td style="vertical-align:top; width:758px; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 0 0;">0000123000</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:147px; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 0 0;">10654</p>
+</td>
+<td style="vertical-align:top; width:758px; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 0 0;">0010654000</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:147px; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 0 0;">1</p>
+</td>
+<td style="vertical-align:top; width:758px; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 0 0;">0000001000</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;">Indien u werkt met de module 'Matenbalken' (Textiel-versie), worden de laatste 3 nullen vervangen door de 'Interne maat'.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span style="font-weight: bold;">Barcode toekennen aan artikel</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Tijdens het toevoegen van een nieuw artikel:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Wanneer u een nieuw artikel toevoegt, wordt automatisch een nieuwe 'eigen barcode' bij het artikel ingevuld.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>U hoeft verder niets te doen indien u op het veld 'Eigen barcode' komt. Gewoon bevestigen door op &lt;Enter&gt; te drukken.</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Nadien, als het artikel reeds aanwezig is, een barcode aan het artikel toekennen:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Ga via het hoofdmenu naar de keuze 'Artikelen', en <a href="zoeken.htm" class="topiclink">zoek</a> het betreffende artikel.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Vraag via de &lt;M&gt; toets het <a href="micromacro.htm" class="topiclink">Micro/macro</a> scherm op.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">3.</span>In dit scherm verplaatst u de cursorbalk naar het <a href="enkele_termen__bestand_record_.htm" class="topiclink">veld</a> 'Barcode'</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">4.</span><a href="wijzigen.htm" class="topiclink">Wijzig</a> het veld 'Barcode'.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">5.</span>Vul handmatig een barcode in met een waarde -1. Deze waarde -1 is voor de computer een teken om automatisch op zoek te gaan naar een beschikbare barcode.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 20px; margin: 0 0 0 48px;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">6.</span>Het programma 'weet' dat dit een Interleave2/5 barcode is, en plaats automatisch het veld 'Eigen barcode' op &quot;N&quot;.</p>
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><span class="f_Heading1">Afdrukken van barcodes (labels)</span></h1>
+<p class="p_Normal">Het afdrukken van barcodes kunt u vanuit het artikelenbestand via de keuze 'Printen', waarna u vervolgens kiest voor 'Etiketten'. Er verschijnt een nieuw keuzemenu.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Etiketten: Artikel xxx-xxxxxxx</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Etiketten: Alle artikelen</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 24px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Etiketten: Artikelen selecteren</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal">OPGELET: U kunt enkel etiketten afdrukken met barcodes die standaard geen eigen barcode hebben (m.a.w. waarbij in het veld 'Eigen barcode' een 'N' is ingevuld).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In dit menu kunt u kiezen uit een aantal mogelijkheden:</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Artikel xxx-xxxxx</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">U kunt voor één bepaald artikel etiketten (met barcodes) afdrukken. U kiest daarvoor enkel deze keuze, waarna u nog kunt ingeven hoeveel etiketten u wenst af te drukken.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 13px;"><span style="font-weight: bold;">Alle artikelen</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Wanneer u voor alle artikelen in het artikelenbestand (die geen eigen barcode hebben) een barcode (of meerdere) wilt afdrukken. Indien u een <a href="filter.htm" class="topiclink">filter</a> heeft geselecteerd, wordt enkel voor de artikelen die aan die filter voldoen, etiketten geprint.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 13px;"><span style="font-weight: bold;">Artikelen selecteren</span></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal" style="margin: 0 0 0 40px;">Nadat u deze keuze heeft geselecteerd, wordt het artikelbestand opnieuw getoond, echter met een extra kolom '<span style="font-style: italic;">Print aantal</span>'. Door dit aantal te wijzigen, kunt u ingeven hoe vaak voor elk artikel een etiket wordt geprint. Voor elk artikel waar u een waarde in 'Print aantal' heeft ingevuld, worden een overeenstemmend aantal etiketten afgedrukt.</p>
+<p class="p_Normal" style="margin: 0 0 0 40px;">Wanneer u werkt met de module 'Matenbalk', kunt u het aantal te printen etiketten ingaven per maat.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 13px;"><table class="Opmerking" >
+<tr class="Opmerking">
+<td class="Opmerking"><p class="p_Normal"><span style="font-weight: bold;">Opmerking:</span> </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Hoe kunt u het aantal te printen etiketten bepalen :</p>
+<p class="p_Normal">Zodra het dialoogvenster verschijnt waarin het aantal te printen etiketten verschijnt, kunt u volgende waarden invullen:</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="width:100%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:28px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">x</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">U vult een getal groter dan nul in, en voor elk artikel zonder een eigen barcode worden x etiketten afgedrukt.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:28px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">-1</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Eén etiket voor elk artikel in voorraad: Wanneer de voorraad van een artikel bijvoorbeeld 5 bedraagt, dan zullen voor dat artikel 5 etiketten worden afgedrukt.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:28px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">-2</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Eén etiket voor elk artikel in bestelling: Wanneer voor een bepaald artikel bijvoorbeeld 10 artikelen in bestelling staan, zullen hiervoor 10 etiketten worden afgedrukt.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+/* Text Styles */
+hr { color: #595959 }
+body, table, tr, th /* Normal */
+{
+ font-size: 11pt;
+ font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #595959;
+ text-decoration: none;
+}
+span.f_AXITOMenu_choice /* AXITO Menu-choice */
+{
+ font-size: 10pt;
+ color: #0000ff;
+ background-color: #ccffff;
+}
+span.f_AXITO_Button /* AXITO-Button */
+{
+ font-weight: bold;
+ color: #ffff99;
+ background-color: #808000;
+}
+span.f_Bronnen /* Bronnen */
+{
+ font-size: 8pt;
+}
+span.f_CodeExample /* Code Example */
+{
+ font-size: 8pt;
+ font-family: 'Courier New',Courier,monospace;
+ color: #000000;
+}
+span.f_Comment /* Comment */
+{
+}
+span.f_CourierFixed /* Courier Fixed */
+{
+ font-size: 9pt;
+ font-family: 'Courier New',Courier,monospace;
+ color: #000000;
+}
+span.f_Heading1 /* Heading1 */
+{
+ font-size: 20pt;
+ font-weight: bold;
+ color: #000000;
+ text-decoration: underline;
+}
+span.f_Heading2 /* Heading2 */
+{
+ font-size: 16pt;
+ font-weight: bold;
+ color: #808080;
+ text-decoration: underline;
+}
+span.f_Heading3 /* Heading3 */
+{
+ font-size: 14pt;
+ font-weight: bold;
+ color: #808080;
+}
+span.f_Heading4 /* Heading4 */
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #808080;
+}
+span.f_ImageCaption /* Image Caption */
+{
+ font-size: 8pt;
+ font-weight: bold;
+}
+span.f_InstructieCommando /* InstructieCommando */
+{
+ font-size: 12pt;
+ font-weight: bold;
+}
+span.f_InstructieResultaat /* InstructieResultaat */
+{
+}
+span.f_Notes /* Notes */
+{
+}
+span.f_Opmerkingcursief /* Opmerking, cursief */
+{
+ font-size: 8pt;
+ font-style: italic;
+ color: #808080;
+}
+span.f_Tabeltitel /* Tabel titel */
+{
+ font-size: 14pt;
+ font-weight: bold;
+}
+span.f_Titeltekstinbalk /* Titeltekst in balk */
+{
+ font-size: 24pt;
+ font-weight: bold;
+ color: #ffffff;
+}
+/* Paragraph styles */
+p, p.p_Normal, div.p_Normal, li.p_Normal /* Normal */
+{
+ text-align: left;
+ text-indent: 0;
+ line-height: 1.80;
+ padding: 0 0 0 0;
+ margin: 0 0 0 14px;
+}
+.p_AXITOMenu_choice /* AXITO Menu-choice */
+{
+ font-size: 10pt;
+}
+.p_AXITO_Button /* AXITO-Button */
+{
+ font-size: 11pt;
+}
+.p_Bronnen /* Bronnen */
+{
+ font-size: 8pt;
+}
+.p_CodeExample /* Code Example */
+{
+ font-size: 8pt;
+ line-height: 1.0;
+ white-space: nowrap;
+ page-break-inside: avoid;
+ margin: 0 0 0 0;
+}
+.p_Comment /* Comment */
+{
+ font-size: 11pt;
+}
+.p_Heading1 /* Heading1 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0;
+ line-height: 1.80;
+ padding: 0 0 0 0;
+ margin: 0 0 0 14px;
+}
+.p_Heading2 /* Heading2 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0;
+ line-height: 1.80;
+ padding: 0 0 0 0;
+ margin: 0 0 0 14px;
+}
+.p_Heading3 /* Heading3 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0;
+ line-height: 1.80;
+ padding: 0 0 0 0;
+ margin: 0 0 0 14px;
+}
+.p_Heading4 /* Heading4 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0;
+ line-height: 1.80;
+ padding: 0 0 0 0;
+ margin: 0 0 0 14px;
+}
+.p_ImageCaption /* Image Caption */
+{
+ font-size: 8pt;
+}
+.p_InstructieCommando /* InstructieCommando */
+{
+ font-size: 12pt;
+}
+.p_InstructieResultaat /* InstructieResultaat */
+{
+ font-size: 11pt;
+}
+.p_Notes /* Notes */
+{
+ font-size: 11pt;
+}
+.p_Opmerkingcursief /* Opmerking, cursief */
+{
+ font-size: 8pt;
+}
+.p_Tabeltitel /* Tabel titel */
+{
+ font-size: 14pt;
+ text-indent: -48px;
+ margin: 0 0 0 48px;
+}
+.p_Titeltekstinbalk /* Titeltekst in balk */
+{
+ font-size: 24pt;
+}
+/* Table styles */
+table.AXITOTableintable {
+ border: solid 3px #FFFFFF;
+ border-spacing: 0;
+ border-collapse: collapse;
+}
+table.AXITOTableintable tr.AXITOTableintable {
+ text-align: left;
+}
+table.AXITOTableintable th.AXITOTableintable, table.AXITOTableintable td.AXITOTableintable {
+ vertical-align: top;
+ padding: 5px;
+ border: solid 2px #FFFFFF;
+}
+table.AXITOTableintable th.AXITOTableintable {
+ background-color:#ffffff;
+}
+table.AXITOTablewithHeader {
+ width: 95%;
+ background-color: #FFFFFF;
+ border: none;
+ border-spacing: 0;
+ border-collapse: collapse;
+}
+table.AXITOTablewithHeader tr.AXITOTablewithHeader {
+ text-align: left;
+}
+table.AXITOTablewithHeader th.AXITOTablewithHeader, table.AXITOTablewithHeader td.AXITOTablewithHeader {
+ vertical-align: top;
+ padding: 5px;
+ border: solid thin #C0C0C0;
+}
+table.AXITOTablewithHeader th.AXITOTablewithHeader {
+ background-color:#ffffff;
+}
+table.AxitoTableLarge {
+ width: 95%;
+ border: none;
+ border-spacing: 0;
+ border-collapse: collapse;
+}
+table.AxitoTableLarge tr.AxitoTableLarge {
+ text-align: left;
+}
+table.AxitoTableLarge th.AxitoTableLarge, table.AxitoTableLarge td.AxitoTableLarge {
+ vertical-align: top;
+ padding: 5px;
+ border: solid thin #C0C0C0;
+}
+table.Opmerking {
+ width: 85%;
+ background-color: #E9FEE2;
+ border-color: #E0E0E0 #808080 #808080 #E0E0E0;
+border-style: solid;
+border-width: 3px;
+ border-spacing: 0;
+}
+table.Opmerking tr.Opmerking {
+ text-align: left;
+}
+table.Opmerking th.Opmerking, table.Opmerking td.Opmerking {
+ vertical-align: top;
+ padding: 10px;
+ border: none;
+}
+table.Voorbeeld {
+ width: 85%;
+ background-color: #FFFFDD;
+ border-color: #E0E0E0 #808080 #808080 #E0E0E0;
+border-style: solid;
+border-width: 3px;
+ border-spacing: 0;
+}
+table.Voorbeeld tr.Voorbeeld {
+ text-align: left;
+}
+table.Voorbeeld th.Voorbeeld, table.Voorbeeld td.Voorbeeld {
+ vertical-align: top;
+ padding: 10px;
+ border: none;
+}
+table.Waarschuwing {
+ width: 75%;
+ background-color: #FFD9D9;
+ border-color: #E0E0E0 #808080 #808080 #E0E0E0;
+border-style: solid;
+border-width: 3px;
+ border-spacing: 0;
+}
+table.Waarschuwing tr.Waarschuwing {
+ text-align: left;
+}
+table.Waarschuwing th.Waarschuwing, table.Waarschuwing td.Waarschuwing {
+ vertical-align: top;
+ padding: 10px;
+ border: none;
+}
+div.hmrotate90  { display:inline-block; -webkit-writing-mode: vertical-rl; -ms-writing-mode: tb-rl; writing-mode: vertical-rl; }
+div.hmrotate270 { display:inline-block; -webkit-writing-mode: vertical-rl; -ms-writing-mode: tb-rl; writing-mode: vertical-rl; transform: rotate(180deg); }
+
+a.imagetogglelink {
+  position: relative;
+  display: inline-block;
+}
+svg.image-toggle-magnifier { /* Magnifier icon for image toggles */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40pt;
+  height: 40pt;
+  max-width: 80%;
+  max-height: 80%;
+  fill: #FFFFFF;
+  stroke: #808080;
+  stroke-width: 0.5pt;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+img.image-toggle:hover + svg.image-toggle-magnifier, svg.image-toggle-magnifier:hover {
+  opacity: 1;
+}
+
+
+
+#hmpopupdiv /* used for javascript text popups */
+{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  padding: 6px;
+  border:1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+}
+
+#hmlightbox /* image lightbox */
+{
+  border: none;
+  padding: 8px;
+  background: #FFF;
+  font-size: 110%;
+  font-weight: bold;
+  color: #777;
+  box-shadow: 5px 5px 5px #888;
+}
+
+a.dropdown-toggle /* dropdown toggle caption */
+{
+  cursor: pointer;
+}
+a.inline-toggle /* inline toggle caption */
+{
+  cursor: pointer;
+}
+img.dropdown-toggle-icon /* toggle icon */
+{
+  cursor: pointer;
+}
+/* CSS for responsive image maps */
+
+.hmImageMap a.hmHotspotRect { display:block; position:absolute; border: 1px solid transparent; background:#000; opacity:0.01 }
+.hmImageMap a.hmHotspotEllipse { display:block; position:absolute; border-radius:50%; border: 1px solid transparent; background:#000; opacity:0.01 }
+.hmImageMap:hover a.hmHotspotRect {opacity:0.3 }
+.hmImageMap:hover a.hmHotspotEllipse { opacity:0.3 }
+a.hmHotspotRect:hover { border:1px solid #000; background:#FFF; opacity:0.3 }
+a.hmHotspotEllipse:hover { border:1px solid #000; background:#FFF; opacity:0.3 }

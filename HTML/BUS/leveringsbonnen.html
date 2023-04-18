@@ -1,0 +1,1489 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<!-- Help+Manual Premium Pack Version 4.3.0 (c) 2015-2021 by Tim Green. All rights reserved. -->
+	<title>Leveringsbonnen</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" id="pageviewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="cache-control" content="no-cache" />	
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta name="generator" content="Help &amp; Manual" />
+	<meta name="keywords" content="Leveringsbonnen" />
+	<meta name="description" content="Net zoals bij een facturatiebestand, kunt u ook in het leveringsbonnenbestand een leveringsbon toevoegen, wijzigen, schrappen enz... Het toevoegen of wijzigen van een..." />
+	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
+	<meta name="author" content="Support" />
+	<meta name="msapplication-tap-highlight" content="no" />
+<link rel="shortcut icon" href="favicon.ico" /> 
+<!-- If you use Google Web Fonts please include Open Sans as it is the preferred font for the skin's own UI -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link type="text/css" href="./css/hmprojectstyles.css" rel="stylesheet" />
+	<script type="text/javascript">
+/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+*/
+		var pageName = "mainPage";
+
+		
+		var hmDevice = {
+		
+		mobileSleepReload: true,
+		// Unique project ID
+		compilehash: (function () {
+		var outVal = 0, t="AXITO-Software HandleidingUser-defined Project ID";
+		for (var x = 0; x < t.length; x++) {
+			outVal = outVal + (t.charCodeAt(x)*(x+2));
+		}
+		return (outVal*697).toString(32) + "_";
+		})(),
+		
+		// Cookies
+		hmSetCookie: function(cname, cvalue, exdays) {
+			var expires = "";
+			if (exdays) {
+				var d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				expires = "expires="+d.toGMTString();
+			}
+			document.cookie = cname + "=" + cvalue + "; " + expires;
+		},
+
+		hmGetCookie: function(cname) {
+			var name = cname + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0; i<ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1);
+				if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+			}
+			return "";
+		},
+		
+		hmDeleteCookie: function(cname) {
+			var name = cname + "=";
+			document.cookie = name + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+		}
+	
+	};
+	// Session Variables
+	// Test that storage is both available and accessible (looking at you, Safari!)
+	var storageOK = (function(){
+		var gotStorage = typeof(Storage) === "object" && typeof(localStorage) === "object" && typeof(sessionStorage) === "object";
+		if (gotStorage) {
+			try {
+				localStorage.setItem('testStorage',1);
+				localStorage.removeItem('testStorage');
+				gotStorage = true;
+			}
+			catch(e) {
+			gotStorage = false;
+			}
+		}
+		return gotStorage;
+		})();
+		
+	sessionVariable = {
+		localS: storageOK,
+		
+		fxVal: function(v) {
+			return decodeURIComponent(v);
+		},
+		
+		setPV: function(sVar,sVal) {
+			if (this.localS) {
+				localStorage.setItem(hmDevice.compilehash + sVar,this.fxVal(sVal));
+			} else
+				hmDevice.hmSetCookie(hmDevice.compilehash + sVar,this.fxVal(sVal),365);	
+		},
+		setSV: function(sVar,sVal) {
+			if (this.localS)
+				sessionStorage.setItem(hmDevice.compilehash + sVar,this.fxVal(sVal));
+			else
+				hmDevice.hmSetCookie(hmDevice.compilehash + sVar,this.fxVal(sVal),false);
+		},
+		getPV: function(sVar) {
+			if (this.localS) {
+				if (typeof(localStorage.getItem(hmDevice.compilehash + sVar)) !== "undefined")
+					return localStorage.getItem(hmDevice.compilehash + sVar);
+				else return null;
+			} else 
+				return hmDevice.hmGetCookie(hmDevice.compilehash + sVar);
+		},
+		getSV: function(sVar) {
+			if (this.localS) {
+				if (typeof(sessionStorage.getItem(hmDevice.compilehash + sVar)) !== "undefined")
+					return sessionStorage.getItem(hmDevice.compilehash + sVar);
+				else return null;
+			} else 
+				return hmDevice.hmGetCookie(hmDevice.compilehash + sVar);
+		},
+		deletePV: function(sVar) {
+			if (this.localS)
+				localStorage.removeItem(hmDevice.compilehash + sVar);
+			else
+				hmDevice.hmDeleteCookie(hmDevice.compilehash + sVar);
+		},
+		deleteSV: function(sVar) {
+			if (this.localS)
+				sessionStorage.removeItem(hmDevice.compilehash + sVar);
+			else
+				hmDevice.hmDeleteCookie(hmDevice.compilehash + sVar);
+		}
+	},
+	hmFlags = {
+		skinType: "flat"
+	};	
+	
+	/* UI Location */
+	hmDevice.page = "topicpage";
+	hmDevice.baseFontSize = 95;
+	hmDevice.fontChangeMax = 20;
+	
+	/* Source Checks */
+	hmDevice.agent = navigator.userAgent.toLowerCase();
+	hmDevice.embedded = (self != top);
+	hmDevice.Xdomain = (function(){try { return parent.location.hostname.length < 0 } catch(err) { return true;}})();
+	hmDevice.platform = navigator.platform.toLowerCase();
+	hmDevice.ipad = /ipad/.test(hmDevice.platform);
+	hmDevice.iphone = /iphone/.test(hmDevice.platform);
+	hmDevice.winphone7 =  (/windows phone os [7]\.\d\d??; .*?trident\/[5]\.\d\d??; iemobile\/9/.test(hmDevice.agent));
+	hmDevice.winphone = (/windows phone [89]\.\d\d??; .*?trident\/[67]\.\d\d??;.*?touch; /.test(hmDevice.agent));
+	hmDevice.w8desktop = (/windows nt 6\.[2345]|windows nt 10\.[0123456]/m.test(hmDevice.agent));
+	hmDevice.msBrowser = (/edge|trident/m.test(hmDevice.agent));
+	hmDevice.w8metro = (function(){var supported = true; 
+				try {new ActiveXObject("htmlfile");} catch(e) {supported = false;} 
+				return (!supported && hmDevice.w8desktop && hmDevice.msBrowser)})();
+	hmDevice.touch = !!(('ontouchstart' in window && !window.opera) || ('msmaxtouchppoints' in window.navigator) || ('maxtouchppoints' in window.navigator) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+	// Treat all Windows 8 devices as desktops unless in metro mode with touch
+	hmDevice.tb = (/tablet/.test(hmDevice.agent) && (!/trident/.test(hmDevice.agent) || (hmDevice.w8metro && hmDevice.touch)));
+	hmDevice.goodandroid = (/android.+?applewebkit\/(?:(?:537\.(?:3[6-9]|[4-9][0-9]))|(?:53[8-9]\.[0-9][0-9])|(?:54[0-9]\.[0-9][0-9]))|android.+?gecko\/[345][0-9]\.\d{1,2} firefox/.test(hmDevice.agent));
+	hmDevice.deadandroid = (/android.+?applewebkit\/(?:53[0-6]\.\d{1,2})|firefox\/[0-2]\d\.\d{1,2}/.test(hmDevice.agent));
+	hmDevice.android = (/android/.test(hmDevice.agent) && !hmDevice.deadandroid);
+	hmDevice.mb = /mobi|mobile/.test(hmDevice.agent);
+	
+	/* Main Checks */
+	hmDevice.phone = (hmDevice.mb && !hmDevice.ipad && !hmDevice.tb);
+	hmDevice.tablet = (hmDevice.ipad || hmDevice.tb || (!hmDevice.phone && hmDevice.android));
+	hmDevice.aspectRatio = (screen.height / screen.width > 1 ? screen.height / screen.width : screen.width / screen.height).toFixed(2);
+	hmDevice.narrowTablet = (hmDevice.tablet && hmDevice.aspectRatio > 1.4);
+	hmDevice.desktop = ((!hmDevice.tablet && !hmDevice.phone));
+	hmDevice.device = hmDevice.phone ? "phone" : hmDevice.tablet ? "tablet" : hmDevice.desktop ? "desktop" : "default";
+	hmDevice.fontSize = hmDevice.phone ? hmDevice.baseFontSize * 1.0 : hmDevice.tablet ? hmDevice.baseFontSize * 1.0 : hmDevice.desktop ? hmDevice.baseFontSize : hmDevice.baseFontSize;
+	hmDevice.maxFontSize = hmDevice.fontSize + hmDevice.fontChangeMax;
+	hmDevice.minFontSize = hmDevice.fontSize - hmDevice.fontChangeMax;
+	if (hmDevice.device !== sessionVariable.getPV("hmDevice")) {
+		sessionVariable.setPV("hmDevice", hmDevice.device);
+		sessionVariable.setPV("fontSize",hmDevice.fontSize.toString());
+		} else {
+			var tempSize = sessionVariable.getPV("fontSize");
+			if (tempSize !== null)
+				hmDevice.fontSize = parseInt(tempSize,10);
+			else
+				sessionVariable.setPV("fontSize",hmDevice.fontSize.toString());
+		}
+		
+	/* Main Stylesheet */
+	hmDevice.cssfile = document.createElement('link');
+	hmDevice.cssfile.rel = 'stylesheet';
+	hmDevice.cssfile.type = 'text/css';
+	hmDevice.cssfile.href = hmDevice.phone ? "./css/hmwebhelp_main_phone.css" : hmDevice.tablet ? "./css/hmwebhelp_main_tablet.css" : hmDevice.desktop ? "./css/hmwebhelp_main_desktop.css" : "./css/hmwebhelp_main_default.css";
+	document.getElementsByTagName('head')[0].appendChild(hmDevice.cssfile);
+
+	// Expand to full width of container frame if help is embedded in another page
+	if (hmDevice.embedded && hmDevice.desktop) {
+		let embedStyle = document.createElement("style");
+			embedStyle.type = "text/css";
+			embedStyle.appendChild(document.createTextNode("div#helpwrapper {max-width: 100% !important}"));
+			document.getElementsByTagName("head")[0].appendChild(embedStyle);
+	}
+
+	hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
+	var hmSearchActive = true,
+		hmIndexActive = true;
+	</script>
+	<style type="text/css">.svgsprite{display:none;}
+	div#noscript {display: none;}</style> 
+	<style id="livestyles" type="text/css"></style>
+	<noscript><style type="text/css">
+	div#pagewrapper {display: none;}
+	div#fouc {display: none;}
+	div#noscript {
+		display: block;
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		border: 1rem solid grey;
+		background-color: #eaeaea;
+		}
+	h2#noscriptwarning {
+		text-align: center;
+		position: relative;
+		top: 35%;
+		color: #333333;
+	}
+	</style>
+	</noscript>
+	<link rel="canonical" href="http://www.helpandmanual.com/help/leveringsbonnen.html" />
+	<script id="jqscript" type="text/javascript"></script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<defs>
+<g class="svgsprite" id="th-list" width="32" height="32" viewBox="0 0 32 32">
+<path d="M9.152 22.272v3.456q0 0.704-0.512 1.184t-1.216 0.512h-5.696q-0.736 0-1.216-0.512t-0.512-1.184v-3.456q0-0.704 0.512-1.216t1.216-0.48h5.696q0.704 0 1.216 0.48t0.512 1.216zM9.152 13.152v3.424q0 0.704-0.512 1.216t-1.216 0.48h-5.696q-0.736 0-1.216-0.48t-0.512-1.216v-3.424q0-0.736 0.512-1.216t1.216-0.512h5.696q0.704 0 1.216 0.512t0.512 1.216zM32 22.272v3.456q0 0.704-0.512 1.184t-1.216 0.512h-17.12q-0.736 0-1.216-0.512t-0.512-1.184v-3.456q0-0.704 0.512-1.216t1.216-0.48h17.12q0.736 0 1.216 0.48t0.512 1.216zM9.152 4v3.424q0 0.704-0.512 1.216t-1.216 0.512h-5.696q-0.736 0-1.216-0.512t-0.512-1.216v-3.424q0-0.704 0.512-1.216t1.216-0.512h5.696q0.704 0 1.216 0.512t0.512 1.216zM32 13.152v3.424q0 0.704-0.512 1.216t-1.216 0.48h-17.12q-0.736 0-1.216-0.48t-0.512-1.216v-3.424q0-0.736 0.512-1.216t1.216-0.512h17.12q0.736 0 1.216 0.512t0.512 1.216zM32 4v3.424q0 0.704-0.512 1.216t-1.216 0.512h-17.12q-0.736 0-1.216-0.512t-0.512-1.216v-3.424q0-0.704 0.512-1.216t1.216-0.512h17.12q0.736 0 1.216 0.512t0.512 1.216z"></path>
+	</g>	
+<g class="svgsprite" id="key-inv" width="30" height="32" viewBox="0 0 30 32">
+<path d="M20.256 1.696q3.68 0 6.304 2.624t2.592 6.304-2.592 6.304-6.336 2.624q-0.896 0-1.632-0.16l-0.16 0.16v3.584h-3.584v3.552h-3.552v3.616h-10.72v-7.168l10.88-10.88q-0.16-0.736-0.16-1.664 0-3.68 2.624-6.272t6.336-2.624zM20.256 12.416q0.704 0 1.248-0.512t0.512-1.312-0.512-1.248-1.28-0.512q-0.768 0-1.28 0.544t-0.512 1.216q0 0.768 0.544 1.312t1.28 0.512z"></path>
+	</g>
+<g class="svgsprite" id="search" width="30" height="32" viewBox="0 0 30 32">
+<path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zM29.728 29.728q0 0.928-0.704 1.6t-1.6 0.672q-0.96 0-1.6-0.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-0.992t-4-2.688-2.688-4-0.992-4.896 0.992-4.864 2.688-4.032 4-2.688 4.896-0.992 4.864 0.992 4.032 2.688 2.688 4.032 0.992 4.864q0 3.936-2.208 7.136l6.112 6.112q0.672 0.672 0.672 1.632z"></path>
+	</g>
+<g class="svgsprite" id="draghandle_r" width="30" height="32" viewBox="0 0 30 32">
+    <path d="M10,6L8.59,7.41,13.17,12l-4.58,4.59L10,18l6,-6z"></path>
+  </g>
+<g class="svgsprite" id="draghandle_l" width="30" height="32" viewBox="0 0 30 32">
+    <path d="M15.41,7.41L14,6l-6,6,6,6,1.41,-1.41L10.83,12z"></path>
+  </g>
+<g class="svgsprite" id="draghandle_rm" width="30" height="32" viewBox="0 0 30 32">
+    <path d="M12.8 24.896l8.096-8.096q0.352-0.352 0.352-0.8t-0.352-0.8l-8.096-8.096q-0.32-0.352-0.8-0.352t-0.8 0.352l-1.824 1.792q-0.352 0.352-0.352 0.832t0.352 0.8l5.472 5.472-5.472 5.472q-0.352 0.352-0.352 0.8t0.352 0.832l1.824 1.792q0.352 0.352 0.8 0.352t0.8-0.352zM27.424 16q0 3.744-1.824 6.88t-4.992 4.992-6.88 1.856-6.912-1.856-4.96-4.992-1.856-6.88 1.856-6.88 4.96-4.992 6.912-1.856 6.88 1.856 4.992 4.992 1.824 6.88z"></path>
+  </g>
+<g class="svgsprite" id="draghandle_lm" width="30" height="32" viewBox="0 0 30 32">
+    <path d="M16.224 24.896l1.824-1.792q0.352-0.352 0.352-0.832t-0.352-0.8l-5.472-5.472 5.472-5.472q0.352-0.352 0.352-0.8t-0.352-0.832l-1.824-1.792q-0.32-0.352-0.8-0.352t-0.8 0.352l-8.096 8.096q-0.352 0.32-0.352 0.8t0.352 0.8l8.096 8.096q0.352 0.352 0.8 0.352t0.8-0.352zM27.424 16q0 3.744-1.824 6.88t-4.992 4.992-6.88 1.856-6.912-1.856-4.96-4.992-1.856-6.88 1.856-6.88 4.96-4.992 6.912-1.856 6.88 1.856 4.992 4.992 1.824 6.88z"></path>
+  </g>
+<g class="svgsprite" id="toolbar_updown" width="30" height="30" viewBox="0 0 30 30">
+    <path d="M17.038,8.518h-4.977v8.879l-7.084-0.002V8.518H0L8.519,0L17.038,8.518z M22.2,30l8.519-8.518h-4.977v-8.877l-7.084-0.002
+	v8.879h-4.977L22.2,30z"></path>
+  </g>
+<g class="svgsprite" id="toolbar_close" width="30" height="30" viewBox="0 0 30 30">
+    <path d="M16.295 15.705C16.295 15.705 17.705 14.295 17.705 14.295C17.705 14.295 11.705 8.295 11.705 8.295C11.705 8.295 5.705 14.295 5.705 14.295C5.705 14.295 7.115 15.705 7.115 15.705C7.115 15.705 11.705 11.125 11.705 11.125C11.705 11.125 16.295 15.705 16.295 15.705"></path>
+  </g>
+<g class="svgsprite" id="toolbar_open" width="30" height="30" viewBox="0 0 30 30">
+    <path d="M7.115 8.295C7.115 8.295 5.705 9.705 5.705 9.705C5.705 9.705 11.705 15.705 11.705 15.705C11.705 15.705 17.705 9.705 17.705 9.705C17.705 9.705 16.295 8.295 16.295 8.295C16.295 8.295 11.705 12.875 11.705 12.875C11.705 12.875 7.115 8.295 7.115 8.295"></path>
+  </g>
+<g class="svgsprite" id="angle-circled-left" width="27" height="32" viewBox="0 0 27 32">
+<path d="M16.224 24.896l1.824-1.792q0.352-0.352 0.352-0.832t-0.352-0.8l-5.472-5.472 5.472-5.472q0.352-0.352 0.352-0.8t-0.352-0.832l-1.824-1.792q-0.32-0.352-0.8-0.352t-0.8 0.352l-8.096 8.096q-0.352 0.32-0.352 0.8t0.352 0.8l8.096 8.096q0.352 0.352 0.8 0.352t0.8-0.352zM27.424 16q0 3.744-1.824 6.88t-4.992 4.992-6.88 1.856-6.912-1.856-4.96-4.992-1.856-6.88 1.856-6.88 4.96-4.992 6.912-1.856 6.88 1.856 4.992 4.992 1.824 6.88z"></path>
+	</g>
+<g class="svgsprite" id="angle-circled-up" width="27" height="32" viewBox="0 0 27 32">
+<path d="M20.8 20.352l1.824-1.824q0.352-0.352 0.352-0.8t-0.352-0.832l-8.096-8.096q-0.352-0.32-0.8-0.32t-0.832 0.32l-8.096 8.096q-0.32 0.352-0.32 0.832t0.32 0.8l1.824 1.824q0.352 0.32 0.8 0.32t0.8-0.32l5.504-5.504 5.472 5.504q0.352 0.32 0.8 0.32t0.8-0.32zM27.424 16q0 3.744-1.824 6.88t-4.992 4.992-6.88 1.856-6.912-1.856-4.96-4.992-1.856-6.88 1.856-6.88 4.96-4.992 6.912-1.856 6.88 1.856 4.992 4.992 1.824 6.88z"></path>
+	</g>
+<g class="svgsprite" id="angle-circled-right" width="27" height="32" viewBox="0 0 27 32">
+<path d="M12.8 24.896l8.096-8.096q0.352-0.352 0.352-0.8t-0.352-0.8l-8.096-8.096q-0.32-0.352-0.8-0.352t-0.8 0.352l-1.824 1.792q-0.352 0.352-0.352 0.832t0.352 0.8l5.472 5.472-5.472 5.472q-0.352 0.352-0.352 0.8t0.352 0.832l1.824 1.792q0.352 0.352 0.8 0.352t0.8-0.352zM27.424 16q0 3.744-1.824 6.88t-4.992 4.992-6.88 1.856-6.912-1.856-4.96-4.992-1.856-6.88 1.856-6.88 4.96-4.992 6.912-1.856 6.88 1.856 4.992 4.992 1.824 6.88z"></path>
+	</g>
+<g class="svgsprite" id="menu" width="27" height="32" viewBox="0 0 27 32">
+    <path d="M27.424 24v2.272q0 0.48-0.32 0.8t-0.832 0.352h-25.12q-0.48 0-0.8-0.352t-0.352-0.8v-2.272q0-0.48 0.352-0.8t0.8-0.352h25.12q0.48 0 0.832 0.352t0.32 0.8zM27.424 14.848v2.304q0 0.448-0.32 0.8t-0.832 0.32h-25.12q-0.48 0-0.8-0.32t-0.352-0.8v-2.304q0-0.448 0.352-0.8t0.8-0.32h25.12q0.48 0 0.832 0.32t0.32 0.8zM27.424 5.728v2.272q0 0.48-0.32 0.8t-0.832 0.352h-25.12q-0.48 0-0.8-0.352t-0.352-0.8v-2.272q0-0.48 0.352-0.832t0.8-0.32h25.12q0.48 0 0.832 0.32t0.32 0.832z"></path>
+  </g>
+<g class="svgsprite" id="weblink" width="32" height="32" viewBox="0 0 27 32">
+ <path d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2zm6.93,6h-2.95c-0.32,-1.25,-0.78,-2.45,-1.38,-3.56,1.84,0.63,3.37,1.91,4.33,3.56zM12,4.04c0.83,1.2,1.48,2.53,1.91,3.96h-3.82c0.43,-1.43,1.08,-2.76,1.91,-3.96zM4.26,14C4.1,13.36,4,12.69,4,12s0.1,-1.36,0.26,-2h3.38c-0.08,0.66,-0.14,1.32,-0.14,2,0,0.68,0.06,1.34,0.14,2H4.26zm0.82,2h2.95c0.32,1.25,0.78,2.45,1.38,3.56,-1.84,-0.63,-3.37,-1.9,-4.33,-3.56zm2.95,-8H5.08c0.96,-1.66,2.49,-2.93,4.33,-3.56C8.81,5.55,8.35,6.75,8.03,8zM12,19.96c-0.83,-1.2,-1.48,-2.53,-1.91,-3.96h3.82c-0.43,1.43,-1.08,2.76,-1.91,3.96zM14.34,14H9.66c-0.09,-0.66,-0.16,-1.32,-0.16,-2,0,-0.68,0.07,-1.35,0.16,-2h4.68c0.09,0.65,0.16,1.32,0.16,2,0,0.68,-0.07,1.34,-0.16,2zm0.25,5.56c0.6,-1.11,1.06,-2.31,1.38,-3.56h2.95c-0.96,1.65,-2.49,2.93,-4.33,3.56zM16.36,14c0.08,-0.66,0.14,-1.32,0.14,-2,0,-0.68,-0.06,-1.34,-0.14,-2h3.38c0.16,0.64,0.26,1.31,0.26,2s-0.1,1.36,-0.26,2h-3.38z"></path>
+ </g>
+<g class="svgsprite" id="collapse" width="27" height="32" viewBox="0 0 27 32">
+<path d="M20.448 19.936q-0.32 0.64-1.024 0.64h-11.424q-0.704 0-1.024-0.64-0.32-0.608 0.096-1.184l5.728-8q0.32-0.48 0.928-0.48t0.928 0.48l5.696 8q0.416 0.576 0.096 1.184zM22.848 24.576v-17.152q0-0.224-0.16-0.384t-0.416-0.192h-17.12q-0.224 0-0.416 0.192t-0.16 0.384v17.152q0 0.224 0.16 0.384t0.416 0.192h17.12q0.256 0 0.416-0.192t0.16-0.384zM27.424 7.424v17.152q0 2.112-1.504 3.616t-3.648 1.536h-17.12q-2.144 0-3.648-1.536t-1.504-3.616v-17.152q0-2.112 1.504-3.616t3.648-1.536h17.12q2.144 0 3.648 1.536t1.504 3.616z"></path>
+	</g>
+<g class="svgsprite" id="expand" width="27" height="32" viewBox="0 0 27 32">
+<path d="M20.448 12.064q0.32 0.608-0.096 1.152l-5.696 8q-0.352 0.512-0.928 0.512t-0.928-0.512l-5.728-8q-0.416-0.544-0.096-1.152 0.32-0.64 1.024-0.64h11.424q0.704 0 1.024 0.64zM22.848 24.576v-17.152q0-0.224-0.16-0.384t-0.416-0.192h-17.12q-0.224 0-0.416 0.192t-0.16 0.384v17.152q0 0.224 0.16 0.384t0.416 0.192h17.12q0.256 0 0.416-0.192t0.16-0.384zM27.424 7.424v17.152q0 2.112-1.504 3.616t-3.648 1.536h-17.12q-2.144 0-3.648-1.536t-1.504-3.616v-17.152q0-2.112 1.504-3.616t3.648-1.536h17.12q2.144 0 3.648 1.536t1.504 3.616z"></path>
+	</g>
+<g class="svgsprite" id="eye" width="32" height="32" viewBox="0 0 32 32">
+<path d="M29.728 17.152q-2.72-4.224-6.816-6.304 1.088 1.856 1.088 4 0 3.328-2.336 5.664t-5.664 2.336-5.664-2.336-2.336-5.664q0-2.144 1.088-4-4.096 2.080-6.816 6.304 2.4 3.648 5.984 5.824t7.744 2.176 7.744-2.176 5.984-5.824zM16.864 10.272q0-0.352-0.256-0.608t-0.608-0.224q-2.24 0-3.84 1.6t-1.6 3.808q0 0.352 0.256 0.608t0.608 0.256 0.608-0.256 0.256-0.608q0-1.536 1.088-2.624t2.624-1.088q0.352 0 0.608-0.256t0.256-0.608zM32 17.152q0 0.608-0.352 1.216-2.496 4.128-6.72 6.592t-8.928 2.464-8.928-2.464-6.72-6.592q-0.352-0.608-0.352-1.216t0.352-1.248q2.496-4.096 6.72-6.56t8.928-2.496 8.928 2.496 6.72 6.56q0.352 0.64 0.352 1.248z"></path>
+	</g>
+<g class="svgsprite" id="eye-off" width="32" height="32" viewBox="0 0 32 32">
+<path d="M9.92 23.84l1.376-2.528q-1.536-1.12-2.432-2.816t-0.864-3.648q0-2.144 1.088-4-4.096 2.080-6.816 6.304 3.008 4.608 7.648 6.688zM16.864 10.272q0-0.352-0.256-0.608t-0.608-0.224q-2.24 0-3.84 1.6t-1.6 3.808q0 0.352 0.256 0.608t0.608 0.256 0.608-0.256 0.256-0.608q0-1.536 1.088-2.624t2.624-1.088q0.352 0 0.608-0.256t0.256-0.608zM23.328 6.88q0 0.128 0 0.16-1.888 3.36-5.632 10.112t-5.632 10.112l-0.896 1.6q-0.16 0.288-0.48 0.288-0.224 0-2.4-1.248-0.288-0.192-0.288-0.512 0-0.224 0.8-1.568-2.56-1.152-4.704-3.072t-3.744-4.384q-0.352-0.544-0.352-1.216t0.352-1.248q2.752-4.192 6.784-6.624t8.864-2.432q1.6 0 3.2 0.32l0.992-1.728q0.16-0.288 0.48-0.288 0.096 0 0.32 0.096t0.576 0.288 0.576 0.32 0.576 0.32 0.32 0.224q0.288 0.16 0.288 0.48zM24 14.848q0 2.496-1.408 4.544t-3.744 2.944l5.024-8.992q0.128 0.832 0.128 1.504zM32 17.152q0 0.608-0.352 1.216-0.704 1.152-1.952 2.592-2.688 3.072-6.208 4.768t-7.488 1.696l1.312-2.368q3.808-0.32 7.008-2.432t5.408-5.472q-2.080-3.2-5.056-5.248l1.12-2.016q1.696 1.152 3.264 2.752t2.592 3.264q0.352 0.608 0.352 1.248z"></path>
+	</g>
+<g class="svgsprite" id="link" width="30" height="32" viewBox="0 0 30 32">
+<path d="M25.984 21.728q0-0.736-0.48-1.216l-3.712-3.712q-0.512-0.512-1.216-0.512-0.768 0-1.28 0.576 0.032 0.032 0.32 0.32t0.384 0.384 0.288 0.352 0.224 0.448 0.064 0.48q0 0.736-0.512 1.216t-1.216 0.512q-0.256 0-0.48-0.064t-0.448-0.224-0.352-0.288-0.384-0.384-0.32-0.32q-0.608 0.544-0.608 1.28t0.512 1.216l3.68 3.712q0.48 0.48 1.216 0.48 0.704 0 1.216-0.48l2.624-2.592q0.48-0.512 0.48-1.184zM13.44 9.12q0-0.704-0.48-1.216l-3.68-3.68q-0.512-0.512-1.216-0.512t-1.216 0.48l-2.624 2.624q-0.512 0.48-0.512 1.184t0.512 1.216l3.712 3.712q0.48 0.48 1.216 0.48t1.28-0.544q-0.064-0.064-0.352-0.352t-0.384-0.384-0.256-0.32-0.224-0.448-0.064-0.512q0-0.704 0.48-1.216t1.216-0.48q0.288 0 0.512 0.064t0.448 0.224 0.32 0.256 0.384 0.384 0.352 0.352q0.576-0.544 0.576-1.312zM29.44 21.728q0 2.144-1.536 3.616l-2.624 2.592q-1.472 1.504-3.616 1.504-2.176 0-3.648-1.536l-3.68-3.68q-1.472-1.504-1.472-3.648 0-2.176 1.568-3.712l-1.568-1.568q-1.536 1.568-3.712 1.568-2.144 0-3.648-1.504l-3.712-3.712q-1.504-1.504-1.504-3.648t1.504-3.616l2.624-2.624q1.504-1.472 3.648-1.472t3.648 1.504l3.648 3.712q1.504 1.472 1.504 3.616 0 2.208-1.568 3.744l1.568 1.568q1.536-1.568 3.712-1.568 2.144 0 3.648 1.504l3.712 3.712q1.504 1.504 1.504 3.648z"></path>
+	</g>
+<g class="svgsprite" id="mail-alt" width="32" height="32" viewBox="0 0 32 32">
+<path d="M32 12.672v14.176q0 1.184-0.832 2.016t-2.016 0.864h-26.304q-1.152 0-2.016-0.864t-0.832-2.016v-14.176q0.8 0.896 1.792 1.568 6.464 4.384 8.896 6.144 1.024 0.768 1.632 1.184t1.696 0.864 1.952 0.416h0.064q0.896 0 1.952-0.416t1.696-0.864 1.632-1.184q3.040-2.176 8.896-6.144 1.024-0.704 1.792-1.568zM32 7.424q0 1.408-0.864 2.688t-2.176 2.208q-6.72 4.672-8.384 5.792-0.16 0.128-0.736 0.544t-0.96 0.704-0.928 0.576-1.056 0.48-0.864 0.16h-0.064q-0.384 0-0.864-0.16t-1.056-0.48-0.928-0.576-0.96-0.704-0.736-0.544q-1.632-1.12-4.704-3.232t-3.648-2.56q-1.12-0.736-2.080-2.048t-0.992-2.464q0-1.376 0.736-2.304t2.112-0.928h26.304q1.152 0 1.984 0.832t0.864 2.016z"></path>
+	</g>
+<g class="svgsprite" id="print" width="30" height="32" viewBox="0 0 30 32">
+<path d="M6.848 27.424h16v-4.576h-16v4.576zM6.848 16h16v-6.848h-2.848q-0.704 0-1.216-0.512t-0.512-1.216v-2.848h-11.424v11.424zM27.424 17.152q0-0.48-0.32-0.8t-0.832-0.352-0.8 0.352-0.32 0.8 0.32 0.8 0.8 0.32 0.832-0.32 0.32-0.8zM29.728 17.152v7.424q0 0.224-0.192 0.384t-0.384 0.192h-4v2.848q0 0.704-0.512 1.216t-1.216 0.512h-17.152q-0.704 0-1.184-0.512t-0.512-1.216v-2.848h-4q-0.224 0-0.416-0.192t-0.16-0.384v-7.424q0-1.408 1.024-2.432t2.4-0.992h1.152v-9.728q0-0.704 0.512-1.216t1.184-0.512h12q0.736 0 1.6 0.384t1.344 0.832l2.72 2.72q0.48 0.512 0.864 1.376t0.352 1.568v4.576h1.12q1.44 0 2.432 0.992t1.024 2.432z"></path>
+	</g>
+<g class="svgsprite" id="resize-full" width="27" height="32" viewBox="0 0 27 32">
+<path d="M13.472 18.848q0 0.256-0.16 0.416l-5.92 5.92 2.56 2.592q0.32 0.32 0.32 0.8t-0.32 0.8-0.8 0.352h-8q-0.48 0-0.8-0.352t-0.352-0.8v-8q0-0.48 0.352-0.8t0.8-0.352 0.8 0.352l2.56 2.56 5.92-5.92q0.192-0.192 0.416-0.192t0.416 0.192l2.048 2.016q0.16 0.192 0.16 0.416zM27.424 3.424v8q0 0.48-0.32 0.8t-0.832 0.352-0.8-0.352l-2.56-2.56-5.92 5.92q-0.192 0.192-0.416 0.192t-0.416-0.192l-2.048-2.016q-0.16-0.192-0.16-0.416t0.16-0.416l5.952-5.92-2.592-2.592q-0.32-0.32-0.32-0.8t0.32-0.8 0.8-0.352h8q0.48 0 0.832 0.352t0.32 0.8z"></path>
+	</g>
+<g class="svgsprite" id="resize-small" width="27" height="32" viewBox="0 0 27 32">
+<path d="M13.728 17.152v8q0 0.448-0.352 0.8t-0.8 0.32-0.8-0.32l-2.592-2.592-5.92 5.952q-0.16 0.16-0.416 0.16t-0.416-0.16l-2.016-2.048q-0.192-0.16-0.192-0.416t0.192-0.416l5.92-5.92-2.56-2.56q-0.352-0.352-0.352-0.8t0.352-0.8 0.8-0.352h8q0.448 0 0.8 0.352t0.352 0.8zM27.2 5.152q0 0.224-0.192 0.416l-5.92 5.92 2.56 2.56q0.352 0.352 0.352 0.8t-0.352 0.8-0.8 0.352h-8q-0.448 0-0.8-0.352t-0.32-0.8v-8q0-0.448 0.32-0.8t0.8-0.32 0.8 0.32l2.592 2.592 5.92-5.952q0.192-0.16 0.416-0.16t0.416 0.16l2.016 2.048q0.192 0.16 0.192 0.416z"></path>
+	</g>
+<g class="svgsprite" id="share" width="27" height="32" viewBox="0 0 27 32">
+<path d="M21.728 18.272q2.368 0 4.032 1.696t1.664 4.032-1.664 4.032-4.032 1.696-4.064-1.696-1.664-4.032q0-0.224 0.032-0.608l-6.432-3.2q-1.632 1.536-3.872 1.536-2.4 0-4.064-1.696t-1.664-4.032 1.664-4.032 4.064-1.696q2.24 0 3.872 1.536l6.432-3.2q-0.032-0.384-0.032-0.608 0-2.368 1.664-4.032t4.064-1.696 4.032 1.696 1.664 4.032-1.664 4.032-4.032 1.696q-2.272 0-3.904-1.536l-6.432 3.2q0.032 0.384 0.032 0.608t-0.032 0.608l6.432 3.2q1.632-1.536 3.904-1.536z"></path>
+	</g>
+<g class="svgsprite" id="text-height" width="32" height="32" viewBox="0 0 32 32">
+<path d="M31.136 25.152q0.608 0 0.768 0.32t-0.192 0.8l-2.272 2.88q-0.352 0.48-0.864 0.48t-0.864-0.48l-2.272-2.88q-0.352-0.48-0.192-0.8t0.736-0.32h1.44v-18.304h-1.44q-0.576 0-0.736-0.32t0.192-0.8l2.272-2.88q0.352-0.48 0.864-0.48t0.864 0.48l2.272 2.88q0.352 0.48 0.192 0.8t-0.768 0.32h-1.408v18.304h1.408zM1.44 2.304l0.96 0.48q0.224 0.096 3.776 0.096 0.8 0 2.368-0.032t2.336-0.032q0.672 0 1.92 0t1.92 0h5.248q0.096 0 0.384 0t0.352 0 0.288-0.032 0.32-0.16 0.256-0.32l0.768-0.032q0.064 0 0.224 0.032t0.256 0q0.032 1.984 0.032 5.984 0 1.44-0.064 1.952-0.704 0.256-1.216 0.32-0.448-0.768-0.992-2.272-0.032-0.16-0.192-0.864t-0.256-1.312-0.128-0.64q-0.096-0.128-0.224-0.224t-0.256-0.096-0.256-0.032-0.32-0.032-0.288 0.032q-0.288 0-1.184-0.032t-1.344 0-1.12 0.032-1.28 0.128q-0.16 1.44-0.128 2.4 0 1.696 0.032 6.944t0.032 8.128q0 0.288-0.032 1.28t0 1.632 0.224 1.216q0.704 0.384 2.208 0.768t2.144 0.672q0.064 0.704 0.064 0.896 0 0.256-0.032 0.512l-0.608 0.032q-1.376 0.032-3.904-0.16t-3.68-0.16q-0.896 0-2.72 0.16t-2.688 0.16q-0.064-0.928-0.064-0.928v-0.16q0.288-0.48 1.088-0.768t1.76-0.544 1.408-0.48q0.32-0.736 0.32-6.816 0-1.824-0.032-5.44t-0.064-5.408v-2.080q0-0.032 0-0.288t0.032-0.448-0.032-0.448-0.064-0.416-0.096-0.256q-0.192-0.224-2.88-0.224-0.576 0-1.664 0.224t-1.408 0.48q-0.352 0.224-0.608 1.28t-0.576 1.984-0.768 0.96q-0.736-0.48-0.992-0.8v-6.816z"></path>
+	</g>
+<g class="svgsprite" id="list-bullet" width="32" height="32" viewBox="0 0 32 32">
+<path d="M6.848 25.152q0 1.408-0.992 2.432t-2.432 0.992-2.432-0.992-0.992-2.432 0.992-2.432 2.432-0.992 2.432 0.992 0.992 2.432zM6.848 16q0 1.44-0.992 2.432t-2.432 0.992-2.432-0.992-0.992-2.432 0.992-2.432 2.432-0.992 2.432 0.992 0.992 2.432zM32 23.424v3.424q0 0.224-0.16 0.416t-0.416 0.16h-21.696q-0.256 0-0.416-0.16t-0.16-0.416v-3.424q0-0.224 0.16-0.384t0.416-0.192h21.696q0.224 0 0.416 0.192t0.16 0.384zM6.848 6.848q0 1.44-0.992 2.432t-2.432 0.992-2.432-0.992-0.992-2.432 0.992-2.432 2.432-0.992 2.432 0.992 0.992 2.432zM32 14.272v3.456q0 0.224-0.16 0.384t-0.416 0.16h-21.696q-0.256 0-0.416-0.16t-0.16-0.384v-3.456q0-0.224 0.16-0.384t0.416-0.16h21.696q0.224 0 0.416 0.16t0.16 0.384zM32 5.152v3.424q0 0.224-0.16 0.384t-0.416 0.192h-21.696q-0.256 0-0.416-0.192t-0.16-0.384v-3.424q0-0.256 0.16-0.416t0.416-0.16h21.696q0.224 0 0.416 0.16t0.16 0.416z"></path>
+	</g>
+<g class="svgsprite" id="ok" width="32" height="32" viewBox="0 0 32 32">
+<path d="M29.824 10.112q0 0.704-0.48 1.216l-15.36 15.36q-0.512 0.48-1.216 0.48t-1.216-0.48l-8.896-8.896q-0.48-0.512-0.48-1.216t0.48-1.216l2.432-2.432q0.512-0.512 1.216-0.512t1.216 0.512l5.248 5.28 11.712-11.744q0.512-0.512 1.216-0.512t1.216 0.512l2.432 2.432q0.48 0.512 0.48 1.216z"></path>
+	</g>
+<g class="svgsprite" id="ok-squared" width="27" height="32" viewBox="0 0 27 32">
+<path d="M12.224 23.2l10.976-10.976q0.32-0.32 0.32-0.8t-0.32-0.8l-1.824-1.824q-0.352-0.32-0.8-0.32t-0.8 0.32l-8.352 8.352-3.776-3.776q-0.32-0.352-0.8-0.352t-0.8 0.352l-1.824 1.824q-0.32 0.32-0.32 0.8t0.32 0.8l6.4 6.4q0.352 0.32 0.8 0.32t0.8-0.32zM27.424 7.424v17.152q0 2.112-1.504 3.616t-3.648 1.536h-17.12q-2.144 0-3.648-1.536t-1.504-3.616v-17.152q0-2.112 1.504-3.616t3.648-1.536h17.12q2.144 0 3.648 1.536t1.504 3.616z"></path>
+	</g>
+<symbol class="svgsprite" id="menu-closed" viewBox="0 0 24 24">
+<path d="M2.99999995 23.9999998C2.99999995 23.9999998 21.0123147 12.01849265 21.0123147 12.01849265C21.0123147 12.01849265 3.02464845 1.28000000075e-05 3.02464845 1.28000000075e-05C3.02464845 1.28000000075e-05 2.99999995 23.9999998 2.99999995 23.9999998"></path>
+  </symbol>
+<symbol class="svgsprite" id="menu-open" viewBox="0 0 24 24">
+    <path d="M0.0 3.0C0.0 3.0 12.0 21.0 12.0 21.0C12.0 21.0 24.0 3.0 24.0 3.0C24.0 3.0 0.0 3.0 0.0 3.0"></path>
+  </symbol>
+</defs>
+</svg>
+<div id="fouc" style="background:#ffffff;position:absolute;top:0;right:0;bottom:0;left:0;z-index:100001;"></div><div id="noscript"><h2 id="noscriptwarning">Please enable JavaScript to view this site.</h2></div>
+	<div id="helpwrapper">
+    <div id="pagewrapper">
+	<div id="toolbar_updown" class="toolwrapper phone">
+	<svg id="toolbar_updown_button" alt="Show/Hide Toolbars" viewBox="0 0 30 30"><use xlink:href="#toolbar_updown"></use></svg>
+	</div>
+	<div id="headerbox_wrapper">
+	<div id="headerbox">
+<a id="headerlogo" href="http://www.ec-software.com/" title="EC Software Website" target="_blank"></a>
+<div id="headerwrapper"><h1 class="page_header" id="hm_pageheader">AXITO-Software Handleiding</h1></div>
+
+
+<div id="phone_hamburger_icon" class="phone"><svg id="phone_hamburger_mobnav" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg></div>
+	</div>
+	<div id="header_menu">
+<ul class="topnav">  
+    <li class="phone"><a href="javascript:hmWebHelp.closeTopNav();" data-target="socialsharing.js" data-path="./js/" data-title="Share This Topic" class="popuplink" title="Share this Topic">Share This Topic</a></li>
+	<li class="desk_tablet"><a href="https://www.helpandmanual.com/" target="_blank" title="Main Page">EC Software Website</a></li>	
+    <li class="header">  
+        <a title="Tutorials for programmers">Tutorials</a>  
+        <ul class="subnav">  
+            <li><a href="https://www.helpandmanual.com/support_tutorials.html" target="_blank" title="Main Tutorials Page">Tutorials Page</a></li>
+			<li><a href="https://www.helpandmanual.com/support_tutorials.html#vb" target="_blank" title="Visual Basic tutorials">Visual Basic</a></li>  
+            <li><a href="https://www.helpandmanual.com/support_tutorials.html#dotnet" target="_blank" title=".NET language tutorials">For .NET languages</a></li>
+			<li><a href="https://www.helpandmanual.com/support_tutorials.html#ac" target="_blank" title="Microsoft Access tutorials">Microsoft Access</a></li>
+			<li><a href="https://www.helpandmanual.com/support_tutorials.html#foxpro" target="_blank" title="Visual Foxpro tutorials">Visual Foxpro</a></li>
+        </ul>  
+    </li>  
+    <li class="header">  
+        <a title="Free resources for help authors">Resources</a>  
+        <ul class="subnav">
+            <li><a href="https://www.helpandmanual.com/downloads_mscomp.html" target="_blank" title="Help compiler downloads">Help Compilers</a></li>  
+            <li><a href="https://www.helpandmanual.com/downloads_delphi.html" target="_blank" title="Free components for Delphi programmers">Delphi Components</a></li> 
+			<li><a href="http://www.tntscreencapture.com/" target="_blank" title="Free TNT screen capture utility">TNT Screen Capture</a></li> 			
+        </ul>  
+    </li>  
+    <li class="header"><a title="Sources for further information">Information</a>
+	<ul class="subnav">
+	    <li><a href="https://www.helpandmanual.com/company_about.html" target="_blank" title="About EC Software">About</a></li>  
+		<li><a href="https://www.helpandmanual.com/news/" target="_blank" title="The EC Software news blog and RSS feed">News Blog</a></li>  
+		<li><a href="https://www.helpandmanual.com/company_contact.html" target="_blank" title="Contact addresses for feedback and support">Contact Us</a></li>
+       </ul>  		
+	</li>  
+	<li class="desktop tablet">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+</ul>
+
+	</div>
+	</div>
+	<!-- TOPIC CONTENT -->
+	<div id="topicbox">
+	<div id="navigationmenu">
+	<ul id="hamburgermenu">
+	<li id="toggle_fullscreen" class="desktop">
+	<svg id="fullscreen_toggle" class="hmbicon" viewBox="0 0 27 32"><use xlink:href="#resize-full"></use></svg>
+	<a onclick='hmWebHelp.doFullEmbedWindow(this)' title="Zoom window">
+	<span>Zoom Window Out</span></a>
+	</li> 
+	<li>
+		<svg class="hmbicon" viewBox="0 0 32 32"><use xlink:href="#text-height"></use></svg>
+		<a onclick="hmWebHelp.extFuncs('fontSize',[true,'global']);" title="Increase Font Size"> 
+		<span>Larger Text</span></a>&nbsp;|&nbsp;<a onclick="hmWebHelp.extFuncs('fontSize',[false,'global']);" title="Decrease Font Size"><span>Smaller Text</span></a>
+	</li>
+	<li class="desktop" id="showhide_pageheader">
+		<svg id="showhide_header_icon" class="hmbicon" viewBox="0 0 27 32"><use xlink:href="#collapse"></use></svg>
+		<a title="Hide Page Header">
+		<span>Hide Page Header</span></a>
+	</li>
+	<li class="toggles" id="showhide_toggles">
+		<svg id="showhide_toggles_icon" class="hmbicon" viewBox="0 0 32 32"><use xlink:href="#eye"></use></svg>
+		<a onclick="hmWebHelp.extFuncs('hmDoToggle',{method: 'hmToggleToggles', obj: {speed: 80}});" title="Show/hide Expanding Text Blocks on Page"> 
+		<span>Show Expanding Text</span></a>
+	</li>
+	<li id="hm_printable_version">
+		<svg class="hmbicon" viewBox="0 0 30 32"><use xlink:href="#print"></use></svg>
+		<a id="hm_printable_link" href="_hm_print_window.htm?leveringsbonnen.html" onclick="hmWebHelp.hamburgerMenu()" target="hm_print_window" title="Print Current Topic">
+		<span>Print Topic</span></a>
+	</li>
+	<li class="server">
+		<svg class="hmbicon" viewBox="0 0 27 32"><use xlink:href="#share"></use></svg>
+		<a href="javascript:hmWebHelp.hamburgerMenu()" data-target="socialsharing.js" data-path="./js/" data-title="Share this Topic" class="popuplink" title="Share this topic on social networks"> 
+		<span>Share This Topic</span></a>
+	</li>
+	<li class="desktop server">
+		<svg class="hmbicon" viewBox="0 0 30 32"><use xlink:href="#link"></use></svg>
+		<a href="javascript:hmWebHelp.hamburgerMenu()" data-target="_hmpermalink.html" data-path="./" data-title="Save Topic Permalink" class="popuplink" title="Copy URL of current topic">
+		<span>Save Permalink URL</span></a>
+	</li> 	
+	</ul>
+			 
+	</div>
+	<div id="topicbody">
+	<!-- HMSKIN BODY START -->
+	<div id="hmpageheader">
+	<table id="topicheadertable">
+	  <tr>
+		<td id="topicheadercell">
+		  <div id="topicheaderwrapper">
+		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <span>&raquo;&nbsp;No topics above this level&nbsp;&laquo;</span></p> 
+		  <p class="topictitle">Leveringsbonnen</p>
+		  </div>
+		</td>
+		<td id="topicnavcell"><span>
+		<a id="atoclink" class="topicnavlink" title="Contents of this topic">
+		<svg class="navicon" viewBox="0 0 32 32"><use xlink:href="#list-bullet"></use></svg>
+		<span>Scroll</span></a> 
+		 <a id="topicnavlinkprevious" class="topicnavlink disabled"  title="This is the first topic">
+		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-left"></use></svg>
+		 <span>Prev</span></a>
+		<a id="topicnavlinkhome" class="topicnavlink disabled" title="No topics above this level">
+		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-up"></use></svg>
+		<span>Top</span></a>
+		<a id="topicnavlinknext" class="topicnavlink disabled" title="This is the last topic">
+		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
+		<span>Next</span></a>
+		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">
+		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg>
+		 <span>More</span></a>
+		 </span>
+		 </td>
+	  </tr>
+	</table>
+	</div>
+	<div id="autoTocWrapper" class=""></div> 
+	<div id="hmpagebody">
+	<div id="hmpagebody_scroller">
+<!--ZOOMRESTART--> 
+	<p class="p_Normal">Net zoals bij een facturatiebestand, kunt u ook in het leveringsbonnenbestand een leveringsbon toevoegen, wijzigen, schrappen enz... Het toevoegen of wijzigen van een leveringsbon gebeurt, net zoals een factuur in twee stappen:</p>
+<p class="p_Normal" style="margin: 0 0 0 1.6250rem;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;"><span class="f_Heading2">Stap 1: Hoofdgegevens</span> </p>
+<p class="p_Normal" style="margin: 0 0 0 0;">In deze eerste stap kunt u de hoofdgegevens zoals klantnummer, leveringsbondatum, vervaldag enzoverder invullen.</p>
+<p class="p_Normal" style="margin: 0 0 0 1.5000rem;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0;"><span class="f_Heading2">Stap 2: Leveringsbonregels</span> </p>
+<p class="p_Normal" style="margin: 0 0 0 0;">Nadat de voorgaande hoofdgegevens zijn ingevuld, komt u automatisch in het tweede toevoegscherm terecht. Hierbij kunt u voor één leveringsbon meerdere leveringsbonregels (artikelen, werkzaamheden) toevoegen.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Zowat alle keuze die in het leveringsbonnen bestand voorkomen zijn gelijk aan deze bij het facturatiebestand. Om deze reden beperken wij ons tot het bespreken van de nieuwe keuzes:</p>
+<p class="p_Tabeltitel"><span class="f_Tabeltitel">&nbsp;</span></p>
+<p class="p_Tabeltitel"><img id="TOGGLE0186A1_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_plus1.gif"/><span class="f_Tabeltitel">  <a id="TOGGLE0186A1_LINK" class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #595959; background-color: transparent; text-decoration: none;" href="javascript:void(0)" data-type="dropdown" data-state="1" data-icon="TOGGLE0186A1_ICON" data-src0="./images/hmtoggle_plus0.gif" data-src1="./images/hmtoggle_plus1.gif">Keuzes in de AXITO-kader</a></span></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 1.1250rem;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0.3125rem; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">* <a id="leveringsbon_overbrengen" class="hmanchor"></a>Overbrengen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via deze keuze kunt van één offerte of bestelbon automatisch een leveringsbon opstellen. Wanneer u deze keuze selecteert, verschijnt er een menu met volgende mogelijkheden:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Offerte overbrengen naar leveringsbon</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Offerte gedeeltelijk overbrengen naar leveringsbon</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">3.</span>Bestelbon overbrengen naar leveringsbon</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">4.</span>Bestelbon gedeeltelijk overbrengen naar leveringsbon</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 1.5000rem;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Via deze vier keuzes kunt u dus een volledige of gedeeltelijke een offerte of bestelbon verwerken naar een leveringsbon. Bij de eerste keuze vult u gewoon de offertenummer in (op te vragen via &lt;F5&gt;). Bij de tweede keuze krijgt u vervolgens de video van de offerte te zien, waarna u met &lt;+&gt; en &lt; - &gt; de verschillende offerteregels kunt opnemen.</p>
+<p class="p_Normal" style="text-align: justify;">Bij de derde keuze vult u gewoon de bestelbonnummer in (op te vragen via &lt;F5&gt;). En bij de vierde keuze krijgt u vervolgens de video van de bestelbon te zien, waarna u met &lt;+&gt; en &lt; - &gt; de verschillende bestelbonregels kunt opnemen. Nadat u op &lt;E&gt;inde heeft gedrukt, wordt de leveringsbon aangemaakt.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Diversen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Als u vanuit het leveringsbonnenbestand kiest voor 'Diversen' krijgt u een menu te zien met daarin diverse mogelijkheden:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Instellingen: via deze keuze kunt u diverse instellingen wijzigen (met betrekking op de leveringsbonnen).</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Lijst van de verschillende documenten. Per document kunt u een aantal gegevens wijzigen, zoals hoe vaak document printen, instellingen met betrekken op het gebruikte papier, positie van de bedrijfsgegevens op het document, vaste tekst op het document.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Magazijn</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze keuze werkt in combinatie met het magazijnbeheer. Hierdoor wordt de betreffende leveringsbon aan het magazijnbeheer toegevoegd, zodat deze kan uitgeleverd worden. Via een dialoogvenster kunt u de belangrijkste gegevens invullen. Verdere uitleg vindt u terug in Magazijn: Leveringsn beheren.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Y Instratat document xxxxx</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via deze keuze krijgt u een lijst van alle instrastatboekingen van het betreffende document te zien</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Einde</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">U verlaat het leveringsbonnenbestand met behulp van &lt;E&gt; of &lt;Esc&gt;. Hierdoor komt u terug in het hoofdmenu terecht.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 1.5000rem;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><img id="TOGGLE0186A2_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_plus1.gif"/></td><td style="border:none;padding:0"><span class="f_Tabeltitel"><a id="TOGGLE0186A2_LINK" class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #595959; background-color: transparent; text-decoration: none;" href="javascript:void(0)" data-type="dropdown" data-state="1" data-icon="TOGGLE0186A2_ICON" data-src0="./images/hmtoggle_plus0.gif" data-src1="./images/hmtoggle_plus1.gif">Betekenis velden</a></span></td></tr></table></div>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 1.1250rem;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0.3125rem; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">leverings-bonnummer</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Elke leveringsbon heeft zijn eigen unieke nummer. Een eenvoudige werkwijze is deze, waarbij het leveringsbonnummer begint met het jaartal, gevolgd door indien gewenst een maandnummer. De overige karakters vormen een volgnummer. Enkele voorbeelden:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>0700001' (07 = jaar 2007 ; 000001 = volgnummer ; 0700001 verwijst dus naar de eerste leveringsbon van het jaar 2007)</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>'0700002' (dit verwijst naar de tweede leveringsbon van het jaar 2007)</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>07801001' (07 = jaar 2007 ; 01 = maand januari ; 001 = volgnummer)</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Welke leveringsbonnummer u invult, beslist u uiteraard zelf.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Klantnummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Klanten</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Hier vult u de klantnummer in. Volgende situaties kunnen zich voordoen:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>U kent de volledige klantnummer, en vult deze in.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>U kent slechts een gedeelte van de klantnummer, vult deze in, en u drukt vervolgens op &lt;Enter&gt;:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 3.0000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Indien deze (gedeeltelijke) klantnummer slechts één maal voorkomt in het klantenbestand, zal de computer automatisch de klantnummer vervolledigen.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 3.0000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Indien deze (gedeeltelijke) klantnummer meerdere keren voorkomt, zal de computer u het klantenbestand tonen (in de buurt van de gezochte klant), waarna u enkel de juiste klantnummer hoeft over te brengen (verplaats de cursorbalk naar de te zoeken klant en druk op &lt;O&gt;).</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>U kent slechts een gedeelte van de klantnummer, vult deze in en u drukt op &lt;F5&gt; (overbrengen). Hierdoor zal de computer u het klantenbestand tonen (in de buurt van de gezochte klant), waarna u enkel de juiste klantnummer hoeft over te brengen (verplaats de cursorbalk naar de te zoeken klant en druk op &lt;O&gt;).</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>De in te vullen klant is nog niet aanwezig in het klantenbestand:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 3.0000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Druk &lt;F5&gt;. U krijgt het klantenbestand te zien.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 3.0000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Vervolgens kunt u via &lt;T&gt; de betreffende klant toevoegen in het klantenbestand.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>Nadat u deze klant heeft toegevoegd, kunt u met behulp van de keuze &lt;O&gt; deze pas toegevoegde klant overbrengen naar de leveringsbon die u op dat moment aan het toevoegen (of wijzigen) bent.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>U vult geen klantnummer in. De klantnaam, straat en woonplaats vult u zelf in.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">leverings-bondatum</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">De leveringsbondatum wordt automatisch door de computer ingevuld (aan de hand van de systeemdatum). U mag deze datum uiteraard wijzigen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Code boekstuk</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Voorbeelden</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Deze code boekstuk bepaalt onder meer hoe de BTW wordt berekend. U kunt kiezen uit volgende 4 codes:</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 0.8125rem;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0.8125rem;"><table style="width:80%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:2.1875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">N</span></p>
+</td>
+<td style="vertical-align:top; width:9.3125rem; padding:0.3125rem; border:none"><p class="p_Normal">Normale BTW berekening</p>
+</td>
+<td style="vertical-align:top; width:21.7500rem; padding:0.3125rem; border:none"><p class="p_Normal">Het betreft een normale Belgische leveringsbon, waarbij automatisch het BTW-bedrag wordt berekend</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:2.1875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">M</span></p>
+</td>
+<td style="vertical-align:top; width:9.3125rem; padding:0.3125rem; border:none"><p class="p_Normal">Medecontractant</p>
+</td>
+<td style="vertical-align:top; width:21.7500rem; padding:0.3125rem; border:none"><p class="p_Normal">Er wordt geen BTW berekend.</p>
+<p class="p_Normal" style="text-align: justify;">Het betreft een medecontractant-klant.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:2.1875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">E</span></p>
+</td>
+<td style="vertical-align:top; width:9.3125rem; padding:0.3125rem; border:none"><p class="p_Normal">EEG-Lidstaat</p>
+</td>
+<td style="vertical-align:top; width:21.7500rem; padding:0.3125rem; border:none"><p class="p_Normal">Er wordt geen BTW berekend. (Intracommunautair)</p>
+<p class="p_Normal" style="text-align: justify;">Het betreft een klant die niet in Belgie, maar wel in de Europese Gemeenschap gevestigd is. Vb.: Nederland, Duitsland, Frankrijk, ...</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:2.1875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">B</span></p>
+</td>
+<td style="vertical-align:top; width:9.3125rem; padding:0.3125rem; border:none"><p class="p_Normal">Buitenland</p>
+</td>
+<td style="vertical-align:top; width:21.7500rem; padding:0.3125rem; border:none"><p class="p_Normal">Er wordt geen BTW berekend. (Niet EEG-lidstaat)</p>
+<p class="p_Normal" style="text-align: justify;">Het betreft een klant die niet in Belgie, en niet in de Europese Gemeenschap gevestigd is. Vb.: Amerika, Japan, ...</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="text-align: justify;"><span style="width:2.1250rem;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Indien u over het AXITO-Boekhoudprogramma beschikt, zal deze code boekstuk tevens de BTW-vakken (zie BTW-aangifte) mee bepalen. Dit gebeurt overigens automatisch.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">BTW-opeisbaarheid</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal">De factureringsverplichtingen werden vanaf 1 januari 2013 grondig gewijzigd, omwille van de Europese factureringsrichtlijn 2010/45/EU. Omwille van de praktische moeilijkheden door de nieuwe regeling betreffende opeisbaarheid, voorzag de administratie in een overgangsregeling tot 31 december 2013.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Voor levering van goederen en diensten wordt de belasting &nbsp;in principe opeisbaar op het tijdstip waarop de levering van het goed of dienst wordt verricht. Dit is in de regel steeds de oudste leverdatum!</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a href="btw-opeisbaarheid.html" class="topiclink">Voor meer informatie</a></p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Landcode munteenheid</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Vreemde munt'</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Landcodes</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Deze landcode bepaalt de munteenheid waarin deze leveringsbon moet worden opgesteld en geprint.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Werknemers-nummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Werknemers</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Alzo kunt u een werknemer (vertegenwoordiger) koppelen aan een leveringsbon. Nadien kunt u met behulp van AXITO-Statistiek nagaan wat een bepaalde werknemer heeft 'gepresteerd' (handig bij het bepalen van commissies).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Naam klant</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Deze naam wordt automatisch ingevuld aan de hand van de klantnummer. Wanneer echter geen klantnummer werd ingevuld, moet u dit veld zelf invullen</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Straat klant</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Zie vorige</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Woonplaats klant</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Woonplaatsen</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Zie vorige</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Status</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">De status van een bon geeft aan in welke toestand deze bon zich bevind. Welke waarde kan dit status-veld hebben :</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 1.5000rem;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 1.5000rem;"><table style="width:80%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:3.6875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center; margin: 0 0 0 0;"><span style="font-weight: bold;">0</span></p>
+</td>
+<td style="vertical-align:top; width:28.1250rem; padding:0.3125rem; border:none"><p class="p_Normal"> <span style="font-weight: bold;">Niet gereed om te factureren</span></p>
+<p class="p_Normal"> Deze bon is toegevoegd, maar kan momenteel nog niet gefactureerd worden, bijvoorbeeld omdat ze nog niet volledig is.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:3.6875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">1</span></p>
+</td>
+<td style="vertical-align:top; width:28.1250rem; padding:0.3125rem; border:none"><p class="p_Normal"><span style="font-weight: bold;">Gereed om te factureren</span></p>
+<p class="p_Normal">Deze bon kan gefactureerd worden.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:3.6875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">2</span></p>
+</td>
+<td style="vertical-align:top; width:28.1250rem; padding:0.3125rem; border:none"><p class="p_Normal"><span style="font-weight: bold;">Gefactureerd</span></p>
+<p class="p_Normal">Deze bon is reeds gefactureerd. Wanneer u de bonnen automatisch factureerd, wordt de status van de gefactureerde bon automatisch op '2' geplaatst.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:3.6875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">3</span></p>
+</td>
+<td style="vertical-align:top; width:28.1250rem; padding:0.3125rem; border:none"><p class="p_Normal"><span style="font-weight: bold;">Handmatig gefactureerd</span></p>
+<p class="p_Normal">Deze situatie kan enkel maar voorkomen indien je zowel de bon en de factuur handmatig hebt toegevoegd. Met andere woorden : de factuur (van een bijbehorende bon) werd in het facturatie-bestand niet via de keuze '* Overbrengen' aangemaakt maar via de keuze <a href="toevoegen.html" class="topiclink">'Toevoegen'</a>. Zodoende is er geen 'link' tussen de bon en de factuur, en kan de computer niet weten dat een bepaalde factuur en bon samenhoren. De gebruiker weet dit uiteraard wel, maar wil wel voorkomen dat de bon niet nogmaals automatisch gefactureerd wordt. Door de status van de bon op '3' te plaatsen, voorkomt men dat dit kan gebeuren.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:3.6875rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">!</span></p>
+</td>
+<td style="vertical-align:top; width:28.1250rem; padding:0.3125rem; border:none"><p class="p_Normal"><span style="font-weight: bold;">Geannuleerd</span></p>
+<p class="p_Normal">Deze bon werd door de gebruiker geannuleerd (bijvoorbeeld omdat de klant afziet van de bestelling), maar mag niet geschrapt worden.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Wisselkoers</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Vreemde munteenheid'</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit is de wisselkoers zoals die was op het moment van toevoegen van de betreffende leveringsbon.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Leveringstraat</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit is de leveringstraat van deze leveringsbon.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Leveringwoon-plaats</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Woonplaatsen</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit is de leveringwoonplaats van deze leveringsbon.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Week</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Deze weeknummer wordt automatisch berekend aan de hand van de leveringsbondatum.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Kortingcode</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Kortingen- en prijzenboek'</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Kortingcodes</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Indien u over de optie 'Kortingen- en prijzenboek' beschikt, kunt u via dit veld aan elke leveringsbon een eigen kortingcode koppelen. Dit bepaalt rechtstreeks de artikelprijzen die de computer straks bij het aanmaken van leveringsbonregels zal voorstellen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Reeds voldaan excl. BTW</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit is het bedrag dat reeds voldaan is (exclusief BTW).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Hoofdnota</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Nota's</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Deze 'hoofdnota' wordt bij het printen van de betreffende leveringsbon, standaard net onder de laatste leveringsbonregel geprint. In deze 'interne tekstverwerker' kunt u eender welke tekst ingeven. Voorbeelden hiervan zijn: Plaatsings- en leveringsvoorwaarden, gemaakte afspraken, kenmerken verkochte artikelen enzoverder. Merk op dat u via &lt;F5&gt; kunt werken met standaard notateksten, die u uiteraard zelf kunt opstellen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Totaal excl. BTW</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit is het totaal leveringsbonbedrag exclusief BTW.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Totaal BTW</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit is het totaal BTW-bedrag voor de betreffende leveringsbon.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Totaal incl. BTW</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit is het totaal leveringsbonbedrag inclusief BTW.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Voldaan</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Via dit veld kunt u aangeven of deze leveringsbon:</p>
+<div style="text-align: justify; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0.8125rem;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:3.4375rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">J</span></p>
+</td>
+<td style="vertical-align:top; width:16.9375rem; padding:0.3125rem; border:none"><p class="p_Normal">Voldaan is</p>
+<p class="p_Normal">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:3.4375rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">N</span></p>
+</td>
+<td style="vertical-align:top; width:16.9375rem; padding:0.3125rem; border:none"><p class="p_Normal">Niet voldaan is</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:3.4375rem; padding:0.3125rem; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">G</span></p>
+</td>
+<td style="vertical-align:top; width:16.9375rem; padding:0.3125rem; border:none"><p class="p_Normal">Gedeeltelijk voldaan is (vb.: een voorschot)</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Reeds voldaan</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit bedrag heeft de betreffende klant reeds betaald. (Bijvoorbeeld een voorschot)</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Nog te voldoen</span></p>
+</td>
+<td class="AxitoTableLarge" style="width:42.8750rem;"><p class="p_Normal" style="text-align: justify;">Dit is het bedrag dat de betreffende klant voor deze leveringsbon nog moet betalen.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 1.5000rem;">&nbsp;</p>
+<p class="p_Tabeltitel"><img id="TOGGLE0186A3_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_plus1.gif"/><span class="f_Tabeltitel">  <a id="TOGGLE0186A3_LINK" class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #595959; background-color: transparent; text-decoration: none;" href="javascript:void(0)" data-type="dropdown" data-state="1" data-icon="TOGGLE0186A3_ICON" data-src0="./images/hmtoggle_plus0.gif" data-src1="./images/hmtoggle_plus1.gif">Keuzes in de AXITO-kader (Video)</a></span></p>
+<div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 1.1250rem;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0.3125rem; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Toevoegen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Met deze keuze kunt u een nieuwe leveringsbonregel toevoegen. Door op &lt;T&gt; te drukken, krijgt u een toevoegscherm te zien (zie afbeelding hierna). Wat u in de verschillende velden kunt invullen wordt verderop besproken in 'Betekenis velden (video leveringsbon)'</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Wijzigen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Het wijzigen van gegevens kunt u via &lt;W&gt;.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Opmerking: u kunt gegevens ook wijzigen door &lt;Enter&gt; te drukken.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Schrappen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Indien u een leveringsbonregel wenst te schrappen, verplaatst u de cursorbalk naar de regel van de betreffende leveringsbonregel, en drukt u op &lt;S&gt;. Vervolgens zal deze leveringsbonregel in een hedere (gele) kleur worden opgelicht, en zal in de AXITO-kader de vraag 'Doorgaan met schrappen' verschijnen. Deze vraag beantwoordt u dan met &lt;J&gt;a.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Micro/Macro</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Het macroscherm is identiek aan het toevoegscherm (zie afbeelding hierna). De bedoeling van deze keuze is het weergeven van alle gegevens van één bepaalde leveringsbonregel in één oogopslag. Wanneer u nogmaals op &lt;M&gt; drukt, krijgt u terug het vorige micro-scherm te zien.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Printen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Met behulp van &lt;P&gt; kunt u de betreffende leveringsbon afdrukken op papier. U kunt kiezen uit meerdere leveringsbonlayouts (uitzicht leveringsbon).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Historieken</span></p>
+<p class="p_Normal"><span class="f_Opmerkingcursief">Zie 'Historieken' &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Om snel na te kunnen gaan wat de betreffende klant in het verleden reeds heeft leveringsd, tegen welke verkoopprijs enzoverder.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Backorders</span></p>
+<p class="p_Normal"><span class="f_Opmerkingcursief">Zie 'Backorders' &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Om snel na te kunnen gaan welke backorders voor de betreffende klant nog openstaan.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Nota</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Nota's</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Via deze keuze kunt u een bijkomende notatekst (regelnota) aan de betreffende leveringsbonregel koppelen. Deze notatekst zal standaard, net onder de betreffene leveringsbonregel geprint worden. Uiteraard handig wanneer de 60 karakters van de artikelomschrijving niet volstaan. Zodra u op &lt;N&gt; drukt, verschijnt op het scherm een kader, waar u deze tekst kunt intypen. Deze keuze beëindigt u door op &lt;Esc&gt; te drukken. Op het scherm verschijnt in de kolom 'Nota' een '*' indien de regelnota tekst bevat. Merk op dat u via &lt;F5&gt; over standaard notateksten kunt beschikken.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Korting %</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Wanneer u aan alle leveringsbonregels eenzelfde korting wens toe te kennen, kunt u dit op een snelle manier verwezenlijken met behulp van de keuze 'Korting %'. Hierbij zal een kortingspercentage worden opgevraagd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">* Overbrengen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Met behulp van deze keuze kunt u op een snelle manier een samenstelling (samengesteld artikel) overbrengen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Diversen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">Met behulp van deze keuze kunt u onder andere de eenheidsprijzen van de betreffende leveringsbon herberekenen (uiteraard uitgaande van de huidige wijzigbare kortingcode, en de huidige artikelprijzen in het artikelenbestand).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">F8 Werkwijze</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">De keuze 'F8 Werkwijze' wordt uitvoerig besproken in 'F.8. F8 = Werkwijze'.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Einde</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal">U verlaat deze 'video leveringsbon' via een druk op &lt;E&gt; of &lt;Esc&gt;. Vervolgens komt u terug terecht in het hoofdoverzicht van de leveringsbonnen.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 1.5000rem;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Bijkomende keuzes in AXITO-Facturatie</span></h2>
+<p class="p_Normal">Omdat u werkt met de keuze leveringsbonnen, wordt automatisch de keuze ‘* Factureren’ in het facturatiebestand actief. Via deze keuze kunt u op een eenvoudige manier een reeds toegevoegde leveringsbon gaan factureren. Nadat U op &nbsp;&lt;*&gt; heeft gedrukt, krijgt u een scherm te zien met volgende keuzes:</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 1.6250rem;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:1.1875rem;"><p class="p_Normal" style="text-align: center;">1</p>
+</td>
+<td class="AxitoTableLarge" style="width:19.2500rem;"><p class="p_Normal">Factureren leveringsbon</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:1.1875rem;"><p class="p_Normal" style="text-align: center;">2</p>
+</td>
+<td class="AxitoTableLarge" style="width:19.2500rem;"><p class="p_Normal">Factureren leveringsbon gedeeltelijk</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:1.1875rem;"><p class="p_Normal" style="text-align: center;">3</p>
+</td>
+<td class="AxitoTableLarge" style="width:19.2500rem;"><p class="p_Normal">Factureren offerte</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:1.1875rem;"><p class="p_Normal" style="text-align: center;">4</p>
+</td>
+<td class="AxitoTableLarge" style="width:19.2500rem;"><p class="p_Normal">Factureren offerte gedeeltelijk</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:1.1875rem;"><p class="p_Normal" style="text-align: center;">5</p>
+</td>
+<td class="AxitoTableLarge" style="width:19.2500rem;"><p class="p_Normal">Kassaticket factureren</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:1.1875rem;"><p class="p_Normal" style="text-align: center;">E</p>
+</td>
+<td class="AxitoTableLarge" style="width:19.2500rem;"><p class="p_Normal">Einde</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><span style="width:2.1250rem;display:inline-block">&nbsp;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Via deze twee keuzes kunt u dus een volledige of gedeeltelijke leveringsbon gaan factureren. Bij de eerste keuze vult u gewoon de leveringsbonnummer in (op te vragen via &lt;F5&gt;). Bij de tweede keuze krijgt u vervolgens de video van de leveringsbon te zien, waarna u met &lt;+&gt; en &lt; - &gt; de verschillende leveringsbonregels kunt opnemen. Nadat u op &lt;E&gt;inde heeft gedrukt, wordt de factuur aangemaakt.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Tabeltitel"><img id="TOGGLE0186A4_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_plus1.gif"/><span class="f_Tabeltitel">  <a id="TOGGLE0186A4_LINK" class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #595959; background-color: transparent; text-decoration: none;" href="javascript:void(0)" data-type="dropdown" data-state="1" data-icon="TOGGLE0186A4_ICON" data-src0="./images/hmtoggle_plus0.gif" data-src1="./images/hmtoggle_plus1.gif">Betekenis velden</a></span></p>
+<div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 1.1250rem;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0.3125rem; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="AxitoTableLarge" >
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Artikelnummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">9-18 karakters</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Artikelen of Werkzaamheden</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Wanneer u een leveringsbonegel toevoegt, moet u als eerste stap een artikelnummer ingeven. Dit kunt u op verschillende manieren doen :</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>U kent het artikelnummer volledig, typt het in en drukt &lt;Enter&gt;.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>U kent slechts een gedeelte (of niets) van het artikelnummer, vult deze in, en u drukt op &lt;F5&gt;. De computer zal vervolgens het artikelenbestand tonen (in de buurt van het gezochte artikel), waarna u enkel het juiste artikelnummer hoeft over te brengen met &lt;O&gt; of &lt;Enter&gt;.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>Het in te vullen artikel is nog niet aanwezig in het artikelenbestand:</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 3.0000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Druk &lt;F5&gt;. U krijgt het artikelenbestand te zien.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 3.0000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Vervolgens kunt u via &lt;T&gt; het betreffende artikel toevoegen in het artikelenbestand.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 3.0000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Nadat u dit artikel heeft toegevoegd, kunt U door op &lt;O&gt; te drukken dit artikel overbrengen naar de factuurregel die u op dat moment aan het toevoegen bent.</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>Als artikelgroepnummer (de karakters voor de '-') geeft u '---' in. Vervolgens drukt u op &lt;F5&gt;, zodat de werkzaamheden op het scherm verschijnen. Net zoals bij de artikelen kunt U ook een werkzaamheid overbrengen. Een werkzaamheid kunt u dus beschouwen als een artikelnummer, waarvan de artikelgroep gelijk is aan streepjes ---</p>
+<p class="p_Normal" style="text-align: justify; text-indent: 0; padding-left: 0.8125rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>U vult geen artikelnummer in. U zult dan wel de overige gegevens, zoals omschrijving, eenheidsprijs enz. zelf moeten invullen.</p></td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Omschrijving</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">60 karakters</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Wanneer u een artikelnummer heeft ingevuld, zal de bijbehorende omschrijving automatisch worden ingevuld. Uiteraard mag u deze omschrijving wijzigen.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Indien u geen artikelnummer heeft ingevuld, zult U de omschrijving zelf moeten ingeven.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Leverancier</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Leveranciers</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze leveranciersnummer wordt automatisch ingevuld wanneer u een artikelnummer heeft ingevuld. Deze leveranciersnummer kunt u nadien nog steeds wijzigen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Aantal</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Hierin vult u het aantal verkochte artikelen in. Het veld 'Aantal' mag u nadien voortdurend wijzigen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Per</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via het veld 'Per' bepaalt u in welke basisverpakking dit artikel wordt verkocht (bijvoorbeeld per 1 stuk, per 6 liter, set van 12 stuks). In de meeste situaties zal dit veld gelijk zijn aan het getal 1. Merk op dat dit getal rechtstreeks het totaal bedrag van de betreffende factuurregel beïnvloedt.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Eenheid</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de eenheid waarin het artikel wordt verkocht (bijv.: stuk, m², lm, liter, kg ...).</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Indien u geen artikelnummer invult, moet U dit zelf invullen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Eenheidsprijs</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de verkoopprijs exclusief BTW. U mag dit uiteraard wijzigen.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Indien u geen artikelnummer invult, moet u dit zelf invullen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Korting %</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Kortingen- en prijzenboek'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Hier vult u het kortingspercentage voor deze leveringsbonregel in. U kan ervoor zorgen dat de computer dit kortingspercentage standaard voorstelt (uitgaande van het 'kortingen- en prijzenboek').</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Bedrag</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het totaal bedrag exclusief BTW voor deze leveringsbonregel. Dit bedrag wordt automatisch berekend. Als u dit bedrag echter wijzigt, zal het kortingspercentage automatisch worden aangepast.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">BTW-percentage</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het BTW-percentage dat voor deze leveringsbonregel van toepassing is. Wanneer u een artikelnummer heeft ingevuld, zal automatisch dit BTW-percentage worden ingevuld.</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: De mogelijkheid bestaat om aan elke leveringsbonrregel een ander BTW-percentage te koppelen.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Tegenrekening</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Boekhoudplan</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is het grootboekrekeningnummer waarop deze leveringsbonrregel straks in het AXITO boekhoudprogramma zal worden geboekt. (Indien dit grootboekrekeningnummer niet ingevuld wordt, zal het standaard op rekening 700000 worden geboekt).</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge" style="width:6.8750rem;"><p class="p_Normal"><span style="font-weight: bold;">Code aantal-berekening</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Spread-sheet'</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Spread-sheet : aantal</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze code bepaalt de spread-sheet, die aan deze leveringsbonregel is gekoppeld. Indien u over de optie 'Aantal-spreadsheet' beschikt, kunt u alzo formules als 'breedte x hoogte' integreren in de leveringsbon. Deze formules zijn volledig zelf definieerbaar. Zowel eenvoudige als complexe formules behoren tot de mogelijkheden. </p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Voorraad</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft het huidige voorraadpeil weer van dit artikel in het artikelenbestand.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">In leveringsling</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft aan hoeveel eenheden van dit artikel momenteel in leveringslling zijn; met andere woorden reeds leveringsd bij de leverancier, maar nog niet geleverd. </p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Adviesprijs</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de verkoopprijs excl. BTW zoals deze momenteel in het artikelenbestand staat genoteerd.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Dit veld is informatief.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de aankoopprijs zoals deze toenmalig (op het moment dat deze factuurregel werd toegevoegd) in het artikelenbestand stond genoteerd.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Dit veld is informatief en wijzigbaar. Wordt tevens in het AXITO statistiek-programma gebruikt om resultaten (winst, verlies) te berekenen per klant, artikel enzoverder.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs gemiddeld</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de gemiddelde aankoopprijs zoals deze toenmalig (op het moment dat deze leveringsbonregel werd toegevoegd) in het artikelenbestand stond genoteerd. Zelfde opmerking als bij het voorgaande veld 'Aankoopprijs'.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Netto eenheidprijs</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de eenheidsprijs excl. BTW van deze leveringsbonrregel, min de ingevulde korting in het veld 'Korting %'. &nbsp; Opmerking : Dit veld is informatief.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Regelnota</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Nota's</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Via de keuze 'Nota' kunt u de regelnota van deze leveringsbonregel wijzigen. Bij het printen van de leveringsbon, zal deze regelnota standaard net onder de betreffende leveringsbonregel worden geprint.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Backorders</span></p>
+<p class="p_Normal"><span class="f_Opmerkingcursief">Zie 'Backorders' &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft weer hoeveel backorders voor deze klant voor dit artikel genoteerd staan. Dit backorderaantal geeft weer hoeveel van dit artikel nog geleverd moet worden, omdat op het moment van leveringsling een voorraadtekort was.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Enkel van toepassing indien u over de optie 'Backorderbeheer' beschikt.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Samenstelling-nummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Samengestelde artikelen'</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">&lt;F5&gt; Samenstellingen</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Aan de hand van dit nummer kunt u snel zien tot welke samenstelling deze leveringsbonrregel (artikel) behoort.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Factuurnummer</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'leveringsbonnen'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Indien u over de optie 'Facturatie' beschikt, kunt u alzo nagaan naar welke factuur deze leveringsbonregel is gefactureerd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Opmerking</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">U kunt per leveringsbonrregel een korte opmerking ingeven. Puur informatief, en in de meeste situaties niet van toepassing.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Soort aantal berekening</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Spread-sheet'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Enkel van toepassing indien Uu over de optie 'Aantal-spreadsheet' beschikt. </p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Mogelijke codes zijn:</p>
+<div style="text-align: justify; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0.8750rem;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:2.8750rem; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">B</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Beperkte aantal berekening (eenvoudige werking; voorbeeld 'breedte x hoogte')</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:2.8750rem; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">U</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Uitgebreide aantal berekening (met behulp van een spread-sheet, met kolommen en rijen)</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Opbouw aantal berekening</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Spread-sheet'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Enkel van toepassing indien u over de optie 'Aantal-spreadsheet' beschikt.</p>
+<p class="p_Normal" style="text-align: justify;">Wanneer u dit veld wijzigt, krijgt u de betreffende spread-sheet te zien.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Volgnummer</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Deze volgnummer bepaalt de volgorde (plaats) van de leveringsbonrregel binnen de leveringsbon. Wanneer u bijvoorbeeld de 9e leveringsbonregel wenst te verplaatsen naar de positie tussen leveringsbonregel 2 (met regelnummer 2) en leveringsbonregel 3 (met regelnummer 3), dan moet u er voor zorgen dat de nieuwe regelnummer tussen de waarde 2 en 3 ligt (vb.: 2,5). Na het wijzigen zult U zien dat deze regel op zijn nieuwe positie komt te staan.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Voorraad artikelbestand</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft het huidige voorraadpeil weer van dit artikel in het artikelenbestand.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">In leveringsling artikelbestand</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit getal geeft aan hoeveel eenheden van dit artikel momenteel in leveringslling zijn; met andere woorden reeds leveringsd bij de leverancier, maar nog niet geleverd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Adviesprijs artikelbestand</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de huidige verkoopprijs excl. BTW, zoals deze momenteel in het artikelenbestand staat genoteerd &nbsp; . Opmerking: Dit veld is informatief.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs artikelbestand</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de huidige aankoopprijs van het betreffende artikel, zoals deze op dit moment in het artikelenbestand staat genoteerd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs gemiddeld artikelbestand</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de gemiddelde aankoopprijs van het betreffende artikel, zoals deze op dit moment in het artikelenbestand staat genoteerd.</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs op dat moment</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de aankoopprijs zoals deze toenmalig (op het moment dat deze leveringsbonregel werd toegevoegd) in het artikelenbestand stond genoteerd.</p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify;">Opmerking: Dit veld is informatief en wijzigbaar. Wordt tevens in het AXITO statistiek-programma gebruikt om resultaten (winst, verlies) te berekenen per klant, artikel enzoverder</p>
+</td>
+</tr>
+<tr class="AxitoTableLarge">
+<td class="AxitoTableLarge"><p class="p_Normal"><span style="font-weight: bold;">Aankoopprijs gemiddeld op dat moment</span></p>
+<p class="p_Opmerkingcursief"><span class="f_Opmerkingcursief">Zie 'Voorraadbeheer'</span></p>
+</td>
+<td class="AxitoTableLarge"><p class="p_Normal" style="text-align: justify;">Dit is de gemiddelde aankoopprijs zoals deze toenmalig (op het moment dat deze leveringsbonregel werd toegevoegd) in het artikelenbestand stond genoteerd. Zelfde opmerking als bij het voorgaande veld 'Aankoopprijs op dat moment'.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 1.5000rem;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0.8125rem;"><table class="Voorbeeld" >
+<tr class="Voorbeeld">
+<td class="Voorbeeld"><p class="p_Normal"><span style="font-weight: bold;">Voorbeeld:</span> </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Toevoegen nieuwe leveringsbon: Algemene procedure</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Om een nieuwe leveringsbon toe te voegen, moet u de volgende zeven stappen doorlopen:</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Kies vanuit het hoofdmenu voor de keuze &quot;leveringsbonnen&quot;. Hierdoor komt u in het hoofdoverzicht van de leveringsbonnen terecht (en dit op de laatste leveringsbon die u in het verleden reeds heeft toegevoegd). Merk op dat elke regel (of record) overeenkomt met een leveringsbon, en dat alle reeds eerder gemaakte leveringsbonnen contimu bewaard blijven.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Door op &lt;T&gt; te drukken, voegt u een nieuwe leveringsbon toe. Hierdoor zal automatisch een toevoegscherm verschijnen.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">3.</span>Vervolgens geeft u alle hoofdgegevens van de betreffende leveringsbon in, zoals leveringsbonnummer, klantnummer, leveringsbondatum enzoverder..</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">4.</span>Nadat u alle hoofdgegevens heeft ingevuld, zal de computer automatisch overgaan naar het tweede toevoegscherm. Hierin worden vervolgens de gegevens van de eerste leveringsbonregel opgevraagd, zoals artikelnummer, artikelomschrijving, eenheidsprijs enzoverder.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">5.</span>Indien u een tweede leveringsbonrregel wenst toe te voegen, moet u nogmaals op &lt;T&gt; drukken. Vervolgens geeft u de gegevens van die tweede leveringsbonregel in. Wenst u een derde leveringsbonregel toe te voegen, dan drukt u nogmaals op &lt;T&gt; enzoverder...</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">6.</span>Nadat u alle gegevens heeft ingevuld, kunt u de betreffende leveringsbon printen door op &lt;P&gt; te drukken.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin: 0 0 0 1.5000rem;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">7.</span>Om vanuit het 'video leveringsbon'-scherm terug te keren naar het hoofdoverzicht van de leveringsbonnen, drukt u op &lt;E&gt; of &lt;Esc&gt;. Merk op dat u vanuit het hoofdoverzicht van de leveringsbonnen, elke reeds eerder gemaakte leveringsbon terug gedetailleerd kunt bekijken, door op &lt;V&gt; te drukken (dit staat voor 'Video', wat zoveel betekent als 'kijken naar').</p></td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 0 0.8125rem;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 0.8125rem;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0.8125rem;"><table class="Voorbeeld" >
+<tr class="Voorbeeld">
+<td class="Voorbeeld"><p class="p_Normal"><span style="font-weight: bold;">Voorbeeld:</span> </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Toevoegen nieuwe leveringsbon</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Nadat u vanuit het hoofdmenu voor de keuze &quot;leveringsbonnen&quot; heeft gekozen, komt &nbsp;automatisch in het hoofdoverzicht van de leveringsbonnen terecht. Vervolgens kunt u een nieuwe leveringsbon toevoegen door op &lt;T&gt; te drukken. Hierdoor verschijnt een toevoegscherm, waarin de hoofdgegevens van de nieuwe leveringsbon opgevraagd worden.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">De hoofdgegevens van de leveringsbon</span></h2>
+<p class="p_Normal"><span style="font-weight: bold;">Leveringsbonnummer</span>: Wanneer u een nieuwe leveringsbon toevoegt, zal de computer automatisch het eerstvolgende leveringsbonnummer voorstellen (namelijk laatste leveringsbonrnummer plus één). Indien het echter de allereerste leveringsbon betreft, zal de leveringsbonrnummer opgebouwd zijn als volgt: De eerste twee karakters worden bepaald aan het hand van het jaar (vb.: 07), de overige karakters zijn een volgnummer (vb.: 00001). Uiteraard mag u de leveringsbonrnummer op ieder moment wijzigen. Zorg er wel voor dat het leveringsbonnummer begint met het jaartal. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Klantnummer</span>: Aan de hand van de klantnummer kan de computer de informatie opvragen, die nodig is bij het opstellen van de leveringsbon (Naam, Adres, Leveringsadres, BTW-nummer, Code boekstuk, Landcode munteenheid, Werknemersnummer, Vervaldagperiode, Financiële korting, ...). Via &lt;F5&gt; krijgt U een overzicht van de verschillende klanten. leveringsbondatum : De computer zal automatisch de systeemdatum (elke computer heeft een interne klok en kalender) invullen. U kunt deze wijzigen. Zodra u &lt;Enter&gt; drukt, worden aan de hand van 'Code vervaldag' van de betreffende klant in het klantenbestand, de vervaldata automatisch berekend. Creditbon / terugname : Vervolgens bepaalt u of het een 'leveringsbon' of een 'Terugname' betreft. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Code boekstuk</span>: Via deze code bepaalt u het soort leveringsbon (&lt;F5&gt; geeft u een overzicht van de verschillende mogelijkheden). </p>
+<p class="p_Normal"><span style="font-weight: bold;">Omschrijving</span>: Bij elke leveringsbon kunt u een samenvattende omschrijving invullen. Zodoende heeft u direct informatie over deze leveringsbon. <span style="font-weight: bold;">Kenmerken</span>: Via &lt;F5&gt; kunt u diverse kenmerken aan deze leveringsbon koppelen. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Levering straat, Levering woonpl</span>.: Via deze twee velden kunt u aangeven dat het leveringsadres afwijkt van het leveringsbon-adres. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Voldaan</span>: Voordat de leveringsbon is opgesteld, kunt u reeds aangeven of de &nbsp;leveringsbongedeeltelijk of volledig zal worden voldaan. Wanneer &nbsp;u 'G' (=gedeeltelijk) invult, zal tevens het veld 'Reeds voldaan' worden opgevraagd (alzo kunt u een reeds betaald voorschot registreren).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Nadat u alle hoofdgegevens van de leveringsbon (of terugname) heeft ingegeven, komt u automatisch in het tweede toevoegscherm terecht. Hierin zullen de gegevens van de eerste leveringsbonrregel worden opgevraagd.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">De leveringsbonregels</span></h2>
+<p class="p_Normal">Voor elke leveringsbonregel zullen de volgende gegevens opgevraagd worden:</p>
+<p class="p_Normal"><span style="font-weight: bold;">Artikelnummer</span>: Aan de hand van dit artikelnummer zal elke belangrijke informatie van dit artikel automatisch in de betreffende leveringsbonrregel worden overgebracht (Omschrijving, Leveranciersnummer, Per, Eenheid, Eenheidsprijs, BTW %, Tegenrekening, Aankoopprijs, ...). Indien u het artikelnummer niet van buiten kent, kunt u met behulp van &lt;F5&gt; een overzicht krijgen van het artikelenbestand; Nadat u het gewenste artikel heeft gevonden, kunt u het artikelnummer overbrengen naar de betreffende leveringsbonrregel via de keuze &lt;O&gt;verbrengen of &lt;Enter&gt;. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Omschrijving</span>: Dit veld is steeds wijzigbaar. Indien u deze omschrijving wijzigt, heeft dat geen invloed op de omschrijving zoals die op dat moment in het artikelenbestand genoteerd staat. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Aantal</span>: Dit is het aantal eenheden dat van dit artikel worden verkocht. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Eenheid</span>: Wordt enkel opgevraagd indien u geen artikelnummer invult. Dit is de verkoopseenheid van deze leveringsbonregel (vb.: stuk, m, liter, kg ...). </p>
+<p class="p_Normal"><span style="font-weight: bold;">Eenheidsprijs</span>: Wordt enkel opgevraagd indien u geen artikelnummer invult. Dit is de verkoopprijs exclusief BTW van deze leveringsbonrregel. <span style="font-weight: bold;">Korting</span>: Dit is de het kortingspercentage dat u toekent aan de betreffende leveringsbonregel. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Bedrag</span>: Dit is het totaal verkoopbedrag van de betreffende leveringsbonregel. Dit bedrag (berekend aan de hand van onder andere 'Aantal' en 'Eenheidsprijs', kunt u wijzigen. De computer zal dan automatisch het juiste kortingspercentage invullen in het veld 'Korting %'.</p>
+<p class="p_Normal">Nadat u alle gegevens van de eerste leveringsbonregel heeft ingevuld, kunt u een tweede leveringsbonrregel toevoegen door nogmaals op &lt;T&gt; te drukken. Vervolgens geeft u de gegevens van die tweede leveringsbonregel in. Wenst u een derde leveringsbonregel toe te voegen, dan drukt u nogmaals op &lt;T&gt; enzoverder...</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Merk op dat u aan elke leveringsbonregel een uitgebreide nota-tekst (bijv. garantievoorwaarden, leveringsvoorwaarden enzoverder) kunt koppelen, door gebruik te maken van de keuze &lt;N&gt;ota.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Het overbrengen van een samenstelling</span></h2>
+<p class="p_Normal">Wanneer u zich in het 'Video leveringsbon'-scherm bevindt, kunt u een samenstelling naar de betreffende leveringsbon overbrengen via de keuze '* Overbrengen'. Nadat u op &lt;*&gt; heeft gedrukt, verschijnt een keuzemenu. Nadat u heeft gekozen voor de keuze '1. Overbrengen samenstelling', krijgt u een 'Overbreng'-scherm te zien. Vervolgens worden volgende velden opgevraagd:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Samenstellingnummer</span>: Dit is het samenstellingnummer zoals u dat invulde in het samenstellingenbestand. Via &lt;F5&gt; kunt u een overzicht krijgen van de verschillende samenstellingen. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Omschrijving samenstelling</span>: Indien u een samenstellingnummer heeft ingevuld, zal in dit veld automatisch de omschrijving van de betreffende samenstelling worden ingevuld (vanuit het samenstellingenbestand). U heeft echter de mogelijkheid om deze omschrijving te wijzigen. </p>
+<p class="p_Normal"><span style="font-weight: bold;">Aantal</span>: Dit getal geeft weer, hoe vaak dat deze samenstelling moet worden overgebracht (vb.: 5 volledige stereoketens). </p>
+<p class="p_Normal"><span style="font-weight: bold;">Eenheid</span>: Ook deze eenheid is wijzigbaar.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Nadat al deze velden zijn ingegeven, zullen de verschillende videoregels van de betreffende samenstelling, automatisch worden overgebracht naar de betreffende leveringsbon. </p>
+</td>
+</tr>
+</table>
+</div>
+
+	<div class="topicfooter">
+<p class="topicfooter">Created with <a href="http://www.ec-software.com/products_hm_overview.html" target="_blank">Help & Manual 8</a> and styled with <a href="http://www.ec-software.com/products_hm_pluspack.html">Premium Pack Version 4</a> &copy; by EC Software</p>
+</div>
+	</div> <!-- hmpagebody_scroller -->
+	</div> <!-- hmpagebody -->
+	</div> <!-- topicbody-->
+	</div><!-- topicbox -->
+	<div id="navwrapper">
+	<div id="dragwrapper" class="toolwrapper">
+	<svg id="draghandleicon_r" class="splittertool" viewBox="0 0 30 32" alt="resize nav pane"><use xlink:href="#draghandle_r"></use></svg>
+	<svg id="draghandleicon_l" class="splittertool" viewBox="0 0 30 32" alt="resize nav pane"><use xlink:href="#draghandle_l"></use></svg>
+	</div>
+	<div id="toolbutton_wrapper" class="toolwrapper desk_tablet">
+	<svg id="toolbar_updown_close" class="splittertool" viewBox="0 0 30 32" alt="showhide pageheader"><use xlink:href="#toolbar_close"></use></svg>
+	<svg id="toolbar_updown_open" class="splittertool" viewBox="0 0 30 32" alt="showhide pageheader"><use xlink:href="#toolbar_open"></use></svg>
+	</div>
+	<div id="navsplitbar"></div>
+	<img id="leftright" src="./images/leftright.png" alt="resize nav pane" width="150" height="45" border="0" />
+	<div id="navcontainer">
+	<!-- NAV TABS START -->
+	<nav id="navpane_tabs">
+	<ul id="topictabs" class="tabs">
+	<li id="contentstab" class="hmtabs current" title="Table of Contents"><a id="contentstablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#th-list"></use></svg><span class="desk_tablet">Contents</span><span class="phone">Contents</span></a></li>
+	<li id="indextab" class="hmtabs" title="Keyword Index"><a id="indextablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#key-inv"></use></svg><span>Index</span></a></li>
+	<li id="searchtab" class="hmtabs" title="Search Topics"><a id="searchtablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#search"></use></svg><span>Search</span></a></li>
+	</ul>
+	</nav>
+	<!-- NAV TABS END -->	
+	<div id="contentsbox" class="navbox on">
+	<iframe name="hmnavigation" id="hmnavigation" class="navframe" src="hmcontent.html" scrolling="no" seamless="seamless" title="Navigation Pane" frameborder="0"></iframe>
+	</div>
+	<div id="indexbox" class="navbox off">
+	<iframe name="hmindex" id="hmindex" class="navframe" src="" scrolling="no" seamless="seamless" title="Keyword Index Pane" frameborder="0"></iframe>	
+	</div> 
+	<div id="searchbox" class="navbox off">
+	<iframe name="hmsearch" id="hmsearch" class="navframe" src="" scrolling="no" seamless="seamless" title="Full Text Search Pane" frameborder="0"></iframe>
+	</div>
+	</div><!-- navcontainer -->
+	</div><!-- navwrapper -->
+	<div id="mob_toolbar_wrapper" data="open">
+	<div id="mob_toolbar" class="mtoolbar">
+		<table id="mob_tb_table" class="mobtoolbar" border="0" width="100%"><tr>
+			<td width="22"></td> 
+			<td id="mob_tb_home" align="center" valign="middle"><div id="mobnavhome" class="mobnav home"></div></td>
+			<td id="mob_tb_toc" align="center" valign="middle"><div id="mobnavtoc" class="mobnav toc"></div></td>
+			<td id="mob_tb_textplus" align="center" valign="middle"><div id="mobnavtextplus" class="mobnav textplus"></div></td>
+			<td id="mob_tb_textminus" align="center" valign="middle"><div id="mobnavtextminus" class="mobnav textminus"></div></td>
+			<td id="mob_tb_previous" align="center" valign="middle"><div id="mobnavprevious" class="mobnav previous"></div></td>
+			<td id="mob_tb_next" align="center" valign="middle"><div id="mobnavnext" class="mobnav next"></div></td>
+			<td>&nbsp;&nbsp;</td>
+			<td id="mob_tb_hamburger" class="mob_hamburger" align="right" valign="top"><div id="phone_mobnav_hamburger_icon" class="mobnav phone"><svg id="phone_hamburger_mobnav" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg></div></td>
+			</tr></table>
+	</div></div>
+	</div> <!-- pagewrapper --> 
+    </div> <!-- helpwrapper -->
+	<div id="dragsurface"></div>
+<script type="text/javascript" src="./js/xmessage.js"></script> 
+<script id="hmPageInitScript" type="text/javascript">
+var fouc=document.getElementById("fouc");
+/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+*/
+// Reset font size with preset cookie value if available
+(function(){
+	var tempFontSize = sessionVariable.getPV("fontSize"),
+		baseElement = document.getElementsByTagName("html")[0];
+	if (tempFontSize !== null) {
+	baseElement.style.fontSize=tempFontSize + "%";
+	} else {
+	baseElement.style.fontSize = hmDevice.baseFontSize + "%";
+	}
+	})();
+/*** TOGGLE INIT PLACEHOLDER ***/
+
+	var moveCheck = null, hmTocLoaded = false, hmTocWidth = 0, xMessage = new xMsg("LANDING TOPIC");
+
+	// Post-loading scripts function
+	function initScripts() {
+	hmPopupsObject = {};
+	hmFlags.isHmTopic = true;
+	hmFlags.idxLoaded = false;
+	hmFlags.schLoaded = false;
+	hmFlags.searchSession = false;
+	hmFlags.tocClicked = false;
+	hmFlags.layoutTable = false;
+	hmFlags.searchHighlight = "";
+	hmFlags.tocInitWidth = 0;
+	hmFlags.jumpHighlight = false;
+	hmFlags.hmMainPage = "index.html";
+	hmFlags.hmTrackHost = "http://www.helpandmanual.com/help/";
+	hmFlags.hmProject = "AXITO-Software Handleiding";
+	hmFlags.hmDefaultPage = "index.html";
+	hmFlags.hmCurrentPage = "leveringsbonnen.html";
+	hmFlags.hmTOC = "hmcontent.html";
+	hmFlags.hmSearchPage = "hmftsearch.html";
+	hmFlags.hmIndexPage = "hmkwindex.html";
+	hmFlags.thisTopic = "leveringsbonnen.html";
+	hmFlags.lastTopic = "index.html";
+	hmFlags.isEWriter = false;
+	hmFlags.topicExt = ".html";
+	hmFlags.defaultExt = ".html";
+	hmFlags.projName = "Handleiding";
+	hmFlags.tDescription = document.querySelector("meta[name='description']").getAttribute("content");
+	hmFlags.tKeywords = "Leveringsbonnen";
+	hmFlags.hdFormat = false;
+	hmFlags.contextID = (function(){
+		var cntxMatch;
+		if (/^https??:\/\//im.test(document.location)) {
+			cntxMatch = /contextid=\d*/.exec(window.location.search.substring(1));
+		} else {
+			cntxMatch = /contextid=\d*/.exec(window.location.hash.substring(1));
+			}
+		return cntxMatch != null ? cntxMatch[0] : false;
+		})();	
+	
+	function loadScripts(x) {
+	$.getScript( scripts[x], function( data, textStatus, jqxhr ) {
+	  if (currentScript < scripts.length-1) {
+	  currentScript++;
+	  loadScripts(currentScript);
+	  } else {
+	  hmpage.defaulttopic = "index.html";
+	hmpage.breadcrumbs = !false;
+	hmpage.parenthome = true;
+	  hmWebHelp.hmMainPageInit();
+	  hmpage.hmDescription = document.querySelector("meta[name='description']").getAttribute("content");
+	  hmpage.hmPicture = "" === "" ? "" : "./images/";
+	  hmpage.topicfooter = $("div.topicfooter")[0].outerHTML;
+	  
+	  
+	 
+	
+	  }
+	}); // $getScript
+	}  // loadScripts()
+	
+	// Force HTML4 mode in History framework for local WebHelp (required for Chrome, use globally for consistency)
+	if (document.location.protocol.substr(0,4) !== "http") {
+		window.History = {options: {html4Mode: true} };
+	}
+	var currentScript = 0;
+	var scripts = ["./js/helpman_settings.js", "./js/jquery.scrollTomin.js", "./js/jquery.history.js", "./js/hm_webhelp.js"]
+	if (hmFlags.contextID) scripts.unshift("./js/hmcontextids.js");
+	if (hmDevice.phone) scripts.push("./js/mobileNav.js");	
+ 
+	var jScript = document.getElementById("jqscript");
+	jScript.src = "./js/jquery.js";
+	
+	var loadCheck = setInterval(function() {
+		if (window.jQuery) {
+			clearInterval(loadCheck);
+            $("div#navwrapper").css("min-width",($("nav#navpane_tabs").width() + 28) + "px");
+			$.ajaxPrefilter( "json script", function(options) {options.crossDomain = true;});
+			if (hmDevice.embedded && hmDevice.desktop) $("li#toggle_fullscreen").show();
+			loadScripts(0);
+			
+			/* Title Bar Text */
+			var titleBarText = "Leveringsbonnen";
+			switch ("topic") {
+				case "project":
+				titleBarText = "AXITO-Software Handleiding";
+				break;
+				
+				case "project_topic":
+				titleBarText = "AXITO-Software Handleiding" + " \> " + "Leveringsbonnen"; 
+				break;
+				}
+			titleBarText = $("<textarea/>").html(titleBarText).text();
+			$("title").text(titleBarText);
+			
+			}
+		},100);
+	}
+	if (window.addEventListener)
+	window.addEventListener("load", initScripts, false);
+	else if (window.attachEvent)
+	window.attachEvent("onload", initScripts);
+	else window.onload = initScripts;
+helpman_mailrecipient = 'Support Staff <support@ec-software.com>';
+hmGetUrlParams = function() {/*! 
+* Enter code to save URL parameters to session variables inside the if clause below.
+* This will be executed when your WebHelp is first opened and the session variables
+* you save here will then be available. See the session variables documentation in
+* the V3 Responsive Skins chapter of the help for detailed instructions.
+*/
+if (hmWebHelp.userParams && hmWebHelp.userParams.paramsCount > 0) {
+  
+}
+}
+/*! 
+* Enter the JS function/s you want to be able to call after the main page 
+* or individual topics load in this file. The functions are made available 
+* by this file but called by the POSTLOAD_TOPICFUNC and POSTLOAD_PAGEFUNC
+* variables. 
+*  
+* Nothing in this file should be executed on loading! All execution is
+* initiated with a single statement stored in the POSTLOAD_PAGEFUNC and
+* POSTLOAD_TOPICFUNC variables, in the General Settings variables group. 
+*
+* POSTLOAD_PAGEFUNC: Statement to be executed ONCE on loading the main page.
+* POSTLOAD_TOPICFUNC: Statement to be executed on EVERY page load
+* 
+* The statement/s you enter POSTLOAD_PAGEFUNC will be executed after 
+* all page components and assets have loaded, including images.
+* 
+* The statement/s in POSTLOAD_TOPICFUNC are executed after topic content
+* has been dynamically replaced in the page when the user browses to a new
+* topic.
+*/
+
+</script>
+</body>
+</html>

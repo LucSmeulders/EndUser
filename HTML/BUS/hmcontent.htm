@@ -1,0 +1,1490 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>&nbsp;</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="robots" content="noindex,follow" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ 
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { font-size: 1em }
+       .heading1 { color: #000; text-decoration: none; }
+       .heading2 { color: #000; text-decoration: none; }
+       .heading3 { color: #000; text-decoration: none; }
+       .heading4 { color: #000; text-decoration: none; }
+       .heading5 { color: #000; text-decoration: none; }
+       .heading6 { color: #000; text-decoration: none; }
+
+       .hilight1 { color: #FFFFFF; background: #808080; text-decoration: none; }
+       .hilight2 { color: #FFFFFF; background: #808080; text-decoration: none; }
+       .hilight3 { color: #FFFFFF; background: #808080; text-decoration: none; }
+       .hilight4 { color: #FFFFFF; background: #808080; text-decoration: none; }
+       .hilight5 { color: #FFFFFF; background: #808080; text-decoration: none; }
+       .hilight6 { color: #FFFFFF; background: #808080; text-decoration: none; }
+
+       /* TOC LIST CSS */
+       #toc    { padding:0; margin:0 }
+       #toc li { margin-top:2px; margin-left:0; padding:1px }
+       #toc ul { padding-left:0; margin-left:0px }       
+       /* TOC LIST CSS */
+       
+       @media (pointer: coarse) {
+         body    { transform-origin: 0 0;
+		   transform:scale(1.25); 
+		   max-width: 80%;
+       }       
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+   	   var hiTest = /^hilight/im,
+			parentScope = (parent.hmNavigationFrame);
+		if (parentScope) parent.currentNav("toc");
+		$("a[class^='heading']").on("click",function(event){
+			var doSwipe = (hiTest.test($(this).children("span").first().attr("class")) || false || (parentScope && !parent.hmBrowser.nonDeskTouch));
+			if (doSwipe && parentScope) {
+			window.parent.showNav("toggle");
+			}
+			});
+     });
+   </script>
+      <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body>
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="inleiding.htm" target="hmcontent"><span class="heading1" id="s1">Inleiding</span></a>
+</li>
+<li class="heading1" id="i2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="algemeen6.htm" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">Algemeen</span></a>
+<ul id="ul2" style="list-style-type:none">
+<li class="heading2" id="i2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="axito-in-de-cloud.htm" target="hmcontent"><span class="heading2" id="s2.1">AXITO in de cloud</span></a>
+</li>
+<li class="heading2" id="i2.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="offline-installatie-axito-soft.htm" target="hmcontent"><span class="heading2" id="s2.2" ondblclick="return dblclicked(this)">Offline installatie AXITO-Software</span></a>
+<ul id="ul2.2" style="list-style-type:none">
+<li class="heading3" id="i2.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.1" href="installatie_axito-cts_software.htm" target="hmcontent"><span class="heading3" id="s2.2.1">De verschillende installatiestappen</span></a>
+</li>
+<li class="heading3" id="i2.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.2" href="registratie.htm" target="hmcontent"><span class="heading3" id="s2.2.2">Registratie van AXITO-Software</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.3" href="eerste-kennismaking.htm" target="hmcontent"><span class="heading2" id="s2.3" ondblclick="return dblclicked(this)">Eerste kennismaking</span></a>
+<ul id="ul2.3" style="list-style-type:none">
+<li class="heading3" id="i2.3.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.1" href="enkele_termen__bestand_record_.htm" target="hmcontent"><span class="heading3" id="s2.3.1">Enkele termen : Bestand, record, veld</span></a>
+</li>
+<li class="heading3" id="i2.3.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.2" href="eerste_kennismaking.htm" target="hmcontent"><span class="heading3" id="s2.3.2">Eerste kennismaking</span></a>
+</li>
+<li class="heading3" id="i2.3.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.3" href="cts_hoofdmenu.htm" target="hmcontent"><span class="heading3" id="s2.3.3">AXITO-Menuprogramma</span></a>
+</li>
+<li class="heading3" id="i2.3.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.4" href="cts-handelszaak_hoofdmenu.htm" target="hmcontent"><span class="heading3" id="s2.3.4" ondblclick="return dblclicked(this)">AXITO-Handelszaak</span></a>
+<ul id="ul2.3.4" style="list-style-type:none">
+<li class="heading4" id="i2.3.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.3.4.1" href="axito-hoofdmenu.htm" target="hmcontent"><span class="heading4" id="s2.3.4.1">AXITO-Hoofdmenu</span></a>
+</li>
+<li class="heading4" id="i2.3.4.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.3.4.2" href="opbouw-axito-scherm.htm" target="hmcontent"><span class="heading4" id="s2.3.4.2">Opbouw AXITO-scherm</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.3.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.5" href="axito-smartkey.htm" target="hmcontent"><span class="heading3" id="s2.3.5" ondblclick="return dblclicked(this)">AXITO Smartkey</span></a>
+<ul id="ul2.3.5" style="list-style-type:none">
+<li class="heading4" id="i2.3.5.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.3.5.1" href="het-toetsenbord.htm" target="hmcontent"><span class="heading4" id="s2.3.5.1">Het toetsenbord</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.3.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.6" href="veld-knoppen.htm" target="hmcontent"><span class="heading3" id="s2.3.6">Veld-knoppen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.4" href="de_verschillende_keuzes.htm" target="hmcontent"><span class="heading2" id="s2.4" ondblclick="return dblclicked(this)">De 'Bewerkingen' knoppenbalk</span></a>
+<ul id="ul2.4" style="list-style-type:none">
+<li class="heading3" id="i2.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.1" href="toevoegen.htm" target="hmcontent"><span class="heading3" id="s2.4.1">Toevoegen</span></a>
+</li>
+<li class="heading3" id="i2.4.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.2" href="wijzigen.htm" target="hmcontent"><span class="heading3" id="s2.4.2">Wijzigen</span></a>
+</li>
+<li class="heading3" id="i2.4.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.3" href="schrappen.htm" target="hmcontent"><span class="heading3" id="s2.4.3">Schrappen</span></a>
+</li>
+<li class="heading3" id="i2.4.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.4" href="index.htm" target="hmcontent"><span class="heading3" id="s2.4.4">Index</span></a>
+</li>
+<li class="heading3" id="i2.4.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.5" href="zoeken.htm" target="hmcontent"><span class="heading3" id="s2.4.5">Zoeken</span></a>
+</li>
+<li class="heading3" id="i2.4.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.6" href="micromacro.htm" target="hmcontent"><span class="heading3" id="s2.4.6">Macro</span></a>
+</li>
+<li class="heading3" id="i2.4.7" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.7" href="filter.htm" target="hmcontent"><span class="heading3" id="s2.4.7" ondblclick="return dblclicked(this)">Filter</span></a>
+<ul id="ul2.4.7" style="list-style-type:none">
+<li class="heading4" id="i2.4.7.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.7.1" href="snelfilter.htm" target="hmcontent"><span class="heading4" id="s2.4.7.1">Snelfilter</span></a>
+</li>
+<li class="heading4" id="i2.4.7.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.7.2" href="geavanceerde-filter.htm" target="hmcontent"><span class="heading4" id="s2.4.7.2">Geavanceerde filter</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.4.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.8" href="snelprinten.htm" target="hmcontent"><span class="heading3" id="s2.4.8">Snelprinten</span></a>
+</li>
+<li class="heading3" id="i2.4.9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.9" href="snelprinten-(uitbreiding).htm" target="hmcontent"><span class="heading3" id="s2.4.9" ondblclick="return dblclicked(this)">Snelprinten (uitbreiding)</span></a>
+<ul id="ul2.4.9" style="list-style-type:none">
+<li class="heading4" id="i2.4.9.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.9.1" href="instellen-snelprinten.htm" target="hmcontent"><span class="heading4" id="s2.4.9.1">Instellen snelprinten</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.4.10" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.10" href="printen.htm" target="hmcontent"><span class="heading3" id="s2.4.10" ondblclick="return dblclicked(this)">Printen</span></a>
+<ul id="ul2.4.10" style="list-style-type:none">
+<li class="heading4" id="i2.4.10.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.10.1" href="print-nu-menu.htm" target="hmcontent"><span class="heading4" id="s2.4.10.1">Print nu</span></a>
+</li>
+<li class="heading4" id="i2.4.10.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.10.2" href="printen_documenten.htm" target="hmcontent"><span class="heading4" id="s2.4.10.2">Documenten</span></a>
+</li>
+<li class="heading4" id="i2.4.10.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.10.3" href="printen_standaard-lijsten.htm" target="hmcontent"><span class="heading4" id="s2.4.10.3">Standaard lijsten</span></a>
+</li>
+<li class="heading4" id="i2.4.10.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.10.4" href="printen_etiketten.htm" target="hmcontent"><span class="heading4" id="s2.4.10.4">Etiketten</span></a>
+</li>
+<li class="heading4" id="i2.4.10.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.10.5" href="printen_scherm-micro.htm" target="hmcontent"><span class="heading4" id="s2.4.10.5">Scherm micro</span></a>
+</li>
+<li class="heading4" id="i2.4.10.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.10.6" href="printen_scherm-macro.htm" target="hmcontent"><span class="heading4" id="s2.4.10.6">Scherm macro</span></a>
+</li>
+<li class="heading4" id="i2.4.10.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.10.7" href="printen_zelf-bepalen.htm" target="hmcontent"><span class="heading4" id="s2.4.10.7">Zelf bepalen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.4.11" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.11" href="_e-mail.htm" target="hmcontent"><span class="heading3" id="s2.4.11">@ E-mail</span></a>
+</li>
+<li class="heading3" id="i2.4.12" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.12" href="contacten.htm" target="hmcontent"><span class="heading3" id="s2.4.12" ondblclick="return dblclicked(this)">Contacten</span></a>
+<ul id="ul2.4.12" style="list-style-type:none">
+<li class="heading4" id="i2.4.12.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.12.1" href="contacten-weergeven.htm" target="hmcontent"><span class="heading4" id="s2.4.12.1">Contacten weergeven</span></a>
+</li>
+<li class="heading4" id="i2.4.12.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.4.12.2" href="contacten-beheren.htm" target="hmcontent"><span class="heading4" id="s2.4.12.2">Contacten beheren</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.4.13" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.13" href="intrastat-keuze.htm" target="hmcontent"><span class="heading3" id="s2.4.13">Intrastat</span></a>
+</li>
+<li class="heading3" id="i2.4.14" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.14" href="opnemen_niet-openemen.htm" target="hmcontent"><span class="heading3" id="s2.4.14">Opnemen/Niet openemen</span></a>
+</li>
+<li class="heading3" id="i2.4.15" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.15" href="nota.htm" target="hmcontent"><span class="heading3" id="s2.4.15">Nota</span></a>
+</li>
+<li class="heading3" id="i2.4.16" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.16" href="voldaan.htm" target="hmcontent"><span class="heading3" id="s2.4.16">Voldaan</span></a>
+</li>
+<li class="heading3" id="i2.4.17" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.17" href="einde_of_escape.htm" target="hmcontent"><span class="heading3" id="s2.4.17">Einde of Escape</span></a>
+</li>
+<li class="heading3" id="i2.4.18" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.18" href="de_overige_keuzes.htm" target="hmcontent"><span class="heading3" id="s2.4.18">De overige keuzes</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.5" href="de-snelle-toegang-knoppenbal.htm" target="hmcontent"><span class="heading2" id="s2.5">De 'Snelle toegang' knoppenbalk</span></a>
+</li>
+<li class="heading2" id="i2.6" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.6" href="de-functietoetsen.htm" target="hmcontent"><span class="heading2" id="s2.6" ondblclick="return dblclicked(this)">De 'Functietoetsen' knoppenbalk</span></a>
+<ul id="ul2.6" style="list-style-type:none">
+<li class="heading3" id="i2.6.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.1" href="f1__help.htm" target="hmcontent"><span class="heading3" id="s2.6.1">F1: Help</span></a>
+</li>
+<li class="heading3" id="i2.6.2" style="background:url(cicon12.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.2" href="f3__rekenmachine.htm" target="hmcontent"><span class="heading3" id="s2.6.2">F3: Rekenmachine</span></a>
+</li>
+<li class="heading3" id="i2.6.3" style="background:url(cicon12.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.3" href="f4__ascii-tabel.htm" target="hmcontent"><span class="heading3" id="s2.6.3">F4: ASCII-tabel</span></a>
+</li>
+<li class="heading3" id="i2.6.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.4" href="f5__overbrengen.htm" target="hmcontent"><span class="heading3" id="s2.6.4">F5: Overbrengen</span></a>
+</li>
+<li class="heading3" id="i2.6.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.5" href="f6__bestandsoverzicht.htm" target="hmcontent"><span class="heading3" id="s2.6.5" ondblclick="return dblclicked(this)">F6: Bestandsoverzicht</span></a>
+<ul id="ul2.6.5" style="list-style-type:none">
+<li class="heading4" id="i2.6.5.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.6.5.1" href="shift_-_f6.htm" target="hmcontent"><span class="heading4" id="s2.6.5.1">Shift - F6: Artikel opzoeken</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.6.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.6" href="f7__extra_info.htm" target="hmcontent"><span class="heading3" id="s2.6.6">F7: Extra info</span></a>
+</li>
+<li class="heading3" id="i2.6.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.7" href="f9__algemene_informatie.htm" target="hmcontent"><span class="heading3" id="s2.6.7">F9: Algemene informatie</span></a>
+</li>
+<li class="heading3" id="i2.6.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.8" href="f10__instellingen_printer.htm" target="hmcontent"><span class="heading3" id="s2.6.8">F10: Instellingen printer</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="relatiebeheer.htm" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">Relatiebeheer</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="werknemers.htm" target="hmcontent"><span class="heading2" id="s3.1" ondblclick="return dblclicked(this)">Werknemers</span></a>
+<ul id="ul3.1" style="list-style-type:none">
+<li class="heading3" id="i3.1.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.1" href="commissiebeheer.htm" target="hmcontent"><span class="heading3" id="s3.1.1" ondblclick="return dblclicked(this)">Commissiebeheer</span></a>
+<ul id="ul3.1.1" style="list-style-type:none">
+<li class="heading4" id="i3.1.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.1.1" href="algemene-werking.htm" target="hmcontent"><span class="heading4" id="s3.1.1.1">Algemene werking</span></a>
+</li>
+<li class="heading4" id="i3.1.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.1.2" href="commissiepercentages.htm" target="hmcontent"><span class="heading4" id="s3.1.1.2">Commissiepercentages</span></a>
+</li>
+<li class="heading4" id="i3.1.1.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.1.3" href="verkoopsdocumenten-beheren.htm" target="hmcontent"><span class="heading4" id="s3.1.1.3">Verkoopsdocumenten beheren</span></a>
+</li>
+<li class="heading4" id="i3.1.1.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.1.4" href="commissieberekening.htm" target="hmcontent"><span class="heading4" id="s3.1.1.4">Commissieberekening</span></a>
+</li>
+<li class="heading4" id="i3.1.1.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.1.5" href="overige-mogelijkheden.htm" target="hmcontent"><span class="heading4" id="s3.1.1.5">Overige mogelijkheden</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.1.2" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.2" href="bijkomende-info2.htm" target="hmcontent"><span class="heading3" id="s3.1.2" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul3.1.2" style="list-style-type:none">
+<li class="heading4" id="i3.1.2.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.2.1" href="de-axito-knoppenbalk4.htm" target="hmcontent"><span class="heading4" id="s3.1.2.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i3.1.2.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.2.2" href="uitleg-velden5.htm" target="hmcontent"><span class="heading4" id="s3.1.2.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="artikelenbeheer2.htm" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">Artikelenbeheer</span></a>
+<ul id="ul4" style="list-style-type:none">
+<li class="heading2" id="i4.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="artikelgroepen.htm" target="hmcontent"><span class="heading2" id="s4.1" ondblclick="return dblclicked(this)">Artikelgroepen</span></a>
+<ul id="ul4.1" style="list-style-type:none">
+<li class="heading3" id="i4.1.1" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.1" href="bijkomende-info3.htm" target="hmcontent"><span class="heading3" id="s4.1.1" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul4.1.1" style="list-style-type:none">
+<li class="heading4" id="i4.1.1.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.1.1.1" href="de-axito-knoppenbalk5.htm" target="hmcontent"><span class="heading4" id="s4.1.1.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i4.1.1.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.1.1.2" href="uitleg-velden6.htm" target="hmcontent"><span class="heading4" id="s4.1.1.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="artikelen.htm" target="hmcontent"><span class="heading2" id="s4.2" ondblclick="return dblclicked(this)">Artikelen</span></a>
+<ul id="ul4.2" style="list-style-type:none">
+<li class="heading3" id="i4.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.1" href="toevoegen-artikel2.htm" target="hmcontent"><span class="heading3" id="s4.2.1">Toevoegen artikel</span></a>
+</li>
+<li class="heading3" id="i4.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.2" href="wijzigen-artikel.htm" target="hmcontent"><span class="heading3" id="s4.2.2">Wijzigen artikel</span></a>
+</li>
+<li class="heading3" id="i4.2.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.3" href="schrappen-artikel.htm" target="hmcontent"><span class="heading3" id="s4.2.3">Schrappen artikel</span></a>
+</li>
+<li class="heading3" id="i4.2.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.4" href="printen4.htm" target="hmcontent"><span class="heading3" id="s4.2.4" ondblclick="return dblclicked(this)">Printen</span></a>
+<ul id="ul4.2.4" style="list-style-type:none">
+<li class="heading4" id="i4.2.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.1" href="lijsten-printen.htm" target="hmcontent"><span class="heading4" id="s4.2.4.1">Lijsten printen</span></a>
+</li>
+<li class="heading4" id="i4.2.4.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.2" href="inventaris-printen.htm" target="hmcontent"><span class="heading4" id="s4.2.4.2">Inventaris printen</span></a>
+</li>
+<li class="heading4" id="i4.2.4.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.3" href="etiketten-printen2.htm" target="hmcontent"><span class="heading4" id="s4.2.4.3">Etiketten printen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.2.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.5" href="afbeeldingen.htm" target="hmcontent"><span class="heading3" id="s4.2.5">Afbeeldingen</span></a>
+</li>
+<li class="heading3" id="i4.2.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.6" href="artikelsoorten.htm" target="hmcontent"><span class="heading3" id="s4.2.6">Artikelsoorten</span></a>
+</li>
+<li class="heading3" id="i4.2.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.7" href="barcodes.htm" target="hmcontent"><span class="heading3" id="s4.2.7">Barcodes</span></a>
+</li>
+<li class="heading3" id="i4.2.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.8" href="colli-leeggoed.htm" target="hmcontent"><span class="heading3" id="s4.2.8">Colli - Leeggoed</span></a>
+</li>
+<li class="heading3" id="i4.2.9" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.9" href="diversen_artikelen.htm" target="hmcontent"><span class="heading3" id="s4.2.9">Diversen</span></a>
+</li>
+<li class="heading3" id="i4.2.10" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.10" href="recupel_bebat_reprobel_auvibel.htm" target="hmcontent"><span class="heading3" id="s4.2.10">Ecotaksen : Recupel, bebat, reprobel, auvibel</span></a>
+</li>
+<li class="heading3" id="i4.2.11" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.11" href="accijnzen.htm" target="hmcontent"><span class="heading3" id="s4.2.11" ondblclick="return dblclicked(this)">Extra taksen (accijnzen)</span></a>
+<ul id="ul4.2.11" style="list-style-type:none">
+<li class="heading4" id="i4.2.11.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.11.1" href="accijnsartikelen.htm" target="hmcontent"><span class="heading4" id="s4.2.11.1">Accijnsartikelen</span></a>
+</li>
+<li class="heading4" id="i4.2.11.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.11.2" href="accijnsartikel-toepassen.htm" target="hmcontent"><span class="heading4" id="s4.2.11.2">Accijnsartikel toepassen</span></a>
+</li>
+<li class="heading4" id="i4.2.11.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.11.3" href="accijnzen-in-verkoopdocumenten.htm" target="hmcontent"><span class="heading4" id="s4.2.11.3">Accijnzen in verkoopdocumenten</span></a>
+</li>
+<li class="heading4" id="i4.2.11.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.11.4" href="voorbeelden6.htm" target="hmcontent"><span class="heading4" id="s4.2.11.4">Voorbeelden</span></a>
+</li>
+<li class="heading4" id="i4.2.11.5" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.11.5" href="algemeen5.htm" target="hmcontent"><span class="heading4" id="s4.2.11.5" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul4.2.11.5" style="list-style-type:none">
+<li class="heading5" id="i4.2.11.5.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.2.11.5.1" href="uitleg-velden3.htm" target="hmcontent"><span class="heading5" id="s4.2.11.5.1">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.2.12" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.12" href="gratis_artikelen.htm" target="hmcontent"><span class="heading3" id="s4.2.12">Gratis artikel</span></a>
+</li>
+<li class="heading3" id="i4.2.13" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.13" href="grootkleinverpakking.htm" target="hmcontent"><span class="heading3" id="s4.2.13">Groot- &amp; kleinverpakking</span></a>
+</li>
+<li class="heading3" id="i4.2.14" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.14" href="historieken3.htm" target="hmcontent"><span class="heading3" id="s4.2.14">Historieken</span></a>
+</li>
+<li class="heading3" id="i4.2.15" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.15" href="intrastatcodes.htm" target="hmcontent"><span class="heading3" id="s4.2.15">Intrastatcodes</span></a>
+</li>
+<li class="heading3" id="i4.2.16" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.16" href="lijstcodes.htm" target="hmcontent"><span class="heading3" id="s4.2.16">Lijstcodes</span></a>
+</li>
+<li class="heading3" id="i4.2.17" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.17" href="lotnummers.htm" target="hmcontent"><span class="heading3" id="s4.2.17">Lotnummer</span></a>
+</li>
+<li class="heading3" id="i4.2.18" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.18" href="magazijnen.htm" target="hmcontent"><span class="heading3" id="s4.2.18">Magazijnen</span></a>
+</li>
+<li class="heading3" id="i4.2.19" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.19" href="prijsaanpak.htm" target="hmcontent"><span class="heading3" id="s4.2.19">Prijsaanpak</span></a>
+</li>
+<li class="heading3" id="i4.2.20" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.20" href="prijsinformatie.htm" target="hmcontent"><span class="heading3" id="s4.2.20">Prijsinformatie</span></a>
+</li>
+<li class="heading3" id="i4.2.21" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.21" href="prijzen_verhogenverlagen.htm" target="hmcontent"><span class="heading3" id="s4.2.21">Prijzen verhogen/verlagen</span></a>
+</li>
+<li class="heading3" id="i4.2.22" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.22" href="promotieprijzen.htm" target="hmcontent"><span class="heading3" id="s4.2.22">Promotieprijzen</span></a>
+</li>
+<li class="heading3" id="i4.2.23" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.23" href="puntenkaart.htm" target="hmcontent"><span class="heading3" id="s4.2.23">Puntenkaart</span></a>
+</li>
+<li class="heading3" id="i4.2.24" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.24" href="samengestelde_artikelen.htm" target="hmcontent"><span class="heading3" id="s4.2.24" ondblclick="return dblclicked(this)">Samengestelde artikelen</span></a>
+<ul id="ul4.2.24" style="list-style-type:none">
+<li class="heading4" id="i4.2.24.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.24.1" href="toevoegen-nieuw-samengesteld-a.htm" target="hmcontent"><span class="heading4" id="s4.2.24.1">Toevoegen nieuw samengesteld artikel</span></a>
+</li>
+<li class="heading4" id="i4.2.24.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.24.2" href="video-samenstelling.htm" target="hmcontent"><span class="heading4" id="s4.2.24.2">Video samenstelling</span></a>
+</li>
+<li class="heading4" id="i4.2.24.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.24.3" href="samenstelling-toevoegen-in-een.htm" target="hmcontent"><span class="heading4" id="s4.2.24.3">Samenstelling toevoegen in een verkoopsdocument</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.2.25" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.25" href="serienummers.htm" target="hmcontent"><span class="heading3" id="s4.2.25">Serienummers</span></a>
+</li>
+<li class="heading3" id="i4.2.26" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.26" href="spreadsheets.htm" target="hmcontent"><span class="heading3" id="s4.2.26" ondblclick="return dblclicked(this)">Spread-sheets</span></a>
+<ul id="ul4.2.26" style="list-style-type:none">
+<li class="heading4" id="i4.2.26.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.26.1" href="beperkt.htm" target="hmcontent"><span class="heading4" id="s4.2.26.1">Beperkt</span></a>
+</li>
+<li class="heading4" id="i4.2.26.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.26.2" href="uitgebreid.htm" target="hmcontent"><span class="heading4" id="s4.2.26.2">Uitgebreid</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.2.27" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.27" href="streefmaskers.htm" target="hmcontent"><span class="heading3" id="s4.2.27">Streefmaskers</span></a>
+</li>
+<li class="heading3" id="i4.2.28" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.28" href="streefpercentage.htm" target="hmcontent"><span class="heading3" id="s4.2.28">Streefpercentage</span></a>
+</li>
+<li class="heading3" id="i4.2.29" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.29" href="vereenvoudigd_prijzenboek.htm" target="hmcontent"><span class="heading3" id="s4.2.29">Vereenvoudigd prijzenboek</span></a>
+</li>
+<li class="heading3" id="i4.2.30" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.30" href="verhuren_van_artikelen.htm" target="hmcontent"><span class="heading3" id="s4.2.30">Verhuren van artikelen</span></a>
+</li>
+<li class="heading3" id="i4.2.31" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.31" href="artikelen_in_vreemde_talen.htm" target="hmcontent"><span class="heading3" id="s4.2.31">Vreemde talen</span></a>
+</li>
+<li class="heading3" id="i4.2.32" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.32" href="overige_mogelijkheden.htm" target="hmcontent"><span class="heading3" id="s4.2.32">Overige mogelijkheden</span></a>
+</li>
+<li class="heading3" id="i4.2.33" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.33" href="voorbeelden5.htm" target="hmcontent"><span class="heading3" id="s4.2.33">Voorbeelden</span></a>
+</li>
+<li class="heading3" id="i4.2.34" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.34" href="algemeen4.htm" target="hmcontent"><span class="heading3" id="s4.2.34" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul4.2.34" style="list-style-type:none">
+<li class="heading4" id="i4.2.34.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.34.1" href="de-axito-knoppenbalk2.htm" target="hmcontent"><span class="heading4" id="s4.2.34.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i4.2.34.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.34.2" href="uitleg-velden2.htm" target="hmcontent"><span class="heading4" id="s4.2.34.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.3" href="werkzaamheden.htm" target="hmcontent"><span class="heading2" id="s4.3" ondblclick="return dblclicked(this)">Werkzaamheden</span></a>
+<ul id="ul4.3" style="list-style-type:none">
+<li class="heading3" id="i4.3.1" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.1" href="bijkomende-info4.htm" target="hmcontent"><span class="heading3" id="s4.3.1" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul4.3.1" style="list-style-type:none">
+<li class="heading4" id="i4.3.1.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.1" href="de-axito-knoppenbalk6.htm" target="hmcontent"><span class="heading4" id="s4.3.1.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i4.3.1.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.2" href="uitleg-velden7.htm" target="hmcontent"><span class="heading4" id="s4.3.1.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.4" href="samenstellingen.htm" target="hmcontent"><span class="heading2" id="s4.4" ondblclick="return dblclicked(this)">Samenstelling</span></a>
+<ul id="ul4.4" style="list-style-type:none">
+<li class="heading3" id="i4.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.1" href="toevoegen-nieuwe-samenstelling.htm" target="hmcontent"><span class="heading3" id="s4.4.1">Samenstellingen</span></a>
+</li>
+<li class="heading3" id="i4.4.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.2" href="sorteren-van-de-video-regels.htm" target="hmcontent"><span class="heading3" id="s4.4.2">Sorteren van de video-regels</span></a>
+</li>
+<li class="heading3" id="i4.4.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.3" href="overbrengen-samenstelling-naar.htm" target="hmcontent"><span class="heading3" id="s4.4.3">Overbrengen samenstelling naar een verkoopsdocument</span></a>
+</li>
+<li class="heading3" id="i4.4.4" style="background:url(cicon4.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.4" href="voorbeelden3.htm" target="hmcontent"><span class="heading3" id="s4.4.4">Voorbeelden</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.5" href="kortingenboek.htm" target="hmcontent"><span class="heading2" id="s4.5" ondblclick="return dblclicked(this)">Kortingenboek</span></a>
+<ul id="ul4.5" style="list-style-type:none">
+<li class="heading3" id="i4.5.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.1" href="vereenvoudigd-prijzenboek.htm" target="hmcontent"><span class="heading3" id="s4.5.1">Vereenvoudigd prijzenboek</span></a>
+</li>
+<li class="heading3" id="i4.5.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.2" href="kortingenboek_standaard.htm" target="hmcontent"><span class="heading3" id="s4.5.2">Kortingenboek standaard</span></a>
+</li>
+<li class="heading3" id="i4.5.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.3" href="extra_totaal_kortingentoeslage.htm" target="hmcontent"><span class="heading3" id="s4.5.3">Extra totaal kortingen/toeslagen</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="voorraadbeheer2.htm" target="hmcontent"><span class="heading1" id="s5" ondblclick="return dblclicked(this)">Voorraad- &amp; aankoopbeheer</span></a>
+<ul id="ul5" style="list-style-type:none">
+<li class="heading2" id="i5.1" style="background:url(cicon4.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.1" href="procedures.htm" target="hmcontent"><span class="heading2" id="s5.1">Procedures</span></a>
+</li>
+<li class="heading2" id="i5.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.2" href="voorraad.htm" target="hmcontent"><span class="heading2" id="s5.2">Voorraad</span></a>
+</li>
+<li class="heading2" id="i5.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.3" href="inventaris.htm" target="hmcontent"><span class="heading2" id="s5.3">Inventaris</span></a>
+</li>
+<li class="heading2" id="i5.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.4" href="besteladviezen.htm" target="hmcontent"><span class="heading2" id="s5.4">Besteladviezen</span></a>
+</li>
+<li class="heading2" id="i5.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.5" href="backorders.htm" target="hmcontent"><span class="heading2" id="s5.5">Backorders</span></a>
+</li>
+<li class="heading2" id="i5.6" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.6" href="aankoop_bestelbon.htm" target="hmcontent"><span class="heading2" id="s5.6" ondblclick="return dblclicked(this)">Aankoop bestelbon</span></a>
+<ul id="ul5.6" style="list-style-type:none">
+<li class="heading3" id="i5.6.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.6.1" href="toevoegen-aankoopbon.htm" target="hmcontent"><span class="heading3" id="s5.6.1">Toevoegen bestelbon</span></a>
+</li>
+<li class="heading3" id="i5.6.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.6.2" href="wijzigen-aankoopbon.htm" target="hmcontent"><span class="heading3" id="s5.6.2">Wijzigen bestelbon</span></a>
+</li>
+<li class="heading3" id="i5.6.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.6.3" href="schrappen-aankoopbon.htm" target="hmcontent"><span class="heading3" id="s5.6.3">Schrappen bestelbon</span></a>
+</li>
+<li class="heading3" id="i5.6.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.6.4" href="overbrengen-offert-of-bon.htm" target="hmcontent"><span class="heading3" id="s5.6.4">Overbrengen offert of bon</span></a>
+</li>
+<li class="heading3" id="i5.6.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.6.5" href="video-aankoop-bestelbon(regels.htm" target="hmcontent"><span class="heading3" id="s5.6.5" ondblclick="return dblclicked(this)">Video bestelbon(regels)</span></a>
+<ul id="ul5.6.5" style="list-style-type:none">
+<li class="heading4" id="i5.6.5.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.6.5.1" href="toevoegen-videoregel2.htm" target="hmcontent"><span class="heading4" id="s5.6.5.1">Toevoegen videoregel</span></a>
+</li>
+<li class="heading4" id="i5.6.5.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.6.5.2" href="wijzigen-videoregel2.htm" target="hmcontent"><span class="heading4" id="s5.6.5.2">Wijzigen videoregel</span></a>
+</li>
+<li class="heading4" id="i5.6.5.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.6.5.3" href="schrappen-videoregel2.htm" target="hmcontent"><span class="heading4" id="s5.6.5.3">Schrappen videoregel</span></a>
+</li>
+<li class="heading4" id="i5.6.5.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.6.5.4" href="overbrengen2.htm" target="hmcontent"><span class="heading4" id="s5.6.5.4">Overbrengen</span></a>
+</li>
+<li class="heading4" id="i5.6.5.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.6.5.5" href="verplaatsen-van-videoregels.htm" target="hmcontent"><span class="heading4" id="s5.6.5.5">Verplaatsen van videoregels</span></a>
+</li>
+<li class="heading4" id="i5.6.5.6" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.6.5.6" href="bijkomende-info6.htm" target="hmcontent"><span class="heading4" id="s5.6.5.6" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul5.6.5.6" style="list-style-type:none">
+<li class="heading5" id="i5.6.5.6.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.6.5.6.1" href="de-axito-knoppenbalk8.htm" target="hmcontent"><span class="heading5" id="s5.6.5.6.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading5" id="i5.6.5.6.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.6.5.6.2" href="uitleg-velden9.htm" target="hmcontent"><span class="heading5" id="s5.6.5.6.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i5.6.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.6.6" href="printen-aankoopbon.htm" target="hmcontent"><span class="heading3" id="s5.6.6">Printen bestelbon</span></a>
+</li>
+<li class="heading3" id="i5.6.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.6.7" href="bestelbon-doorboeken-naar-arti.htm" target="hmcontent"><span class="heading3" id="s5.6.7">Bestelbon doorboeken naar artikelbestand</span></a>
+</li>
+<li class="heading3" id="i5.6.8" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.6.8" href="bijkomende-info5.htm" target="hmcontent"><span class="heading3" id="s5.6.8" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul5.6.8" style="list-style-type:none">
+<li class="heading4" id="i5.6.8.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.6.8.1" href="de-axito-knoppenbalk7.htm" target="hmcontent"><span class="heading4" id="s5.6.8.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i5.6.8.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.6.8.2" href="uitleg-velden8.htm" target="hmcontent"><span class="heading4" id="s5.6.8.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i5.7" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.7" href="aankoop_leveringsbon.htm" target="hmcontent"><span class="heading2" id="s5.7" ondblclick="return dblclicked(this)">Aankoop leveringsbon</span></a>
+<ul id="ul5.7" style="list-style-type:none">
+<li class="heading3" id="i5.7.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.1" href="toevoegen2.htm" target="hmcontent"><span class="heading3" id="s5.7.1">Toevoegen leveringsbon</span></a>
+</li>
+<li class="heading3" id="i5.7.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.2" href="wijzigen-leveringsbon.htm" target="hmcontent"><span class="heading3" id="s5.7.2">Wijzigen leveringsbon</span></a>
+</li>
+<li class="heading3" id="i5.7.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.3" href="schrappen-leveringsbon.htm" target="hmcontent"><span class="heading3" id="s5.7.3">Schrappen leveringsbon</span></a>
+</li>
+<li class="heading3" id="i5.7.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.4" href="video-aankoop-leveringsbon.htm" target="hmcontent"><span class="heading3" id="s5.7.4" ondblclick="return dblclicked(this)">Video leveringsbon(regels)</span></a>
+<ul id="ul5.7.4" style="list-style-type:none">
+<li class="heading4" id="i5.7.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.7.4.1" href="toevoegen-videoregel.htm" target="hmcontent"><span class="heading4" id="s5.7.4.1">Toevoegen videoregel</span></a>
+</li>
+<li class="heading4" id="i5.7.4.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.7.4.2" href="wijzigen-videoregel.htm" target="hmcontent"><span class="heading4" id="s5.7.4.2">Wijzigen videoregel</span></a>
+</li>
+<li class="heading4" id="i5.7.4.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.7.4.3" href="schrappen-videoregel.htm" target="hmcontent"><span class="heading4" id="s5.7.4.3">Schrappen videoregel</span></a>
+</li>
+<li class="heading4" id="i5.7.4.4" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.7.4.4" href="bijkomende-info8.htm" target="hmcontent"><span class="heading4" id="s5.7.4.4" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul5.7.4.4" style="list-style-type:none">
+<li class="heading5" id="i5.7.4.4.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.7.4.4.1" href="de-axito-knoppenbalk10.htm" target="hmcontent"><span class="heading5" id="s5.7.4.4.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading5" id="i5.7.4.4.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.7.4.4.2" href="uitleg-velden11.htm" target="hmcontent"><span class="heading5" id="s5.7.4.4.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i5.7.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.5" href="printen5.htm" target="hmcontent"><span class="heading3" id="s5.7.5">Printen leveringsbon</span></a>
+</li>
+<li class="heading3" id="i5.7.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.6" href="doorboeken-naar-artikelbestand.htm" target="hmcontent"><span class="heading3" id="s5.7.6">Leveringsbon doorboeken naar artikelbestand</span></a>
+</li>
+<li class="heading3" id="i5.7.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.7" href="controle_aankoop_leveringsbon.htm" target="hmcontent"><span class="heading3" id="s5.7.7">Controle aankoop leveringsbon</span></a>
+</li>
+<li class="heading3" id="i5.7.8" style="background:url(cicon4.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.8" href="enkele-voorbeelden.htm" target="hmcontent"><span class="heading3" id="s5.7.8">Enkele voorbeelden</span></a>
+</li>
+<li class="heading3" id="i5.7.9" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.7.9" href="bijkomende-info7.htm" target="hmcontent"><span class="heading3" id="s5.7.9" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul5.7.9" style="list-style-type:none">
+<li class="heading4" id="i5.7.9.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.7.9.1" href="de-axito-knoppenbalk9.htm" target="hmcontent"><span class="heading4" id="s5.7.9.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i5.7.9.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.7.9.2" href="uitleg-velden10.htm" target="hmcontent"><span class="heading4" id="s5.7.9.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i5.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.8" href="initialisatie_voorraad.htm" target="hmcontent"><span class="heading2" id="s5.8">Initialisatie voorraad</span></a>
+</li>
+<li class="heading2" id="i5.9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.9" href="voorraad_transfert.htm" target="hmcontent"><span class="heading2" id="s5.9" ondblclick="return dblclicked(this)">Voorraad transfert</span></a>
+<ul id="ul5.9" style="list-style-type:none">
+<li class="heading3" id="i5.9.1" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.9.1" href="bijkomende-info9.htm" target="hmcontent"><span class="heading3" id="s5.9.1" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul5.9.1" style="list-style-type:none">
+<li class="heading4" id="i5.9.1.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.9.1.1" href="uitleg-velden12.htm" target="hmcontent"><span class="heading4" id="s5.9.1.1">Uitleg velden</span></a>
+</li>
+<li class="heading4" id="i5.9.1.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.9.1.2" href="uitleg-velden-(video).htm" target="hmcontent"><span class="heading4" id="s5.9.1.2">Uitleg velden (video)</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i5.10" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.10" href="strikt_voorraadbeheer.htm" target="hmcontent"><span class="heading2" id="s5.10">Strikt voorraadbeheer</span></a>
+</li>
+<li class="heading2" id="i5.11" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.11" href="traceren_artikelen2.htm" target="hmcontent"><span class="heading2" id="s5.11">Traceren artikelen</span></a>
+</li>
+<li class="heading2" id="i5.12" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.12" href="overzicht_niet-aangepaste_arti.htm" target="hmcontent"><span class="heading2" id="s5.12">Overzicht niet-aangepaste artikelen voorraad-vlag</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i6" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="verkoopbeheer.htm" target="hmcontent"><span class="heading1" id="s6" ondblclick="return dblclicked(this)">Verkoopbeheer</span></a>
+<ul id="ul6" style="list-style-type:none">
+<li class="heading2" id="i6.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.1" href="offertes.htm" target="hmcontent"><span class="heading2" id="s6.1" ondblclick="return dblclicked(this)">Offertes</span></a>
+<ul id="ul6.1" style="list-style-type:none">
+<li class="heading3" id="i6.1.1" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.1" href="bijkomende-info10.htm" target="hmcontent"><span class="heading3" id="s6.1.1" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul6.1.1" style="list-style-type:none">
+<li class="heading4" id="i6.1.1.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.1.1.1" href="de-axito-knoppenbalk11.htm" target="hmcontent"><span class="heading4" id="s6.1.1.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i6.1.1.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.1.1.2" href="uitleg-velden13.htm" target="hmcontent"><span class="heading4" id="s6.1.1.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.2" href="bestelbonnen.htm" target="hmcontent"><span class="heading2" id="s6.2">Bestelbonnen</span></a>
+</li>
+<li class="heading2" id="i6.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.3" href="leveringsbonnen.htm" target="hmcontent"><span class="heading2" id="s6.3">Leveringsbonnen</span></a>
+</li>
+<li class="heading2" id="i6.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.4" href="facturatie.htm" target="hmcontent"><span class="heading2" id="s6.4" ondblclick="return dblclicked(this)">Facturatie</span></a>
+<ul id="ul6.4" style="list-style-type:none">
+<li class="heading3" id="i6.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.1" href="algemeen.htm" target="hmcontent"><span class="heading3" id="s6.4.1">Algemeen</span></a>
+</li>
+<li class="heading3" id="i6.4.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.2" href="toevoegen-factuur.htm" target="hmcontent"><span class="heading3" id="s6.4.2">Toevoegen factuur</span></a>
+</li>
+<li class="heading3" id="i6.4.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.3" href="wijzigen-factuur.htm" target="hmcontent"><span class="heading3" id="s6.4.3">Wijzigen factuur</span></a>
+</li>
+<li class="heading3" id="i6.4.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.4" href="schrappen-factuur.htm" target="hmcontent"><span class="heading3" id="s6.4.4">Schrappen factuur</span></a>
+</li>
+<li class="heading3" id="i6.4.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.5" href="printen-factuur.htm" target="hmcontent"><span class="heading3" id="s6.4.5" ondblclick="return dblclicked(this)">Printen factuur</span></a>
+<ul id="ul6.4.5" style="list-style-type:none">
+<li class="heading4" id="i6.4.5.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.5.1" href="snelprinten_factuur.htm" target="hmcontent"><span class="heading4" id="s6.4.5.1">Snelprinten</span></a>
+</li>
+<li class="heading4" id="i6.4.5.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.5.2" href="printen_factuur2.htm" target="hmcontent"><span class="heading4" id="s6.4.5.2" ondblclick="return dblclicked(this)">Printen</span></a>
+<ul id="ul6.4.5.2" style="list-style-type:none">
+<li class="heading5" id="i6.4.5.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.5.2.1" href="printen_facturen.htm" target="hmcontent"><span class="heading5" id="s6.4.5.2.1">Facturen</span></a>
+</li>
+<li class="heading5" id="i6.4.5.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.5.2.2" href="printen_bonnen---opdrachten.htm" target="hmcontent"><span class="heading5" id="s6.4.5.2.2">Bonnen - Opdrachten</span></a>
+</li>
+<li class="heading5" id="i6.4.5.2.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.5.2.3" href="printen_etiketten---briefomslagen.htm" target="hmcontent"><span class="heading5" id="s6.4.5.2.3">Etiketten - Briefomslagen</span></a>
+</li>
+<li class="heading5" id="i6.4.5.2.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.5.2.4" href="printen_overige-printopdrachten.htm" target="hmcontent"><span class="heading5" id="s6.4.5.2.4">Overige printopdrachten</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.4.6" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.6" href="video_factuur.htm" target="hmcontent"><span class="heading3" id="s6.4.6" ondblclick="return dblclicked(this)">Video factuur(regels)</span></a>
+<ul id="ul6.4.6" style="list-style-type:none">
+<li class="heading4" id="i6.4.6.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.6.1" href="algemeen2.htm" target="hmcontent"><span class="heading4" id="s6.4.6.1">Algemeen</span></a>
+</li>
+<li class="heading4" id="i6.4.6.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.6.2" href="toevoegen-factuurregel.htm" target="hmcontent"><span class="heading4" id="s6.4.6.2" ondblclick="return dblclicked(this)">Toevoegen factuurregel</span></a>
+<ul id="ul6.4.6.2" style="list-style-type:none">
+<li class="heading5" id="i6.4.6.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.6.2.1" href="toevoegen-artikel.htm" target="hmcontent"><span class="heading5" id="s6.4.6.2.1">Toevoegen artikel</span></a>
+</li>
+<li class="heading5" id="i6.4.6.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.6.2.2" href="toevoegen-werk(uren).htm" target="hmcontent"><span class="heading5" id="s6.4.6.2.2">Toevoegen werk(uren)</span></a>
+</li>
+<li class="heading5" id="i6.4.6.2.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.6.2.3" href="toevoegen-tekstregel.htm" target="hmcontent"><span class="heading5" id="s6.4.6.2.3">Toevoegen tekstregel</span></a>
+</li>
+<li class="heading5" id="i6.4.6.2.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.6.2.4" href="toevoegen-samenstelling.htm" target="hmcontent"><span class="heading5" id="s6.4.6.2.4">Toevoegen samenstelling</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i6.4.6.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.6.3" href="wijzigen-factuurregel.htm" target="hmcontent"><span class="heading4" id="s6.4.6.3">Wijzigen factuurregel</span></a>
+</li>
+<li class="heading4" id="i6.4.6.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.6.4" href="schrappen-factuurregel.htm" target="hmcontent"><span class="heading4" id="s6.4.6.4">Schrappen factuurregel</span></a>
+</li>
+<li class="heading4" id="i6.4.6.5" data-bg="cicon16.png;cicon17.png" style="background:url(cicon17.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.6.5" href="informatief2.htm" target="hmcontent"><span class="heading4" id="s6.4.6.5" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul6.4.6.5" style="list-style-type:none">
+<li class="heading5" id="i6.4.6.5.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.6.5.1" href="keuzes-in-het-axito-ribbon.htm" target="hmcontent"><span class="heading5" id="s6.4.6.5.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading5" id="i6.4.6.5.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.6.5.2" href="velden2.htm" target="hmcontent"><span class="heading5" id="s6.4.6.5.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.4.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.7" href="backorders2.htm" target="hmcontent"><span class="heading3" id="s6.4.7">Backorders</span></a>
+</li>
+<li class="heading3" id="i6.4.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.8" href="kopieren_factuur.htm" target="hmcontent"><span class="heading3" id="s6.4.8">Kopieren factuur</span></a>
+</li>
+<li class="heading3" id="i6.4.9" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.9" href="diversen4.htm" target="hmcontent"><span class="heading3" id="s6.4.9">Diversen</span></a>
+</li>
+<li class="heading3" id="i6.4.10" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.10" href="x-velden.htm" target="hmcontent"><span class="heading3" id="s6.4.10">X-velden</span></a>
+</li>
+<li class="heading3" id="i6.4.11" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.11" href="historieken5.htm" target="hmcontent"><span class="heading3" id="s6.4.11">Historieken</span></a>
+</li>
+<li class="heading3" id="i6.4.12" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.12" href="puntenkaart4.htm" target="hmcontent"><span class="heading3" id="s6.4.12">Puntenkaart</span></a>
+</li>
+<li class="heading3" id="i6.4.13" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.13" href="commissies.htm" target="hmcontent"><span class="heading3" id="s6.4.13">Commissies</span></a>
+</li>
+<li class="heading3" id="i6.4.14" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.14" href="openstaande_facturen.htm" target="hmcontent"><span class="heading3" id="s6.4.14">Openstaande facturen</span></a>
+</li>
+<li class="heading3" id="i6.4.15" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.15" href="overbrengen.htm" target="hmcontent"><span class="heading3" id="s6.4.15">Overbrengen</span></a>
+</li>
+<li class="heading3" id="i6.4.16" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.16" href="facturen_doorboeken_naar_verko.htm" target="hmcontent"><span class="heading3" id="s6.4.16">Facturen doorboeken naar verkoopdagboek (boekhouding)</span></a>
+</li>
+<li class="heading3" id="i6.4.17" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.17" href="enkele_voorbeelden.htm" target="hmcontent"><span class="heading3" id="s6.4.17">Enkele voorbeelden</span></a>
+</li>
+<li class="heading3" id="i6.4.18" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.18" href="importeren-en-exporteren.htm" target="hmcontent"><span class="heading3" id="s6.4.18" ondblclick="return dblclicked(this)">Importeren en exporteren</span></a>
+<ul id="ul6.4.18" style="list-style-type:none">
+<li class="heading4" id="i6.4.18.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.18.1" href="ubl---peppol---efff.htm" target="hmcontent"><span class="heading4" id="s6.4.18.1" ondblclick="return dblclicked(this)">UBL - Peppol - eFFF</span></a>
+<ul id="ul6.4.18.1" style="list-style-type:none">
+<li class="heading5" id="i6.4.18.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.1.1" href="wat-is-ubl.htm" target="hmcontent"><span class="heading5" id="s6.4.18.1.1">Wat is UBL</span></a>
+</li>
+<li class="heading5" id="i6.4.18.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.1.2" href="wat-is-peppol.htm" target="hmcontent"><span class="heading5" id="s6.4.18.1.2">Wat is Peppol</span></a>
+</li>
+<li class="heading5" id="i6.4.18.1.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.1.3" href="wat-is-efff.htm" target="hmcontent"><span class="heading5" id="s6.4.18.1.3">Wat is eFFF</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i6.4.18.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.18.2" href="voorbereidingen.htm" target="hmcontent"><span class="heading4" id="s6.4.18.2" ondblclick="return dblclicked(this)">Voorbereidingen</span></a>
+<ul id="ul6.4.18.2" style="list-style-type:none">
+<li class="heading5" id="i6.4.18.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.2.1" href="instellingen-onderhoud.htm" target="hmcontent"><span class="heading5" id="s6.4.18.2.1">Instellingen onderhoud</span></a>
+</li>
+<li class="heading5" id="i6.4.18.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.2.2" href="instellingen-dossier.htm" target="hmcontent"><span class="heading5" id="s6.4.18.2.2">Instellingen dossier</span></a>
+</li>
+<li class="heading5" id="i6.4.18.2.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.2.3" href="instellingen-klant.htm" target="hmcontent"><span class="heading5" id="s6.4.18.2.3">Instellingen klant</span></a>
+</li>
+<li class="heading5" id="i6.4.18.2.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.2.4" href="instellingen-factuur.htm" target="hmcontent"><span class="heading5" id="s6.4.18.2.4">Instellingen factuur</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i6.4.18.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.18.3" href="een-peppol--en-efff-bestand-opstellen.htm" target="hmcontent"><span class="heading4" id="s6.4.18.3" ondblclick="return dblclicked(this)">Een Peppol- en eFFF-bestand opstellen, inlezen en verzenden</span></a>
+<ul id="ul6.4.18.3" style="list-style-type:none">
+<li class="heading5" id="i6.4.18.3.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.3.1" href="importeren_exporteren-facutren.htm" target="hmcontent"><span class="heading5" id="s6.4.18.3.1">Importeren/exporteren Facutren - Peppol, eFFF</span></a>
+</li>
+<li class="heading5" id="i6.4.18.3.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.3.2" href="problemen-oplossen.htm" target="hmcontent"><span class="heading5" id="s6.4.18.3.2">Problemen oplossen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i6.4.18.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.18.4" href="het-versturen-van-peppol-besta.htm" target="hmcontent"><span class="heading4" id="s6.4.18.4" ondblclick="return dblclicked(this)">Het versturen van Peppol-bestanden</span></a>
+<ul id="ul6.4.18.4" style="list-style-type:none">
+<li class="heading5" id="i6.4.18.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.4.18.4.1" href="het-billtobox-platform.htm" target="hmcontent"><span class="heading5" id="s6.4.18.4.1">Het BillToBox platform</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.4.19" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.19" href="informatief.htm" target="hmcontent"><span class="heading3" id="s6.4.19" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul6.4.19" style="list-style-type:none">
+<li class="heading4" id="i6.4.19.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.19.1" href="keuzes-in-de-axito-kader.htm" target="hmcontent"><span class="heading4" id="s6.4.19.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i6.4.19.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.19.2" href="velden.htm" target="hmcontent"><span class="heading4" id="s6.4.19.2">Uitleg velden</span></a>
+</li>
+<li class="heading4" id="i6.4.19.3" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.19.3" href="instellingen2.htm" target="hmcontent"><span class="heading4" id="s6.4.19.3">Instellingen</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.5" href="abonnementen.htm" target="hmcontent"><span class="heading2" id="s6.5" ondblclick="return dblclicked(this)">Abonnementen</span></a>
+<ul id="ul6.5" style="list-style-type:none">
+<li class="heading3" id="i6.5.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.5.1" href="abonnementen_beheren.htm" target="hmcontent"><span class="heading3" id="s6.5.1">Abonnementen beheren</span></a>
+</li>
+<li class="heading3" id="i6.5.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.5.2" href="abonnementen_verlengen.htm" target="hmcontent"><span class="heading3" id="s6.5.2">Abonnementen verlengen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.6" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.6" href="kassabeheer.htm" target="hmcontent"><span class="heading2" id="s6.6" ondblclick="return dblclicked(this)">Kassaregister</span></a>
+<ul id="ul6.6" style="list-style-type:none">
+<li class="heading3" id="i6.6.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.1" href="dagverkopen.htm" target="hmcontent"><span class="heading3" id="s6.6.1" ondblclick="return dblclicked(this)">Dagverkopen</span></a>
+<ul id="ul6.6.1" style="list-style-type:none">
+<li class="heading4" id="i6.6.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.1.1" href="klantenkaart.htm" target="hmcontent"><span class="heading4" id="s6.6.1.1">Klantenkaart</span></a>
+</li>
+<li class="heading4" id="i6.6.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.1.2" href="puntenkaart3.htm" target="hmcontent"><span class="heading4" id="s6.6.1.2">Puntenkaart</span></a>
+</li>
+<li class="heading4" id="i6.6.1.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.1.3" href="cadeaubonnen.htm" target="hmcontent"><span class="heading4" id="s6.6.1.3">Cadeaubonnen</span></a>
+</li>
+<li class="heading4" id="i6.6.1.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.1.4" href="tegoedbonnen.htm" target="hmcontent"><span class="heading4" id="s6.6.1.4">Tegoedbonnen</span></a>
+</li>
+<li class="heading4" id="i6.6.1.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.1.5" href="terugname_artikelen_retour.htm" target="hmcontent"><span class="heading4" id="s6.6.1.5">Terugname artikelen (retour)</span></a>
+</li>
+<li class="heading4" id="i6.6.1.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.1.6" href="afrekenen_van_een_verkoop.htm" target="hmcontent"><span class="heading4" id="s6.6.1.6">Afrekenen van een verkoop</span></a>
+</li>
+<li class="heading4" id="i6.6.1.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.1.7" href="parkeren-kassaverkopen.htm" target="hmcontent"><span class="heading4" id="s6.6.1.7">Parkeren kassaverkopen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.6.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.2" href="dagafsluiting.htm" target="hmcontent"><span class="heading3" id="s6.6.2" ondblclick="return dblclicked(this)">Dagafsluiting</span></a>
+<ul id="ul6.6.2" style="list-style-type:none">
+<li class="heading4" id="i6.6.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.2.1" href="voorbereiding_dagafsluiting.htm" target="hmcontent"><span class="heading4" id="s6.6.2.1">Voorbereiding dagafsluiting</span></a>
+</li>
+<li class="heading4" id="i6.6.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.2.2" href="dagontvangsten_printen.htm" target="hmcontent"><span class="heading4" id="s6.6.2.2">Dagontvangsten printen</span></a>
+</li>
+<li class="heading4" id="i6.6.2.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.2.3" href="doorboeken_kassaverkopen_naar_.htm" target="hmcontent"><span class="heading4" id="s6.6.2.3">Doorboeken kassaverkopen naar Historiek kassaverkopen</span></a>
+</li>
+<li class="heading4" id="i6.6.2.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.2.4" href="doorboeken_historiek_kassaverk.htm" target="hmcontent"><span class="heading4" id="s6.6.2.4">Doorboeken Historiek kassaverkopen naar 1 factuur/kasuittreksel</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.6.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.3" href="historiek_kassaverkopen.htm" target="hmcontent"><span class="heading3" id="s6.6.3">Historiek kassaverkopen</span></a>
+</li>
+<li class="heading3" id="i6.6.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.4" href="historiek_dagontvangsten.htm" target="hmcontent"><span class="heading3" id="s6.6.4">Historiek dagontvangsten</span></a>
+</li>
+<li class="heading3" id="i6.6.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.5" href="factureren_van_kassaverkoop.htm" target="hmcontent"><span class="heading3" id="s6.6.5">Factureren van kassaverkoop</span></a>
+</li>
+<li class="heading3" id="i6.6.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.6" href="certificaten.htm" target="hmcontent"><span class="heading3" id="s6.6.6">Certificaten</span></a>
+</li>
+<li class="heading3" id="i6.6.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.7" href="diversen3.htm" target="hmcontent"><span class="heading3" id="s6.6.7">Diversen</span></a>
+</li>
+<li class="heading3" id="i6.6.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.8" href="overzichten.htm" target="hmcontent"><span class="heading3" id="s6.6.8">Overzichten</span></a>
+</li>
+<li class="heading3" id="i6.6.9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.9" href="extra_hardware.htm" target="hmcontent"><span class="heading3" id="s6.6.9" ondblclick="return dblclicked(this)">Extra hardware</span></a>
+<ul id="ul6.6.9" style="list-style-type:none">
+<li class="heading4" id="i6.6.9.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.9.1" href="barcodescanner.htm" target="hmcontent"><span class="heading4" id="s6.6.9.1">Barcodescanner</span></a>
+</li>
+<li class="heading4" id="i6.6.9.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.9.2" href="geldlade.htm" target="hmcontent"><span class="heading4" id="s6.6.9.2">Geldlade</span></a>
+</li>
+<li class="heading4" id="i6.6.9.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.9.3" href="klantendisplay.htm" target="hmcontent"><span class="heading4" id="s6.6.9.3">Klantendisplay</span></a>
+</li>
+<li class="heading4" id="i6.6.9.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.9.4" href="ticketprinter.htm" target="hmcontent"><span class="heading4" id="s6.6.9.4">Ticketprinter</span></a>
+</li>
+<li class="heading4" id="i6.6.9.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.9.5" href="betaalterminal.htm" target="hmcontent"><span class="heading4" id="s6.6.9.5">Betaalterminal</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.7" href="locatiebeheer_en_kassabeheer.htm" target="hmcontent"><span class="heading2" id="s6.7">Locatiebeheer en kassabeheer</span></a>
+</li>
+<li class="heading2" id="i6.8" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.8" href="projecten2.htm" target="hmcontent"><span class="heading2" id="s6.8" ondblclick="return dblclicked(this)">Projectbeheer</span></a>
+<ul id="ul6.8" style="list-style-type:none">
+<li class="heading3" id="i6.8.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.8.1" href="projecten3.htm" target="hmcontent"><span class="heading3" id="s6.8.1">Projecten</span></a>
+</li>
+<li class="heading3" id="i6.8.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.8.2" href="aannemersbeheer.htm" target="hmcontent"><span class="heading3" id="s6.8.2">Aannemersbeheer</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.9" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.9" href="traceren_artikelen.htm" target="hmcontent"><span class="heading2" id="s6.9">Traceren artikelen</span></a>
+</li>
+<li class="heading2" id="i6.10" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.10" href="uitwisselen_gegevens.htm" target="hmcontent"><span class="heading2" id="s6.10">Uitwisselen gegevens</span></a>
+</li>
+<li class="heading2" id="i6.11" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.11" href="verhuringen.htm" target="hmcontent"><span class="heading2" id="s6.11" ondblclick="return dblclicked(this)">Verhuringen</span></a>
+<ul id="ul6.11" style="list-style-type:none">
+<li class="heading3" id="i6.11.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.11.1" href="artikel-instellen-als-verhuurartikel.htm" target="hmcontent"><span class="heading3" id="s6.11.1">Verhuurartikelen instellen</span></a>
+</li>
+<li class="heading3" id="i6.11.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.11.2" href="verhuringen-beheren.htm" target="hmcontent"><span class="heading3" id="s6.11.2">Verhuringen beheren</span></a>
+</li>
+<li class="heading3" id="i6.11.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.11.3" href="verhuring-toevoegen.htm" target="hmcontent"><span class="heading3" id="s6.11.3">Verhuring toevoegen</span></a>
+</li>
+<li class="heading3" id="i6.11.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.11.4" href="verhuring-toevoegen-vanuit-ver.htm" target="hmcontent"><span class="heading3" id="s6.11.4">Verhuring toevoegen vanuit verkoopdocument</span></a>
+</li>
+<li class="heading3" id="i6.11.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.11.5" href="instellingen.htm" target="hmcontent"><span class="heading3" id="s6.11.5">Instellingen</span></a>
+</li>
+<li class="heading3" id="i6.11.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.11.6" href="printen2.htm" target="hmcontent"><span class="heading3" id="s6.11.6">Printen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.12" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.12" href="verwerken_orders.htm" target="hmcontent"><span class="heading2" id="s6.12">Verwerken orders</span></a>
+</li>
+<li class="heading2" id="i6.13" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.13" href="picking-list.htm" target="hmcontent"><span class="heading2" id="s6.13">Picking-list</span></a>
+</li>
+<li class="heading2" id="i6.14" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.14" href="magazijn__leveringen_beheren.htm" target="hmcontent"><span class="heading2" id="s6.14" ondblclick="return dblclicked(this)">Magazijnbeheer</span></a>
+<ul id="ul6.14" style="list-style-type:none">
+<li class="heading3" id="i6.14.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.14.1" href="uitgaande-leveringen.htm" target="hmcontent"><span class="heading3" id="s6.14.1" ondblclick="return dblclicked(this)">Uitgaande leveringen</span></a>
+<ul id="ul6.14.1" style="list-style-type:none">
+<li class="heading4" id="i6.14.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.1" href="leveringsbon-doorsturen-naar-m.htm" target="hmcontent"><span class="heading4" id="s6.14.1.1">Leveringsbon doorsturen naar magazijnbon</span></a>
+</li>
+<li class="heading4" id="i6.14.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.2" href="magazijnbon-verwerken.htm" target="hmcontent"><span class="heading4" id="s6.14.1.2">Magazijnbon verwerken</span></a>
+</li>
+<li class="heading4" id="i6.14.1.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.3" href="nieuw_(niet_toegewezen).htm" target="hmcontent"><span class="heading4" id="s6.14.1.3">Nieuw (niet-toegewezen)</span></a>
+</li>
+<li class="heading4" id="i6.14.1.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.4" href="toegewezen_(aan_magazijnier).htm" target="hmcontent"><span class="heading4" id="s6.14.1.4">Toegewezen (aan magazijnier)</span></a>
+</li>
+<li class="heading4" id="i6.14.1.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.5" href="nog_te_synchroniseren.htm" target="hmcontent"><span class="heading4" id="s6.14.1.5">Nog te synchroniseren</span></a>
+</li>
+<li class="heading4" id="i6.14.1.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.6" href="klaar_voor_levering-afhalen.htm" target="hmcontent"><span class="heading4" id="s6.14.1.6">Klaar voor levering/afhalen</span></a>
+</li>
+<li class="heading4" id="i6.14.1.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.7" href="geleverd_afgehaald2.htm" target="hmcontent"><span class="heading4" id="s6.14.1.7">Geleverd/afgehaald</span></a>
+</li>
+<li class="heading4" id="i6.14.1.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.8" href="beeindigd_(volledig_afgehandeld).htm" target="hmcontent"><span class="heading4" id="s6.14.1.8">Beëindigd (volledig afgehandeld)</span></a>
+</li>
+<li class="heading4" id="i6.14.1.9" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.14.1.9" href="instellingen-werknemers.htm" target="hmcontent"><span class="heading4" id="s6.14.1.9">Instellingen werknemers</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a7" href="herstellingen2.htm" target="hmcontent"><span class="heading1" id="s7">Herstellingen</span></a>
+</li>
+<li class="heading1" id="i8" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a8" href="nacalculatie.htm" target="hmcontent"><span class="heading1" id="s8" ondblclick="return dblclicked(this)">Nacalculatie</span></a>
+<ul id="ul8" style="list-style-type:none">
+<li class="heading2" id="i8.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.1" href="inleiding3.htm" target="hmcontent"><span class="heading2" id="s8.1">Inleiding</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a9" href="boekhouding_algemeen.htm" target="hmcontent"><span class="heading1" id="s9" ondblclick="return dblclicked(this)">Boekhouding</span></a>
+<ul id="ul9" style="list-style-type:none">
+<li class="heading2" id="i9.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.1" href="inleidingboekhouding.htm" target="hmcontent"><span class="heading2" id="s9.1" ondblclick="return dblclicked(this)">Inleiding</span></a>
+<ul id="ul9.1" style="list-style-type:none">
+<li class="heading3" id="i9.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.1.1" href="dubbel-boekhouden.htm" target="hmcontent"><span class="heading3" id="s9.1.1">Dubbel boekhouden</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.2" href="de_zes_starthandelingen.htm" target="hmcontent"><span class="heading2" id="s9.2" ondblclick="return dblclicked(this)">De zes starthandelingen</span></a>
+<ul id="ul9.2" style="list-style-type:none">
+<li class="heading3" id="i9.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.1" href="het-eerste-boekjaar-openen.htm" target="hmcontent"><span class="heading3" id="s9.2.1">1. Het eerste boekjaar openen</span></a>
+</li>
+<li class="heading3" id="i9.2.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.2" href="het-opstellen-van-het-boekhoudplan.htm" target="hmcontent"><span class="heading3" id="s9.2.2" ondblclick="return dblclicked(this)">2. Het opstellen van het boekhoudplan</span></a>
+<ul id="ul9.2.2" style="list-style-type:none">
+<li class="heading4" id="i9.2.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.2.2.1" href="wat-is-een-boekhoudplan.htm" target="hmcontent"><span class="heading4" id="s9.2.2.1">Wat is een boekhoudplan?</span></a>
+</li>
+<li class="heading4" id="i9.2.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.2.2.2" href="het-boekhoudplan-opstellen-of-aanvullen.htm" target="hmcontent"><span class="heading4" id="s9.2.2.2">Het boekhoudplan opstellen of aanvullen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.2.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.3" href="het-opstellen-van-het-klantenbestand.htm" target="hmcontent"><span class="heading3" id="s9.2.3">3. Het opstellen van het klantenbestand</span></a>
+</li>
+<li class="heading3" id="i9.2.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.4" href="het-opstellen-van-het-leveranciersbestand.htm" target="hmcontent"><span class="heading3" id="s9.2.4">4. Het opstellen van het leveranciersbestand</span></a>
+</li>
+<li class="heading3" id="i9.2.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.5" href="ingeven-van-de-beginsaldi.htm" target="hmcontent"><span class="heading3" id="s9.2.5" ondblclick="return dblclicked(this)">5. Ingeven van de beginsaldi van klanten/leveranciers</span></a>
+<ul id="ul9.2.5" style="list-style-type:none">
+<li class="heading4" id="i9.2.5.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.2.5.1" href="beginsaldi-van-klanten.htm" target="hmcontent"><span class="heading4" id="s9.2.5.1">Beginsaldi van klanten</span></a>
+</li>
+<li class="heading4" id="i9.2.5.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.2.5.2" href="beginsaldi-van-leveranciers.htm" target="hmcontent"><span class="heading4" id="s9.2.5.2">Beginsaldi van leveranciers</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.2.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.6" href="ingeven-van-de-beginbalans.htm" target="hmcontent"><span class="heading3" id="s9.2.6">6. Ingeven van de beginbalans</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.3" href="btw-opeisbaarheid.htm" target="hmcontent"><span class="heading2" id="s9.3">Btw-opeisbaarheid</span></a>
+</li>
+<li class="heading2" id="i9.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.4" href="aankoopdagboek.htm" target="hmcontent"><span class="heading2" id="s9.4" ondblclick="return dblclicked(this)">Aankoopdagboek</span></a>
+<ul id="ul9.4" style="list-style-type:none">
+<li class="heading3" id="i9.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.4.1" href="toevoegen3.htm" target="hmcontent"><span class="heading3" id="s9.4.1">Toevoegen</span></a>
+</li>
+<li class="heading3" id="i9.4.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.4.2" href="wijzigen2.htm" target="hmcontent"><span class="heading3" id="s9.4.2">Wijzigen</span></a>
+</li>
+<li class="heading3" id="i9.4.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.4.3" href="schrappen2.htm" target="hmcontent"><span class="heading3" id="s9.4.3">Schrappen</span></a>
+</li>
+<li class="heading3" id="i9.4.4" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.4.4" href="de-axito-knoppen.htm" target="hmcontent"><span class="heading3" id="s9.4.4">De AXITO-knoppen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.5" href="verkoopdagboek.htm" target="hmcontent"><span class="heading2" id="s9.5">Verkoopdagboek</span></a>
+</li>
+<li class="heading2" id="i9.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.6" href="diverse_dagboek.htm" target="hmcontent"><span class="heading2" id="s9.6">Diversen dagboek</span></a>
+</li>
+<li class="heading2" id="i9.7" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.7" href="financieel_dagboek.htm" target="hmcontent"><span class="heading2" id="s9.7" ondblclick="return dblclicked(this)">Financieel dagboek</span></a>
+<ul id="ul9.7" style="list-style-type:none">
+<li class="heading3" id="i9.7.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.7.1" href="een-nieuw-rekeningnummer-toevoegen.htm" target="hmcontent"><span class="heading3" id="s9.7.1">Een nieuw rekeningnummer toevoegen</span></a>
+</li>
+<li class="heading3" id="i9.7.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.7.2" href="een-financieel-boekstuk-toevoegen.htm" target="hmcontent"><span class="heading3" id="s9.7.2">Een financieel boekstuk toevoegen</span></a>
+</li>
+<li class="heading3" id="i9.7.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.7.3" href="een-betalingsverschil-boeken.htm" target="hmcontent"><span class="heading3" id="s9.7.3">Een betalingsverschil boeken</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.8" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.8" href="extra-hulpdagboeken.htm" target="hmcontent"><span class="heading2" id="s9.8" ondblclick="return dblclicked(this)">Extra hulpdagboeken</span></a>
+<ul id="ul9.8" style="list-style-type:none">
+<li class="heading3" id="i9.8.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.8.1" href="importeren-coda-bestanden.htm" target="hmcontent"><span class="heading3" id="s9.8.1">Inlezen CODA-bestanden</span></a>
+</li>
+<li class="heading3" id="i9.8.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.8.2" href="extra-aankoopdagboek.htm" target="hmcontent"><span class="heading3" id="s9.8.2">Extra aankoopdagboek</span></a>
+</li>
+<li class="heading3" id="i9.8.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.8.3" href="extra-verkoopdagboek.htm" target="hmcontent"><span class="heading3" id="s9.8.3">Extra verkoopdagboek</span></a>
+</li>
+<li class="heading3" id="i9.8.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.8.4" href="extra-diversen-dagboek.htm" target="hmcontent"><span class="heading3" id="s9.8.4">Extra diversen dagboek</span></a>
+</li>
+<li class="heading3" id="i9.8.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.8.5" href="extra-financieel-dagboek.htm" target="hmcontent"><span class="heading3" id="s9.8.5">Extra financieel dagboek</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.9" href="overzichten-hulpdagboeken.htm" target="hmcontent"><span class="heading2" id="s9.9" ondblclick="return dblclicked(this)">Overzichten hulpdagboeken</span></a>
+<ul id="ul9.9" style="list-style-type:none">
+<li class="heading3" id="i9.9.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.9.1" href="beginsaldi-controleren.htm" target="hmcontent"><span class="heading3" id="s9.9.1">Beginsaldi controleren</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.10" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.10" href="controle-hulpdagboeken.htm" target="hmcontent"><span class="heading2" id="s9.10">Controle hulpdagboeken</span></a>
+</li>
+<li class="heading2" id="i9.11" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.11" href="balansen_grootboek.htm" target="hmcontent"><span class="heading2" id="s9.11" ondblclick="return dblclicked(this)">Balansen, Grootboek</span></a>
+<ul id="ul9.11" style="list-style-type:none">
+<li class="heading3" id="i9.11.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.11.1" href="proef-en-saldibalans.htm" target="hmcontent"><span class="heading3" id="s9.11.1" ondblclick="return dblclicked(this)">Proef- en saldibalans / grootboek</span></a>
+<ul id="ul9.11.1" style="list-style-type:none">
+<li class="heading4" id="i9.11.1.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.11.1.1" href="printvoorbeelden-balansen.htm" target="hmcontent"><span class="heading4" id="s9.11.1.1" ondblclick="return dblclicked(this)">Printvoorbeelden balansen en grootboek</span></a>
+<ul id="ul9.11.1.1" style="list-style-type:none">
+<li class="heading5" id="i9.11.1.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.11.1.1.1" href="proef-en-saldibalans-standaard.htm" target="hmcontent"><span class="heading5" id="s9.11.1.1.1">Proef- en saldibalans standaard</span></a>
+</li>
+<li class="heading5" id="i9.11.1.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.11.1.1.2" href="proef-en-saldibalans-opsplitsing.htm" target="hmcontent"><span class="heading5" id="s9.11.1.1.2">Proef- en saldibalans opsplitsing periode</span></a>
+</li>
+<li class="heading5" id="i9.11.1.1.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.11.1.1.3" href="balanssaldi-per-boekhoudperiod.htm" target="hmcontent"><span class="heading5" id="s9.11.1.1.3">Balanssaldi per boekhoudperiode</span></a>
+</li>
+<li class="heading5" id="i9.11.1.1.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.11.1.1.4" href="resultatenrekening-in-t-vorm.htm" target="hmcontent"><span class="heading5" id="s9.11.1.1.4">Resultatenrekening in T-vorm</span></a>
+</li>
+<li class="heading5" id="i9.11.1.1.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.11.1.1.5" href="grootboek.htm" target="hmcontent"><span class="heading5" id="s9.11.1.1.5" ondblclick="return dblclicked(this)">Grootboek</span></a>
+<ul id="ul9.11.1.1.5" style="list-style-type:none">
+<li class="heading6" id="i9.11.1.1.5.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.11.1.1.5.1" href="grootboek-printopties.htm" target="hmcontent"><span class="heading6" id="s9.11.1.1.5.1">Grootboek printopties</span></a>
+</li>
+</ul>
+</li>
+<li class="heading5" id="i9.11.1.1.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.11.1.1.6" href="proef-en-saldibalans-micro.htm" target="hmcontent"><span class="heading5" id="s9.11.1.1.6">Proef- en saldibalans scherm micro</span></a>
+</li>
+<li class="heading5" id="i9.11.1.1.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.11.1.1.7" href="proef-en-saldibalans-macro.htm" target="hmcontent"><span class="heading5" id="s9.11.1.1.7">Proef- en saldibalans scherm macro</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i9.11.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.11.1.2" href="proef-en-saldibalans-via-xml.htm" target="hmcontent"><span class="heading4" id="s9.11.1.2">Proef-en Saldibalans via XML-bestand (ACCON-formaat)</span></a>
+</li>
+<li class="heading4" id="i9.11.1.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.11.1.3" href="grootboek-via-xml.htm" target="hmcontent"><span class="heading4" id="s9.11.1.3">Grootboek via XML-bestand (ACCON-formaat)</span></a>
+</li>
+<li class="heading4" id="i9.11.1.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.11.1.4" href="subtotalen.htm" target="hmcontent"><span class="heading4" id="s9.11.1.4">Subtotalen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.11.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.11.2" href="balans-klanten.htm" target="hmcontent"><span class="heading3" id="s9.11.2">Balans klanten</span></a>
+</li>
+<li class="heading3" id="i9.11.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.11.3" href="balans-leveranciers.htm" target="hmcontent"><span class="heading3" id="s9.11.3">Balans leveranciers</span></a>
+</li>
+<li class="heading3" id="i9.11.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.11.4" href="openstaande-saldi-klanten.htm" target="hmcontent"><span class="heading3" id="s9.11.4">Openstaande saldi klanten</span></a>
+</li>
+<li class="heading3" id="i9.11.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.11.5" href="openstaande-saldi-leveranciers.htm" target="hmcontent"><span class="heading3" id="s9.11.5">Openstaande saldi leveranciers</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.12" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.12" href="afsluiten-periode.htm" target="hmcontent"><span class="heading2" id="s9.12" ondblclick="return dblclicked(this)">Afsluiten periode</span></a>
+<ul id="ul9.12" style="list-style-type:none">
+<li class="heading3" id="i9.12.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.12.1" href="afsluiten_boekhoudperiode.htm" target="hmcontent"><span class="heading3" id="s9.12.1">Periodeafsluiting</span></a>
+</li>
+<li class="heading3" id="i9.12.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.12.2" href="afsluiten-van-boekhoudjaar.htm" target="hmcontent"><span class="heading3" id="s9.12.2">Jaarafsluiting</span></a>
+</li>
+<li class="heading3" id="i9.12.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.12.3" href="historiek-boekhoudjaren.htm" target="hmcontent"><span class="heading3" id="s9.12.3">Historiek boekhoudjaren</span></a>
+</li>
+<li class="heading3" id="i9.12.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.12.4" href="aanpassen-beginsaldi.htm" target="hmcontent"><span class="heading3" id="s9.12.4">Aanpassen beginsaldi 1 -&gt; 5</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.13" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.13" href="instellen_boekhoudperiode_datu.htm" target="hmcontent"><span class="heading2" id="s9.13">Instellen boekhoudperiode, datum</span></a>
+</li>
+<li class="heading2" id="i9.14" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.14" href="intervat.htm" target="hmcontent"><span class="heading2" id="s9.14" ondblclick="return dblclicked(this)">Intervat / Btw</span></a>
+<ul id="ul9.14" style="list-style-type:none">
+<li class="heading3" id="i9.14.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.14.1" href="intervat_procedure_vanaf_1_jan.htm" target="hmcontent"><span class="heading3" id="s9.14.1">Intervat-procedure vanaf 1 januari 2014</span></a>
+</li>
+<li class="heading3" id="i9.14.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.14.2" href="btw-aangifte.htm" target="hmcontent"><span class="heading3" id="s9.14.2" ondblclick="return dblclicked(this)">Btw-aangifte</span></a>
+<ul id="ul9.14.2" style="list-style-type:none">
+<li class="heading4" id="i9.14.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.14.2.1" href="btw-maandaangifte.htm" target="hmcontent"><span class="heading4" id="s9.14.2.1">Btw-maandaangifte</span></a>
+</li>
+<li class="heading4" id="i9.14.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.14.2.2" href="btw-kwartaalopgave.htm" target="hmcontent"><span class="heading4" id="s9.14.2.2">Btw-kwartaalopgave</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.14.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.14.3" href="btw-listing.htm" target="hmcontent"><span class="heading3" id="s9.14.3" ondblclick="return dblclicked(this)">Btw-klantenlisting</span></a>
+<ul id="ul9.14.3" style="list-style-type:none">
+<li class="heading4" id="i9.14.3.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.14.3.1" href="controlelijst-klantenlisting.htm" target="hmcontent"><span class="heading4" id="s9.14.3.1">Controlelijst klantenlisting</span></a>
+</li>
+<li class="heading4" id="i9.14.3.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.14.3.2" href="klantenlisting-opvragen.htm" target="hmcontent"><span class="heading4" id="s9.14.3.2">Klantenlisting opvragen</span></a>
+</li>
+<li class="heading4" id="i9.14.3.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.14.3.3" href="klantenlisting-printen.htm" target="hmcontent"><span class="heading4" id="s9.14.3.3">Klantenlisting printen</span></a>
+</li>
+<li class="heading4" id="i9.14.3.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.14.3.4" href="klantenlisting-via-xml.htm" target="hmcontent"><span class="heading4" id="s9.14.3.4">Klantenlisting via XML</span></a>
+</li>
+<li class="heading4" id="i9.14.3.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.14.3.5" href="klantenlisting-uploaden-via-in.htm" target="hmcontent"><span class="heading4" id="s9.14.3.5">Klantenlisting uploaden via Intervat</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.14.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.14.4" href="leverancierslisting.htm" target="hmcontent"><span class="heading3" id="s9.14.4">Leverancierslisting</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.15" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.15" href="intrastat.htm" target="hmcontent"><span class="heading2" id="s9.15" ondblclick="return dblclicked(this)">Intrastat</span></a>
+<ul id="ul9.15" style="list-style-type:none">
+<li class="heading3" id="i9.15.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.15.1" href="intrastat-verwerking.htm" target="hmcontent"><span class="heading3" id="s9.15.1" ondblclick="return dblclicked(this)">Intrastat: Invoer &amp; uitvoer</span></a>
+<ul id="ul9.15.1" style="list-style-type:none">
+<li class="heading4" id="i9.15.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.15.1.1" href="instrastat-aangifte-via-onegat.htm" target="hmcontent"><span class="heading4" id="s9.15.1.1">Instrastat: XML-bestand aanmaken</span></a>
+</li>
+<li class="heading4" id="i9.15.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.15.1.2" href="intrastat-aangifte-via-onegate.htm" target="hmcontent"><span class="heading4" id="s9.15.1.2">Intrastat: Aangifte via OneGate</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.15.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.15.2" href="intrastat-goederencodes.htm" target="hmcontent"><span class="heading3" id="s9.15.2" ondblclick="return dblclicked(this)">Intrastat goederencodes</span></a>
+<ul id="ul9.15.2" style="list-style-type:none">
+<li class="heading4" id="i9.15.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.15.2.1" href="intrastat-goederencodes-volledig.htm" target="hmcontent"><span class="heading4" id="s9.15.2.1">Intrastat goederencodes: Volledig</span></a>
+</li>
+<li class="heading4" id="i9.15.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.15.2.2" href="intrastat-goederencodes-eigen-werkplan.htm" target="hmcontent"><span class="heading4" id="s9.15.2.2">Intrastat goederencodes: Eigen werkplan</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.15.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.15.3" href="inzage-periode.htm" target="hmcontent"><span class="heading3" id="s9.15.3">Inzage periode</span></a>
+</li>
+<li class="heading3" id="i9.15.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.15.4" href="instellingen-intrastat.htm" target="hmcontent"><span class="heading3" id="s9.15.4">Instellingen intrastat</span></a>
+</li>
+<li class="heading3" id="i9.15.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.15.5" href="bijkomende-info-intrastat.htm" target="hmcontent"><span class="heading3" id="s9.15.5" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul9.15.5" style="list-style-type:none">
+<li class="heading4" id="i9.15.5.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.15.5.1" href="intrastat-transactiecodes-2022.htm" target="hmcontent"><span class="heading4" id="s9.15.5.1" ondblclick="return dblclicked(this)">Intrastat Transactiecodes vanaf 2022</span></a>
+<ul id="ul9.15.5.1" style="list-style-type:none">
+<li class="heading5" id="i9.15.5.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.15.5.1.1" href="conversietabel-2022.htm" target="hmcontent"><span class="heading5" id="s9.15.5.1.1">Conversietabel 2022</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.16" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.16" href="investeringen-afschrijvingstabellen.htm" target="hmcontent"><span class="heading2" id="s9.16" ondblclick="return dblclicked(this)">Afschrijvingstabellen/Investeringen</span></a>
+<ul id="ul9.16" style="list-style-type:none">
+<li class="heading3" id="i9.16.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.16.1" href="soorten-afschrijvingen.htm" target="hmcontent"><span class="heading3" id="s9.16.1">Soorten afschrijvingen</span></a>
+</li>
+<li class="heading3" id="i9.16.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.16.2" href="onderliggende-werking-en-afschrijvingstabellen.htm" target="hmcontent"><span class="heading3" id="s9.16.2" ondblclick="return dblclicked(this)">Onderliggende werking en afschrijvingstabellen</span></a>
+<ul id="ul9.16.2" style="list-style-type:none">
+<li class="heading4" id="i9.16.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.16.2.1" href="de-jaarafschrijvingstabel.htm" target="hmcontent"><span class="heading4" id="s9.16.2.1">De jaarafschrijvingstabel</span></a>
+</li>
+<li class="heading4" id="i9.16.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.16.2.2" href="de-12-maandenafschrijvingstabe.htm" target="hmcontent"><span class="heading4" id="s9.16.2.2">De 12-maandentabel</span></a>
+</li>
+<li class="heading4" id="i9.16.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.16.2.3" href="de-boekhoudjarentabel.htm" target="hmcontent"><span class="heading4" id="s9.16.2.3">De boekhoudjarentabel</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.17" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.17" href="bankcommunicatie.htm" target="hmcontent"><span class="heading2" id="s9.17" ondblclick="return dblclicked(this)">Bankcommunicatie</span></a>
+<ul id="ul9.17" style="list-style-type:none">
+<li class="heading3" id="i9.17.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.17.1" href="betaalagenda.htm" target="hmcontent"><span class="heading3" id="s9.17.1" ondblclick="return dblclicked(this)">Betaalagenda</span></a>
+<ul id="ul9.17.1" style="list-style-type:none">
+<li class="heading4" id="i9.17.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.17.1.1" href="betaalagenda_licentie.htm" target="hmcontent"><span class="heading4" id="s9.17.1.1">Betaalagenda licentie</span></a>
+</li>
+<li class="heading4" id="i9.17.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.17.1.2" href="leveranciers__banklink.htm" target="hmcontent"><span class="heading4" id="s9.17.1.2">Leveranciers: Banklink</span></a>
+</li>
+<li class="heading4" id="i9.17.1.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.17.1.3" href="aankoopdagboek__betaling_regis.htm" target="hmcontent"><span class="heading4" id="s9.17.1.3">Aankoopdagboek: Betaling registreren</span></a>
+</li>
+<li class="heading4" id="i9.17.1.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.17.1.4" href="betaalagenda__verwerken_betali.htm" target="hmcontent"><span class="heading4" id="s9.17.1.4">Betaalagenda : Verwerken betaling(en)</span></a>
+</li>
+<li class="heading4" id="i9.17.1.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.17.1.5" href="bankprogramma__inlezen_betalin.htm" target="hmcontent"><span class="heading4" id="s9.17.1.5">Bankprogramma: inlezen betalingsbestanden</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.17.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.17.2" href="domicilieringen.htm" target="hmcontent"><span class="heading3" id="s9.17.2">Domicilieringen</span></a>
+</li>
+<li class="heading3" id="i9.17.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.17.3" href="dagafschriften-inlezen-(coda).htm" target="hmcontent"><span class="heading3" id="s9.17.3" ondblclick="return dblclicked(this)">Dagafschriften inlezen</span></a>
+<ul id="ul9.17.3" style="list-style-type:none">
+<li class="heading4" id="i9.17.3.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.17.3.1" href="coda-parameters-instellen.htm" target="hmcontent"><span class="heading4" id="s9.17.3.1">Instellingen configureren</span></a>
+</li>
+<li class="heading4" id="i9.17.3.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.17.3.2" href="coda-bestanden-inlezen.htm" target="hmcontent"><span class="heading4" id="s9.17.3.2">CODA-bestanden downloaden</span></a>
+</li>
+<li class="heading4" id="i9.17.3.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.17.3.3" href="coda-verwerken.htm" target="hmcontent"><span class="heading4" id="s9.17.3.3" ondblclick="return dblclicked(this)">Dagafschriften verwerken</span></a>
+<ul id="ul9.17.3.3" style="list-style-type:none">
+<li class="heading5" id="i9.17.3.3.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.17.3.3.1" href="overzicht-ingelezen-coda-besta.htm" target="hmcontent"><span class="heading5" id="s9.17.3.3.1">Overzicht dagafschriften</span></a>
+</li>
+<li class="heading5" id="i9.17.3.3.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.17.3.3.2" href="video-dagafschrift.htm" target="hmcontent"><span class="heading5" id="s9.17.3.3.2" ondblclick="return dblclicked(this)">Video dagafschriften</span></a>
+<ul id="ul9.17.3.3.2" style="list-style-type:none">
+<li class="heading6" id="i9.17.3.3.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.17.3.3.2.1" href="linken-leggen2.htm" target="hmcontent"><span class="heading6" id="s9.17.3.3.2.1">Controleren dagafschrift videoregels</span></a>
+</li>
+<li class="heading6" id="i9.17.3.3.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.17.3.3.2.2" href="vastgelegde-regels.htm" target="hmcontent"><span class="heading6" id="s9.17.3.3.2.2">Vastgelegde regels</span></a>
+</li>
+<li class="heading6" id="i9.17.3.3.2.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.17.3.3.2.3" href="ingestelde-regels.htm" target="hmcontent"><span class="heading6" id="s9.17.3.3.2.3">Ingestelde regels</span></a>
+</li>
+<li class="heading6" id="i9.17.3.3.2.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.17.3.3.2.4" href="video-regel-splitsen.htm" target="hmcontent"><span class="heading6" id="s9.17.3.3.2.4" ondblclick="return dblclicked(this)">Video-regel splitsen</span></a>
+<ul id="ul9.17.3.3.2.4" style="list-style-type:none">
+<li class="heading6" id="i9.17.3.3.2.4.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.17.3.3.2.4.1" href="rekeningnummers-opnemen.htm" target="hmcontent"><span class="heading6" id="s9.17.3.3.2.4.1">Rekeningnummers opnemen</span></a>
+</li>
+<li class="heading6" id="i9.17.3.3.2.4.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.17.3.3.2.4.2" href="bedragen-opsplitsen.htm" target="hmcontent"><span class="heading6" id="s9.17.3.3.2.4.2">Bedragen opsplitsen</span></a>
+</li>
+<li class="heading6" id="i9.17.3.3.2.4.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.17.3.3.2.4.3" href="wijzigen-opgesplitse-records.htm" target="hmcontent"><span class="heading6" id="s9.17.3.3.2.4.3">Wijzigen opgesplitse records</span></a>
+</li>
+</ul>
+</li>
+<li class="heading6" id="i9.17.3.3.2.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a9.17.3.3.2.5" href="manuele-aanpassingen.htm" target="hmcontent"><span class="heading6" id="s9.17.3.3.2.5">Manuele aanpassingen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading5" id="i9.17.3.3.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.17.3.3.3" href="samenvoegen-dagafschriften.htm" target="hmcontent"><span class="heading5" id="s9.17.3.3.3">Samenvoegen dagafschriften</span></a>
+</li>
+<li class="heading5" id="i9.17.3.3.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.17.3.3.4" href="dagafschriften-verwerken-naar-.htm" target="hmcontent"><span class="heading5" id="s9.17.3.3.4">Financieel boekstuk toevoegen</span></a>
+</li>
+<li class="heading5" id="i9.17.3.3.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.17.3.3.5" href="bankboeking-bekijken.htm" target="hmcontent"><span class="heading5" id="s9.17.3.3.5">Financieel boekstuk bekijken</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.17.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.17.4" href="rekeningnummers_ivm_bankboekin.htm" target="hmcontent"><span class="heading3" id="s9.17.4">Rekeningnummers bankcommunicatie</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.18" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.18" href="vervaldagboek.htm" target="hmcontent"><span class="heading2" id="s9.18" ondblclick="return dblclicked(this)">Vervaldagboek</span></a>
+<ul id="ul9.18" style="list-style-type:none">
+<li class="heading3" id="i9.18.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.18.1" href="aanmaningen.htm" target="hmcontent"><span class="heading3" id="s9.18.1" ondblclick="return dblclicked(this)">Aanmaningen</span></a>
+<ul id="ul9.18.1" style="list-style-type:none">
+<li class="heading4" id="i9.18.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.18.1.1" href="interesten-instellen.htm" target="hmcontent"><span class="heading4" id="s9.18.1.1">Interesten instellen</span></a>
+</li>
+<li class="heading4" id="i9.18.1.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.18.1.2" href="aanmaningen-e-mailen.htm" target="hmcontent"><span class="heading4" id="s9.18.1.2">Aanmaningen e-mailen</span></a>
+</li>
+<li class="heading4" id="i9.18.1.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.18.1.3" href="aanmaningen-printen.htm" target="hmcontent"><span class="heading4" id="s9.18.1.3">Aanmaningen printen</span></a>
+</li>
+<li class="heading4" id="i9.18.1.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.18.1.4" href="standaardteksten-aanpassen.htm" target="hmcontent"><span class="heading4" id="s9.18.1.4">Aanmaningsteksten aanpassen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.18.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.18.2" href="afpunten.htm" target="hmcontent"><span class="heading3" id="s9.18.2">Afpunten</span></a>
+</li>
+<li class="heading3" id="i9.18.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.18.3" href="afpunten-ongedaan-maken.htm" target="hmcontent"><span class="heading3" id="s9.18.3">Afpunten ongedaan maken</span></a>
+</li>
+<li class="heading3" id="i9.18.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.18.4" href="openstaande-aankoopboekstukken.htm" target="hmcontent"><span class="heading3" id="s9.18.4">Openstaande aankoopboekstukken</span></a>
+</li>
+<li class="heading3" id="i9.18.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.18.5" href="openstaande-verkoopboekstukken.htm" target="hmcontent"><span class="heading3" id="s9.18.5">Openstaande verkoopboekstukken</span></a>
+</li>
+<li class="heading3" id="i9.18.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.18.6" href="vervaldagboek-naar-excel.htm" target="hmcontent"><span class="heading3" id="s9.18.6">Vervaldagboek exporteren naar Excel</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.19" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.19" href="jaarrekening.htm" target="hmcontent"><span class="heading2" id="s9.19">Jaarrekening</span></a>
+</li>
+<li class="heading2" id="i9.20" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.20" href="voorbeelden2.htm" target="hmcontent"><span class="heading2" id="s9.20">Voorbeelden</span></a>
+</li>
+<li class="heading2" id="i9.21" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.21" href="btw-vakken.htm" target="hmcontent"><span class="heading2" id="s9.21">Btw-vakken</span></a>
+</li>
+<li class="heading2" id="i9.22" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.22" href="detailrekeningen.htm" target="hmcontent"><span class="heading2" id="s9.22" ondblclick="return dblclicked(this)">Detailrekeningen</span></a>
+<ul id="ul9.22" style="list-style-type:none">
+<li class="heading3" id="i9.22.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.22.1" href="detailrekeningen-configureren.htm" target="hmcontent"><span class="heading3" id="s9.22.1" ondblclick="return dblclicked(this)">Detailrekeningen configureren</span></a>
+<ul id="ul9.22.1" style="list-style-type:none">
+<li class="heading4" id="i9.22.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.22.1.1" href="detailrekening-toevoegen.htm" target="hmcontent"><span class="heading4" id="s9.22.1.1">Detailrekening toevoegen</span></a>
+</li>
+<li class="heading4" id="i9.22.1.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.22.1.2" href="voertuigdetailrekening.htm" target="hmcontent"><span class="heading4" id="s9.22.1.2" ondblclick="return dblclicked(this)">Voertuigdetailrekening</span></a>
+<ul id="ul9.22.1.2" style="list-style-type:none">
+<li class="heading5" id="i9.22.1.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a9.22.1.2.1" href="voertuigrekeningtoevoegen.htm" target="hmcontent"><span class="heading5" id="s9.22.1.2.1">VoertuigdetailrekeningToevoegen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i9.22.1.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a9.22.1.3" href="detailrekeningen-activeren.htm" target="hmcontent"><span class="heading4" id="s9.22.1.3">Detailrekeningen activeren</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i9.22.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.22.2" href="detailrekeningen-gebruiken.htm" target="hmcontent"><span class="heading3" id="s9.22.2">Detailrekeningen gebruiken</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i10" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a10" href="historieken4.htm" target="hmcontent"><span class="heading1" id="s10" ondblclick="return dblclicked(this)">Historieken</span></a>
+<ul id="ul10" style="list-style-type:none">
+<li class="heading2" id="i10.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.1" href="historieken_klanten.htm" target="hmcontent"><span class="heading2" id="s10.1">Historieken klanten</span></a>
+</li>
+<li class="heading2" id="i10.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.2" href="historieken_leveranciers.htm" target="hmcontent"><span class="heading2" id="s10.2">Historieken leveranciers</span></a>
+</li>
+<li class="heading2" id="i10.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.3" href="historieken_artikelen.htm" target="hmcontent"><span class="heading2" id="s10.3">Historieken artikelen</span></a>
+</li>
+<li class="heading2" id="i10.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.4" href="historiek_aankopen_en_levering.htm" target="hmcontent"><span class="heading2" id="s10.4">Historiek aankopen en leveringen</span></a>
+</li>
+<li class="heading2" id="i10.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.5" href="historieken_offertes_bonnen_en.htm" target="hmcontent"><span class="heading2" id="s10.5">Historieken offertes, bonnen en facturen</span></a>
+</li>
+<li class="heading2" id="i10.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.6" href="historieken_boekhouding.htm" target="hmcontent"><span class="heading2" id="s10.6">Historieken boekhouding</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i11" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a11" href="statistieken.htm" target="hmcontent"><span class="heading1" id="s11" ondblclick="return dblclicked(this)">Statistieken</span></a>
+<ul id="ul11" style="list-style-type:none">
+<li class="heading2" id="i11.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.1" href="bedrijfsresultaten.htm" target="hmcontent"><span class="heading2" id="s11.1">Bedrijfsresultaten</span></a>
+</li>
+<li class="heading2" id="i11.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.2" href="bedrijfskosten.htm" target="hmcontent"><span class="heading2" id="s11.2">Bedrijfskosten</span></a>
+</li>
+<li class="heading2" id="i11.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.3" href="bedrijfsobrengsten.htm" target="hmcontent"><span class="heading2" id="s11.3">Bedrijfsopbrengsten</span></a>
+</li>
+<li class="heading2" id="i11.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.4" href="bedrijfskostenopbrengsten.htm" target="hmcontent"><span class="heading2" id="s11.4">Bedrijfskosten/opbrengsten</span></a>
+</li>
+<li class="heading2" id="i11.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.5" href="investeringen.htm" target="hmcontent"><span class="heading2" id="s11.5">Investeringen</span></a>
+</li>
+<li class="heading2" id="i11.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.6" href="evolutie_aankoopverkoop.htm" target="hmcontent"><span class="heading2" id="s11.6">Evolutie aankoop/verkoop</span></a>
+</li>
+<li class="heading2" id="i11.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.7" href="samenstelling_aankoopverkoop.htm" target="hmcontent"><span class="heading2" id="s11.7">Samenstelling aankoop/verkoop</span></a>
+</li>
+<li class="heading2" id="i11.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.8" href="diversen2.htm" target="hmcontent"><span class="heading2" id="s11.8">Diversen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i12" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a12" href="tekstverwerking.htm" target="hmcontent"><span class="heading1" id="s12" ondblclick="return dblclicked(this)">Tekstverwerking</span></a>
+<ul id="ul12" style="list-style-type:none">
+<li class="heading2" id="i12.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.1" href="teksten_mailings.htm" target="hmcontent"><span class="heading2" id="s12.1">Teksten, mailings</span></a>
+</li>
+<li class="heading2" id="i12.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.2" href="bespreking_mogelijkheden.htm" target="hmcontent"><span class="heading2" id="s12.2">Bespreking mogelijkheden</span></a>
+</li>
+<li class="heading2" id="i12.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.3" href="standaardteksten.htm" target="hmcontent"><span class="heading2" id="s12.3">Standaardteksten</span></a>
+</li>
+<li class="heading2" id="i12.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.4" href="diversen.htm" target="hmcontent"><span class="heading2" id="s12.4">Diversen</span></a>
+</li>
+<li class="heading2" id="i12.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.5" href="voorbeelden.htm" target="hmcontent"><span class="heading2" id="s12.5">Voorbeelden</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i13" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a13" href="speciale_versies.htm" target="hmcontent"><span class="heading1" id="s13" ondblclick="return dblclicked(this)">Versies</span></a>
+<ul id="ul13" style="list-style-type:none">
+<li class="heading2" id="i13.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.1" href="garage.htm" target="hmcontent"><span class="heading2" id="s13.1" ondblclick="return dblclicked(this)">Garage</span></a>
+<ul id="ul13.1" style="list-style-type:none">
+<li class="heading3" id="i13.1.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a13.1.1" href="voertuigenbeheer.htm" target="hmcontent"><span class="heading3" id="s13.1.1" ondblclick="return dblclicked(this)">Voertuigenbeheer</span></a>
+<ul id="ul13.1.1" style="list-style-type:none">
+<li class="heading4" id="i13.1.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.1.1" href="klant_voertuigen.htm" target="hmcontent"><span class="heading4" id="s13.1.1.1">Klant voertuigen</span></a>
+</li>
+<li class="heading4" id="i13.1.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.1.2" href="nieuwe_voertuigen.htm" target="hmcontent"><span class="heading4" id="s13.1.1.2">Nieuwe voertuigen</span></a>
+</li>
+<li class="heading4" id="i13.1.1.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.1.3" href="overname_voertuigen.htm" target="hmcontent"><span class="heading4" id="s13.1.1.3">Overname voertuigen</span></a>
+</li>
+<li class="heading4" id="i13.1.1.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.1.4" href="werkplaats_registerboek.htm" target="hmcontent"><span class="heading4" id="s13.1.1.4">Werkplaats registerboek</span></a>
+</li>
+<li class="heading4" id="i13.1.1.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.1.5" href="banden-stockeren.htm" target="hmcontent"><span class="heading4" id="s13.1.1.5">Banden stockeren</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i13.1.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a13.1.2" href="carpass.htm" target="hmcontent"><span class="heading3" id="s13.1.2" ondblclick="return dblclicked(this)">Car-Pass</span></a>
+<ul id="ul13.1.2" style="list-style-type:none">
+<li class="heading4" id="i13.1.2.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.1" href="procedure.htm" target="hmcontent"><span class="heading4" id="s13.1.2.1">Procedure</span></a>
+</li>
+<li class="heading4" id="i13.1.2.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.2" href="carpass_documenten_toevoegen.htm" target="hmcontent"><span class="heading4" id="s13.1.2.2">Documenten toevoegen</span></a>
+</li>
+<li class="heading4" id="i13.1.2.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.3" href="herstellingen.htm" target="hmcontent"><span class="heading4" id="s13.1.2.3">Onderhoud/Herstellingen</span></a>
+</li>
+<li class="heading4" id="i13.1.2.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.4" href="automatisch-verzenden-km-stand.htm" target="hmcontent"><span class="heading4" id="s13.1.2.4">Automatisch verzenden km-stand</span></a>
+</li>
+<li class="heading4" id="i13.1.2.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.5" href="verzenden-km-stand.htm" target="hmcontent"><span class="heading4" id="s13.1.2.5">Manueel verzenden km-stand</span></a>
+</li>
+<li class="heading4" id="i13.1.2.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.6" href="te-corrigeren-km-standen.htm" target="hmcontent"><span class="heading4" id="s13.1.2.6">Te corrigeren km-standen</span></a>
+</li>
+<li class="heading4" id="i13.1.2.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.7" href="car-pass_overige-mogelijkheden.htm" target="hmcontent"><span class="heading4" id="s13.1.2.7">Overige mogelijkheden</span></a>
+</li>
+<li class="heading4" id="i13.1.2.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.8" href="configuratie-verbindingsparame.htm" target="hmcontent"><span class="heading4" id="s13.1.2.8">Configuratie webservice</span></a>
+</li>
+<li class="heading4" id="i13.1.2.9" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a13.1.2.9" href="bijkomende-info12.htm" target="hmcontent"><span class="heading4" id="s13.1.2.9" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul13.1.2.9" style="list-style-type:none">
+<li class="heading5" id="i13.1.2.9.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a13.1.2.9.1" href="foutmeldingen.htm" target="hmcontent"><span class="heading5" id="s13.1.2.9.1">Foutmeldingen</span></a>
+</li>
+<li class="heading5" id="i13.1.2.9.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a13.1.2.9.2" href="overige.htm" target="hmcontent"><span class="heading5" id="s13.1.2.9.2">Overige</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i13.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.2" href="glashandel.htm" target="hmcontent"><span class="heading2" id="s13.2">Glashandel</span></a>
+</li>
+<li class="heading2" id="i13.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.3" href="groente-_en_drankhandel.htm" target="hmcontent"><span class="heading2" id="s13.3">Groente- en drankhandel</span></a>
+</li>
+<li class="heading2" id="i13.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.4" href="kleding_textiel.htm" target="hmcontent"><span class="heading2" id="s13.4">Kleding, textiel</span></a>
+</li>
+<li class="heading2" id="i13.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.5" href="schrijnwerkers.htm" target="hmcontent"><span class="heading2" id="s13.5">Schrijnwerkers</span></a>
+</li>
+<li class="heading2" id="i13.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.6" href="houthandel.htm" target="hmcontent"><span class="heading2" id="s13.6">Houthandel</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i14" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a14" href="onderhoud_instellingen.htm" target="hmcontent"><span class="heading1" id="s14" ondblclick="return dblclicked(this)">Onderhoud/instellingen</span></a>
+<ul id="ul14" style="list-style-type:none">
+<li class="heading2" id="i14.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.1" href="api-configuratie.htm" target="hmcontent"><span class="heading2" id="s14.1" ondblclick="return dblclicked(this)">API-Beheer</span></a>
+<ul id="ul14.1" style="list-style-type:none">
+<li class="heading3" id="i14.1.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.1.1" href="configuratie.htm" target="hmcontent"><span class="heading3" id="s14.1.1">Configuratie</span></a>
+</li>
+<li class="heading3" id="i14.1.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.1.2" href="toevoegen4.htm" target="hmcontent"><span class="heading3" id="s14.1.2">Toevoegen</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i14.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.2" href="het-onderhoudsprogramma.htm" target="hmcontent"><span class="heading2" id="s14.2">Het onderhoudsprogramma</span></a>
+</li>
+<li class="heading2" id="i14.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.3" href="converteren-en-indexeren-besta.htm" target="hmcontent"><span class="heading2" id="s14.3" ondblclick="return dblclicked(this)">Converteren en indexeren bestanden</span></a>
+<ul id="ul14.3" style="list-style-type:none">
+<li class="heading3" id="i14.3.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.3.1" href="selecteren-van-bestanden.htm" target="hmcontent"><span class="heading3" id="s14.3.1">Selecteren van bestanden</span></a>
+</li>
+<li class="heading3" id="i14.3.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.3.2" href="converteren-en-indexeren-start.htm" target="hmcontent"><span class="heading3" id="s14.3.2">Converteren en indexeren starten</span></a>
+</li>
+<li class="heading3" id="i14.3.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.3.3" href="synchroniseren-bestanden.htm" target="hmcontent"><span class="heading3" id="s14.3.3">Synchroniseren bestanden</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i14.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.4" href="instellingen-algemeen.htm" target="hmcontent"><span class="heading2" id="s14.4">Instellingen algemeen</span></a>
+</li>
+<li class="heading2" id="i14.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.5" href="instellingen-handelszaak.htm" target="hmcontent"><span class="heading2" id="s14.5">Instellingen handelszaak</span></a>
+</li>
+<li class="heading2" id="i14.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.6" href="instellingen-boekhouding.htm" target="hmcontent"><span class="heading2" id="s14.6">Instellingen boekhouding</span></a>
+</li>
+<li class="heading2" id="i14.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.7" href="instellingen-tekstverwerking.htm" target="hmcontent"><span class="heading2" id="s14.7">Instellingen tekstverwerking</span></a>
+</li>
+<li class="heading2" id="i14.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.8" href="instellingen-kassabeheer.htm" target="hmcontent"><span class="heading2" id="s14.8">Instellingen kassabeheer</span></a>
+</li>
+<li class="heading2" id="i14.9" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.9" href="instellingen-extra-hardware.htm" target="hmcontent"><span class="heading2" id="s14.9">Instellingen extra hardware</span></a>
+</li>
+<li class="heading2" id="i14.10" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.10" href="lay-out-documenten.htm" target="hmcontent"><span class="heading2" id="s14.10" ondblclick="return dblclicked(this)">Lay-out documenten</span></a>
+<ul id="ul14.10" style="list-style-type:none">
+<li class="heading3" id="i14.10.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.10.1" href="exporteren-lay-out.htm" target="hmcontent"><span class="heading3" id="s14.10.1">Exporteren lay-out</span></a>
+</li>
+<li class="heading3" id="i14.10.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.10.2" href="importeren-lay-out.htm" target="hmcontent"><span class="heading3" id="s14.10.2">Importeren lay-out</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i15" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a15" href="overige_handleidingen.htm" target="hmcontent"><span class="heading1" id="s15" ondblclick="return dblclicked(this)">Overige handleidingen</span></a>
+<ul id="ul15" style="list-style-type:none">
+<li class="heading2" id="i15.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.1" href="advantage-database-server.htm" target="hmcontent"><span class="heading2" id="s15.1">Advantage Database Server</span></a>
+</li>
+<li class="heading2" id="i15.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.2" href="advanced_graphics.htm" target="hmcontent"><span class="heading2" id="s15.2">Advanced Graphics</span></a>
+</li>
+<li class="heading2" id="i15.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.3" href="document_in_vreemde_munt.htm" target="hmcontent"><span class="heading2" id="s15.3">Document in vreemde munt</span></a>
+</li>
+<li class="heading2" id="i15.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.4" href="dossierbeheer.htm" target="hmcontent"><span class="heading2" id="s15.4" ondblclick="return dblclicked(this)">Dossierbeheer</span></a>
+<ul id="ul15.4" style="list-style-type:none">
+<li class="heading3" id="i15.4.1" data-bg="cicon17.png;cicon18.png" style="background:url(cicon18.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.4.1" href="bijkomende-info11.htm" target="hmcontent"><span class="heading3" id="s15.4.1" ondblclick="return dblclicked(this)">Bijkomende info</span></a>
+<ul id="ul15.4.1" style="list-style-type:none">
+<li class="heading4" id="i15.4.1.1" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a15.4.1.1" href="de-axito-knoppenbalk12.htm" target="hmcontent"><span class="heading4" id="s15.4.1.1">De AXITO-knoppenbalk</span></a>
+</li>
+<li class="heading4" id="i15.4.1.2" style="background:url(cicon17.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a15.4.1.2" href="uitleg-velden14.htm" target="hmcontent"><span class="heading4" id="s15.4.1.2">Uitleg velden</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i15.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.5" href="hardware-gebruiken.htm" target="hmcontent"><span class="heading2" id="s15.5" ondblclick="return dblclicked(this)">Hardware gebruiken</span></a>
+<ul id="ul15.5" style="list-style-type:none">
+<li class="heading3" id="i15.5.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.5.1" href="optimus-s.htm" target="hmcontent"><span class="heading3" id="s15.5.1">Optimus S</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i15.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.6" href="honeywell-metrologic-scanner-i.htm" target="hmcontent"><span class="heading2" id="s15.6">Honeywell Metrologic scanner instellen</span></a>
+</li>
+<li class="heading2" id="i15.7" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.7" href="inlezen_externe_artikelgegeven.htm" target="hmcontent"><span class="heading2" id="s15.7" ondblclick="return dblclicked(this)">Inlezen externe artikelgegevens</span></a>
+<ul id="ul15.7" style="list-style-type:none">
+<li class="heading3" id="i15.7.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.7.1" href="kolomnaamgeving-in-excel.htm" target="hmcontent"><span class="heading3" id="s15.7.1">Kolomnaamgeving in Excel</span></a>
+</li>
+<li class="heading3" id="i15.7.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.7.2" href="gewijzigde-excel-opslaan.htm" target="hmcontent"><span class="heading3" id="s15.7.2">Gewijzigde Excel opslaan</span></a>
+</li>
+<li class="heading3" id="i15.7.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.7.3" href="inlezen-in-axito-converteerpro.htm" target="hmcontent"><span class="heading3" id="s15.7.3">Inlezen in AXITO-converteerprogramma</span></a>
+</li>
+<li class="heading3" id="i15.7.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.7.4" href="bekijken-en-opnemen-van-gewens.htm" target="hmcontent"><span class="heading3" id="s15.7.4">Bekijken en opnemen van gewenste gegevens</span></a>
+</li>
+<li class="heading3" id="i15.7.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.7.5" href="doorsturen-naar-het-axito-arti.htm" target="hmcontent"><span class="heading3" id="s15.7.5">Doorsturen naar het AXITO-artikelenbestand</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i15.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.8" href="installeren_van_een_externe_ca.htm" target="hmcontent"><span class="heading2" id="s15.8">Installeren van een externe cardreader</span></a>
+</li>
+<li class="heading2" id="i15.9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.9" href="interface.htm" target="hmcontent"><span class="heading2" id="s15.9" ondblclick="return dblclicked(this)">Interface instellingen</span></a>
+<ul id="ul15.9" style="list-style-type:none">
+<li class="heading3" id="i15.9.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.9.1" href="hoofdmenu.htm" target="hmcontent"><span class="heading3" id="s15.9.1">Hoofdmenu</span></a>
+</li>
+<li class="heading3" id="i15.9.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.9.2" href="kolommen-in-de-browser.htm" target="hmcontent"><span class="heading3" id="s15.9.2">Kolommen in de browser</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i15.10" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.10" href="metrologic_scanner_gebruiken.htm" target="hmcontent"><span class="heading2" id="s15.10">Metrologic Scanpal-2 gebruiken</span></a>
+</li>
+<li class="heading2" id="i15.11" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.11" href="lay-out_documenten.htm" target="hmcontent"><span class="heading2" id="s15.11">Lay-out documenten</span></a>
+</li>
+<li class="heading2" id="i15.12" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.12" href="locatiebeheer.htm" target="hmcontent"><span class="heading2" id="s15.12">Locatiebeheer</span></a>
+</li>
+<li class="heading2" id="i15.13" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.13" href="onderhoudsprogramma.htm" target="hmcontent"><span class="heading2" id="s15.13">Onderhoudsprogramma</span></a>
+</li>
+<li class="heading2" id="i15.14" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.14" href="pdfs_maken.htm" target="hmcontent"><span class="heading2" id="s15.14">PDF's maken</span></a>
+</li>
+<li class="heading2" id="i15.15" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.15" href="printerbeheer.htm" target="hmcontent"><span class="heading2" id="s15.15" ondblclick="return dblclicked(this)">Printerbeheer</span></a>
+<ul id="ul15.15" style="list-style-type:none">
+<li class="heading3" id="i15.15.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.15.1" href="priform.htm" target="hmcontent"><span class="heading3" id="s15.15.1">Priform</span></a>
+</li>
+<li class="heading3" id="i15.15.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.15.2" href="e-mailformulieren.htm" target="hmcontent"><span class="heading3" id="s15.15.2" ondblclick="return dblclicked(this)">E-mailformulieren</span></a>
+<ul id="ul15.15.2" style="list-style-type:none">
+<li class="heading4" id="i15.15.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a15.15.2.1" href="e-mailformulier-begrijpen.htm" target="hmcontent"><span class="heading4" id="s15.15.2.1">E-mailformulier begrijpen</span></a>
+</li>
+<li class="heading4" id="i15.15.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a15.15.2.2" href="vervangingscodes-e-mail.htm" target="hmcontent"><span class="heading4" id="s15.15.2.2">Vervangingscodes</span></a>
+</li>
+<li class="heading4" id="i15.15.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a15.15.2.3" href="e-mailformulier-toevoegen.htm" target="hmcontent"><span class="heading4" id="s15.15.2.3">E-mailformulier toevoegen</span></a>
+</li>
+<li class="heading4" id="i15.15.2.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a15.15.2.4" href="e-mailformulier-toewijzen.htm" target="hmcontent"><span class="heading4" id="s15.15.2.4">E-mailformulier toewijzen</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i15.16" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.16" href="toegangsrechtenbeheer.htm" target="hmcontent"><span class="heading2" id="s15.16">Toegangsrechtenbeheer</span></a>
+</li>
+<li class="heading2" id="i15.17" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.17" href="windows.htm" target="hmcontent"><span class="heading2" id="s15.17" ondblclick="return dblclicked(this)">Windows</span></a>
+<ul id="ul15.17" style="list-style-type:none">
+<li class="heading3" id="i15.17.1" style="background:url(cicon12.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.17.1" href="windows_verkenner.htm" target="hmcontent"><span class="heading3" id="s15.17.1">Windows verkenner&nbsp;</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i16" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a16" href="backupbeheer.htm" target="hmcontent"><span class="heading1" id="s16" ondblclick="return dblclicked(this)">Backupbeheer</span></a>
+<ul id="ul16" style="list-style-type:none">
+<li class="heading2" id="i16.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.1" href="kopieren_bestanden.htm" target="hmcontent"><span class="heading2" id="s16.1">Kopiëren bestanden</span></a>
+</li>
+<li class="heading2" id="i16.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.2" href="terugzetten_bestanden.htm" target="hmcontent"><span class="heading2" id="s16.2">Terugzetten bestanden</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i17" data-bg="cicon3.png;cicon4.png" style="background:url(cicon4.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a17" href="nieuw_in_deze_versie.htm" target="hmcontent"><span class="heading1" id="s17" ondblclick="return dblclicked(this)">Nieuw in deze versie</span></a>
+<ul id="ul17" style="list-style-type:none">
+<li class="heading2" id="i17.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.1" href="2022.htm" target="hmcontent"><span class="heading2" id="s17.1">2022</span></a>
+</li>
+<li class="heading2" id="i17.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.2" href="2021.htm" target="hmcontent"><span class="heading2" id="s17.2">2021</span></a>
+</li>
+<li class="heading2" id="i17.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.3" href="2020.htm" target="hmcontent"><span class="heading2" id="s17.3">2020</span></a>
+</li>
+<li class="heading2" id="i17.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.4" href="2019.htm" target="hmcontent"><span class="heading2" id="s17.4">2019</span></a>
+</li>
+<li class="heading2" id="i17.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.5" href="oudere-versies.htm" target="hmcontent"><span class="heading2" id="s17.5" ondblclick="return dblclicked(this)">Oudere versies</span></a>
+<ul id="ul17.5" style="list-style-type:none">
+<li class="heading3" id="i17.5.1" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.1" href="2018.htm" target="hmcontent"><span class="heading3" id="s17.5.1">2018</span></a>
+</li>
+<li class="heading3" id="i17.5.2" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.2" href="2017.htm" target="hmcontent"><span class="heading3" id="s17.5.2">2017</span></a>
+</li>
+<li class="heading3" id="i17.5.3" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.3" href="2016.htm" target="hmcontent"><span class="heading3" id="s17.5.3">2016</span></a>
+</li>
+<li class="heading3" id="i17.5.4" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.4" href="2015.htm" target="hmcontent"><span class="heading3" id="s17.5.4">2015</span></a>
+</li>
+<li class="heading3" id="i17.5.5" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.5" href="2014.htm" target="hmcontent"><span class="heading3" id="s17.5.5">2014</span></a>
+</li>
+<li class="heading3" id="i17.5.6" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.6" href="20132.htm" target="hmcontent"><span class="heading3" id="s17.5.6">2013</span></a>
+</li>
+<li class="heading3" id="i17.5.7" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.7" href="2012.htm" target="hmcontent"><span class="heading3" id="s17.5.7">2012</span></a>
+</li>
+<li class="heading3" id="i17.5.8" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.8" href="2011.htm" target="hmcontent"><span class="heading3" id="s17.5.8">2011</span></a>
+</li>
+<li class="heading3" id="i17.5.9" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.9" href="2010.htm" target="hmcontent"><span class="heading3" id="s17.5.9">2010</span></a>
+</li>
+<li class="heading3" id="i17.5.10" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.10" href="2009.htm" target="hmcontent"><span class="heading3" id="s17.5.10">2009</span></a>
+</li>
+<li class="heading3" id="i17.5.11" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.11" href="2008.htm" target="hmcontent"><span class="heading3" id="s17.5.11">2008</span></a>
+</li>
+<li class="heading3" id="i17.5.12" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.12" href="2007.htm" target="hmcontent"><span class="heading3" id="s17.5.12">2007</span></a>
+</li>
+<li class="heading3" id="i17.5.13" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.13" href="2006.htm" target="hmcontent"><span class="heading3" id="s17.5.13">2006</span></a>
+</li>
+<li class="heading3" id="i17.5.14" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.14" href="2005.htm" target="hmcontent"><span class="heading3" id="s17.5.14">2005</span></a>
+</li>
+<li class="heading3" id="i17.5.15" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a17.5.15" href="2004.htm" target="hmcontent"><span class="heading3" id="s17.5.15">2004</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i18" style="background:url(cicon2.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a18" href="technische_info.htm" target="hmcontent"><span class="heading1" id="s18">Technische info</span></a>
+</li>
+<li class="heading1" id="i19" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a19" href="faq.htm" target="hmcontent"><span class="heading1" id="s19" ondblclick="return dblclicked(this)">FAQ - VGV (Veel Gestelde Vragen)</span></a>
+<ul id="ul19" style="list-style-type:none">
+<li class="heading2" id="i19.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a19.1" href="cursorbalk.htm" target="hmcontent"><span class="heading2" id="s19.1">Wat is de cursorbalk</span></a>
+</li>
+<li class="heading2" id="i19.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a19.2" href="wat-zijn-cursortoetsen.htm" target="hmcontent"><span class="heading2" id="s19.2">Wat zijn cursortoetsen</span></a>
+</li>
+<li class="heading2" id="i19.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a19.3" href="dialoogvenster.htm" target="hmcontent"><span class="heading2" id="s19.3">Wat is een dialoogvenster</span></a>
+</li>
+<li class="heading2" id="i19.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a19.4" href="nieuw_boekjaar_starten_zonder_.htm" target="hmcontent"><span class="heading2" id="s19.4">Nieuw boekhoudjaar starten (zonder het vorige af te sluiten)</span></a>
+</li>
+<li class="heading2" id="i19.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a19.5" href="waar_vind_ik_onderhoud_handelszaak_terug.htm" target="hmcontent"><span class="heading2" id="s19.5">Waar vind ik 'Onderhoud handelszaak' terug ?</span></a>
+</li>
+<li class="heading2" id="i19.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a19.6" href="look__feel.htm" target="hmcontent"><span class="heading2" id="s19.6">Look &amp; Feel</span></a>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('cicon2.png','cicon1.png','cicon9.png','cicon12.png','cicon18.png','cicon17.png','cicon4.png','cicon16.png','cicon3.png');</script>
+</body>
+</html>
